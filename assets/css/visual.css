@@ -1096,15 +1096,17 @@ a:hover {
 
 .explore-item {
 
-	display: flex;
+	display: block;
 
-	flex-direction: column;
+	position: relative;
 
-	align-items: flex-start;
+	min-height: 13em;
 
-	justify-content: flex-end;
-
-	padding-top: 4.5em;
+	padding:
+		4.8em
+		4.5em
+		1.8em
+		1.8em;
 
 	font-family:
 		"Noto Serif TC",
@@ -1114,20 +1116,24 @@ a:hover {
 
 	font-weight: 500;
 
-	line-height: 1.55;
+	line-height: 1.65;
+
+	text-align: left;
+
+	color: var(--angie-charcoal);
 
 }
 
 
-/* Arrow in existing HTML */
+/* Arrow */
 
 .explore-item > span {
 
 	position: absolute;
 
-	top: 1.45em;
+	top: 1.5em;
 
-	right: 1.45em;
+	right: 1.6em;
 
 	color: var(--angie-green);
 
@@ -1135,7 +1141,7 @@ a:hover {
 		"Noto Sans TC",
 		sans-serif;
 
-	font-size: 1em;
+	font-size: 1.05em;
 
 	font-weight: 400;
 
@@ -1162,7 +1168,6 @@ a:hover {
 	color: var(--angie-charcoal);
 
 }
-
 
 /* ==========================================================
    13. General Elements For Future Pages
@@ -1252,10 +1257,28 @@ input[type="button"]:hover {
 	}
 
 
-	.practice-item,
-	.explore-item {
+	/* WHAT I DO cards */
+
+	.practice-item {
 
 		min-height: 15em;
+
+	}
+
+
+	/* WHO I AM cards */
+
+	.explore-item {
+
+		min-height: 12.5em;
+
+		padding:
+			4.4em
+			3.8em
+			1.7em
+			1.7em;
+
+		font-size: 1.12em;
 
 	}
 
@@ -1457,13 +1480,17 @@ input[type="button"]:hover {
 
 	.explore-item {
 
-		min-height: 10.5em;
+	min-height: 9em;
 
-		padding-top: 3.8em;
+	padding:
+	3.8em
+	3.8em
+	1.5em
+	1.4em;
 
-		font-size: 1.1em;
+	font-size: 1.1em;
 
-	}
+}
 
 
 	.explore-item > span {
