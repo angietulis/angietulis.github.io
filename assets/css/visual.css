@@ -700,11 +700,21 @@ a:hover {
 
 	display: grid;
 
-	grid-template-columns: 4.6em 1fr;
+	grid-template-columns: 4.5em 1fr;
 
-	align-items: start;
+	align-items: center;
+
+	gap: 1.2em;
 
 	margin-bottom: 3.4em;
+
+	padding: 1.7em 2em;
+
+	background: var(--angie-green-pale);
+
+	border-top: solid 1px var(--angie-green-soft);
+
+	border-bottom: solid 1px var(--angie-green-soft);
 
 }
 
@@ -712,21 +722,29 @@ a:hover {
 .section-number {
 
 	font-family:
-		Georgia,
-		serif;
+		"Noto Sans TC",
+		sans-serif;
 
 	color: var(--angie-terracotta);
 
-	font-size: 1.05em;
+	font-size: 0.8em;
+
+	font-weight: 600;
+
+	letter-spacing: 0.12em;
+
+	align-self: start;
+
+	padding-top: 0.25em;
 
 }
 
 
 .section-label {
 
-	margin: 0 0 0.25em 0;
+	margin: 0 0 0.4em 0;
 
-	color: var(--angie-green);
+	color: var(--angie-green-dark);
 
 	font-family:
 		"Noto Sans TC",
@@ -734,7 +752,11 @@ a:hover {
 
 	font-size: 0.72em;
 
-	letter-spacing: 0.18em;
+	font-weight: 600;
+
+	letter-spacing: 0.2em;
+
+	line-height: 1.4;
 
 }
 
@@ -743,8 +765,24 @@ a:hover {
 
 	margin: 0;
 
-	font-size: 2.15em;
+	color: var(--angie-charcoal);
 
+	font-family:
+		"Noto Serif TC",
+		serif;
+
+	font-size: 1.9em;
+
+	font-weight: 500;
+
+	line-height: 1.4;
+
+	letter-spacing: 0.05em;
+
+}
+
+.section-heading-text {
+	min-width: 0;
 }
 
 
