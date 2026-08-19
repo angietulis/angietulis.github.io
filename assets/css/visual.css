@@ -1,6 +1,6 @@
 /* ==========================================================
    Angie 劉泀嗪
-   Visual Identity V4.1
+   Visual Identity V4.2
 
    Editorial / Literary / Contemporary
    ========================================================== */
@@ -42,8 +42,14 @@
 	--angie-green-pale: #dceadf;
 
 
-	/* Energetic orange */
+	/* Energetic orange family */
 	--angie-orange: #f47a1f;
+
+	--angie-orange-light: #ff8a2a;
+
+	--angie-orange-deep: #e96b16;
+
+	--angie-orange-soft: #f98532;
 
 	--angie-orange-dark: #d95f0f;
 
@@ -944,6 +950,8 @@ select:focus-visible {
 
 .practice-editorial-item {
 
+	--card-hover-orange: var(--angie-orange);
+
 	position: relative;
 
 	display: flex;
@@ -970,6 +978,36 @@ select:focus-visible {
 		transform 0.22s ease,
 		background-color 0.22s ease,
 		color 0.22s ease;
+
+}
+
+
+/* Slightly different orange for each field */
+
+.practice-editorial-item:nth-child(1) {
+
+	--card-hover-orange: var(--angie-orange);
+
+}
+
+
+.practice-editorial-item:nth-child(2) {
+
+	--card-hover-orange: var(--angie-orange-light);
+
+}
+
+
+.practice-editorial-item:nth-child(3) {
+
+	--card-hover-orange: var(--angie-orange-deep);
+
+}
+
+
+.practice-editorial-item:nth-child(4) {
+
+	--card-hover-orange: var(--angie-orange-soft);
 
 }
 
@@ -1178,7 +1216,7 @@ select:focus-visible {
 
 .practice-editorial-item:hover {
 
-	background: var(--angie-orange);
+	background: var(--card-hover-orange);
 
 	color: var(--angie-charcoal) !important;
 
@@ -1187,16 +1225,12 @@ select:focus-visible {
 }
 
 
-/* Number becomes paper white */
-
 .practice-editorial-item:hover .practice-number {
 
 	color: var(--angie-paper);
 
 }
 
-
-/* Chinese title stays dark */
 
 .practice-editorial-item:hover .practice-title h3 {
 
@@ -1205,8 +1239,6 @@ select:focus-visible {
 }
 
 
-/* English subtitle becomes dark */
-
 .practice-editorial-item:hover .practice-en {
 
 	color: var(--angie-charcoal);
@@ -1214,16 +1246,12 @@ select:focus-visible {
 }
 
 
-/* Description becomes dark */
-
 .practice-editorial-item:hover .practice-description {
 
 	color: var(--angie-charcoal);
 
 }
 
-
-/* Arrow becomes paper white */
 
 .practice-editorial-item:hover .practice-arrow {
 
@@ -1234,8 +1262,6 @@ select:focus-visible {
 }
 
 
-/* Rule becomes paper white */
-
 .practice-editorial-item:hover .practice-arrow::after {
 
 	width: 6em;
@@ -1245,11 +1271,9 @@ select:focus-visible {
 }
 
 
-/* Hide green frame on orange hover */
-
 .practice-outline:hover {
 
-	border-color: var(--angie-orange);
+	border-color: var(--card-hover-orange);
 
 }
 
@@ -1276,6 +1300,8 @@ select:focus-visible {
 /* Individual index entry */
 
 .explore-editorial-item {
+
+	--card-hover-orange: var(--angie-orange);
 
 	position: relative;
 
@@ -1307,7 +1333,31 @@ select:focus-visible {
 
 	transition:
 		transform 0.22s ease,
-		background-color 0.22s ease;
+		background-color 0.22s ease,
+		color 0.22s ease;
+
+}
+
+
+/* Slightly different orange for each WHO I AM entry */
+
+.explore-editorial-item:nth-child(1) {
+
+	--card-hover-orange: var(--angie-orange-light);
+
+}
+
+
+.explore-editorial-item:nth-child(2) {
+
+	--card-hover-orange: var(--angie-orange-deep);
+
+}
+
+
+.explore-editorial-item:nth-child(3) {
+
+	--card-hover-orange: var(--angie-orange);
 
 }
 
@@ -1355,6 +1405,9 @@ select:focus-visible {
 
 	line-height: 1.4;
 
+	transition:
+		color 0.2s ease;
+
 }
 
 
@@ -1380,6 +1433,10 @@ select:focus-visible {
 
 	line-height: 1.5;
 
+	transition:
+		color 0.2s ease,
+		border-color 0.2s ease;
+
 }
 
 
@@ -1396,6 +1453,9 @@ select:focus-visible {
 	font-size: 0.88em;
 
 	line-height: 1.85;
+
+	transition:
+		color 0.2s ease;
 
 }
 
@@ -1425,21 +1485,55 @@ select:focus-visible {
 }
 
 
+/* ----------------------------------------------------------
+   WHO I AM — Orange Hover
+   ---------------------------------------------------------- */
+
 .explore-editorial-item:hover {
+
+	background: var(--card-hover-orange);
 
 	color: var(--angie-charcoal) !important;
 
-	background:
-		rgba(220, 234, 223, 0.22);
-
-	transform: translateY(-2px);
+	transform: translateY(-3px);
 
 }
 
 
+/* English label */
+
+.explore-editorial-item:hover .explore-kicker {
+
+	color: var(--angie-paper);
+
+}
+
+
+/* Chinese title */
+
+.explore-editorial-item:hover h3 {
+
+	color: var(--angie-charcoal);
+
+	border-bottom-color: var(--angie-paper);
+
+}
+
+
+/* Description */
+
+.explore-editorial-item:hover .explore-description {
+
+	color: var(--angie-charcoal);
+
+}
+
+
+/* Arrow */
+
 .explore-editorial-item:hover .explore-arrow {
 
-	color: var(--angie-orange);
+	color: var(--angie-paper);
 
 	transform: translate(0.14em, -0.1em);
 
