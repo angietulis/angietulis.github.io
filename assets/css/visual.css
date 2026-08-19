@@ -1,6 +1,6 @@
 /* ==========================================================
    Angie 劉泀嗪
-   Visual Identity V3.1
+   Visual Identity V3.2
 
    Editorial / Literary / Contemporary
    ========================================================== */
@@ -232,8 +232,10 @@ a:hover {
 	color: var(--angie-orange-dark) !important;
 
 	border-bottom-color: var(--angie-orange);
+
 }
-	
+
+
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
@@ -244,7 +246,6 @@ select:focus-visible {
 
 	outline-offset: 3px;
 
-	
 }
 
 
@@ -364,6 +365,7 @@ select:focus-visible {
 	padding-left: 0.35em;
 
 }
+
 
 #menu ul > li {
 
@@ -747,6 +749,10 @@ select:focus-visible {
 
 	gap: 1em;
 
+	width: 72%;
+
+	box-sizing: border-box;
+
 	margin-bottom: 2.8em;
 
 	padding: 1.55em 1.8em;
@@ -882,7 +888,7 @@ select:focus-visible {
 }
 
 
-/* Shared card */
+/* Shared editorial card */
 
 .practice-item,
 .explore-item {
@@ -897,14 +903,12 @@ select:focus-visible {
 
 	padding: 1.7em;
 
-	background: var(--angie-card);
+	background: rgba(255, 255, 255, 0.14);
 
-	border:
-		solid 1px
-		var(--angie-line);
+	border: 0;
 
 	border-top:
-		solid 3px
+		solid 2px
 		var(--angie-green);
 
 	color: var(--angie-charcoal);
@@ -927,15 +931,15 @@ select:focus-visible {
 .practice-item:hover,
 .explore-item:hover {
 
-	background: var(--angie-green-pale);
+	background: rgba(220, 234, 223, 0.55);
 
-	border-color: var(--angie-green);
+	border-top-color: var(--angie-green);
 
 	box-shadow:
-		0 12px 30px
-		rgba(41, 43, 41, 0.09);
+		0 8px 20px
+		rgba(41, 43, 41, 0.045);
 
-	transform: translateY(-5px);
+	transform: translateY(-3px);
 
 	color: var(--angie-charcoal) !important;
 
@@ -1178,6 +1182,7 @@ select:focus-visible {
 
 }
 
+
 /* ==========================================================
    13. General Elements For Future Pages
    ========================================================== */
@@ -1270,24 +1275,26 @@ input[type="button"]:hover {
 
 	.practice-item {
 
-	min-height: 14em;
+		min-height: 14em;
 
-}
+	}
 
 
-.explore-item {
+	/* WHO I AM cards */
 
-	min-height: 11em;
+	.explore-item {
 
-	padding:
-		4em
-		3.6em
-		1.5em
-		1.5em;
+		min-height: 11em;
 
-	font-size: 1.12em;
+		padding:
+			4em
+			3.6em
+			1.5em
+			1.5em;
 
-}
+		font-size: 1.12em;
+
+	}
 
 }
 
@@ -1322,6 +1329,17 @@ input[type="button"]:hover {
 
 	}
 
+
+	/* Chapter bar becomes wider */
+
+	.home-section-heading {
+
+		width: 84%;
+
+	}
+
+
+	/* Cards become one column */
 
 	.practice-list,
 	.explore-links {
@@ -1417,7 +1435,11 @@ input[type="button"]:hover {
 	}
 
 
+	/* Chapter bar returns to full width */
+
 	.home-section-heading {
+
+		width: 100%;
 
 		grid-template-columns: 2.6em 1fr;
 
@@ -1487,24 +1509,25 @@ input[type="button"]:hover {
 
 	.explore-item {
 
-	min-height: 9em;
+		min-height: 9em;
 
-	padding:
-	3.8em
-	3.8em
-	1.5em
-	1.4em;
+		padding:
+			3.8em
+			3.8em
+			1.5em
+			1.4em;
 
-	font-size: 1.1em;
+		font-size: 1.1em;
 
-}
+	}
 
 
 	.explore-item > span:last-child {
 
-	top: 1.25em;
+		top: 1.25em;
 
-	right: 1.25em;
+		right: 1.25em;
 
-}
+	}
+
 }
