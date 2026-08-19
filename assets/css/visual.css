@@ -1,6 +1,6 @@
 /* ==========================================================
    Angie 劉泀嗪
-   Visual Identity V3.2
+   Visual Identity V4
 
    Editorial / Literary / Contemporary
    ========================================================== */
@@ -161,12 +161,7 @@ h6 {
 }
 
 
-/* ----------------------------------------------------------
-   Chinese Name
-
-   Keep system Traditional Chinese fonts here because they
-   correctly display 泀.
-   ---------------------------------------------------------- */
+/* Chinese name */
 
 .name-zh,
 .sidebar-name-zh {
@@ -184,9 +179,7 @@ h6 {
 }
 
 
-/* ----------------------------------------------------------
-   English Signature
-   ---------------------------------------------------------- */
+/* English signature */
 
 .name-en,
 .sidebar-name-en {
@@ -196,20 +189,6 @@ h6 {
 		cursive;
 
 	font-weight: 400;
-
-}
-
-
-/* English labels inside cards */
-
-.practice-en {
-
-	font-family:
-		"Noto Serif TC",
-		Georgia,
-		serif;
-
-	font-style: italic;
 
 }
 
@@ -652,6 +631,7 @@ select:focus-visible {
 
 }
 
+
 .home-intro p {
 
 	font-size: 1.04em;
@@ -727,7 +707,7 @@ select:focus-visible {
 .home-fields,
 .home-explore {
 
-	padding: 5.5em 0;
+	padding: 6.5em 0;
 
 	border-bottom: solid 1px var(--angie-line);
 
@@ -735,44 +715,74 @@ select:focus-visible {
 
 
 /* ==========================================================
-   09. Shared Section Heading
+   09. Editorial Chapter Heading
    ========================================================== */
 
 .home-section-heading {
 
-	--chapter-block-width: 60%;
+	--chapter-width: 24em;
 
 	position: relative;
 
 	display: grid;
 
-	grid-template-columns: 3.8em 1fr;
+	grid-template-columns:
+		6.7em
+		1fr;
 
 	align-items: center;
 
-	gap: 1em;
+	gap: 1.25em;
 
 	width: 100%;
 
+	min-height: 8.8em;
+
 	box-sizing: border-box;
 
-	margin-bottom: 2.6em;
+	margin-bottom: 4.5em;
 
-	padding: 1.55em 1.8em;
+	padding: 1.35em 1.7em;
 
-	background:
-		linear-gradient(
-			to right,
-			var(--angie-green) 0,
-			var(--angie-green) var(--chapter-block-width),
-			transparent var(--chapter-block-width),
-			transparent 100%
-		);
+	background: transparent;
+
+	overflow: visible;
 
 }
 
 
-/* Thin editorial line extending from the color block */
+/* Green chapter plate */
+
+.home-section-heading::before {
+
+	content: "";
+
+	position: absolute;
+
+	z-index: 0;
+
+	top: 0;
+
+	left: 0;
+
+	width: var(--chapter-width);
+
+	height: 100%;
+
+	background: var(--angie-green);
+
+	clip-path: polygon(
+		0 0,
+		calc(100% - 0.8em) 0,
+		100% 0.8em,
+		100% 100%,
+		0 100%
+	);
+
+}
+
+
+/* Fine line extending from the plate */
 
 .home-section-heading::after {
 
@@ -780,42 +790,80 @@ select:focus-visible {
 
 	position: absolute;
 
-	left: var(--chapter-block-width);
+	z-index: 0;
+
+	left: var(--chapter-width);
 
 	right: 0;
 
 	top: 50%;
 
-	height: 1px;
-
-	background: var(--angie-green);
+	height: 6px;
 
 	transform: translateY(-50%);
+
+	background:
+		radial-gradient(
+			circle at right center,
+			var(--angie-orange) 0,
+			var(--angie-orange) 2px,
+			transparent 2.5px
+		),
+		linear-gradient(
+			var(--angie-green),
+			var(--angie-green)
+		);
+
+	background-repeat:
+		no-repeat,
+		no-repeat;
+
+	background-position:
+		right center,
+		left center;
+
+	background-size:
+		6px 6px,
+		100% 1px;
 
 	pointer-events: none;
 
 }
 
 
-/* Section number */
+.home-section-heading > * {
+
+	position: relative;
+
+	z-index: 1;
+
+}
+
+
+/* Large translucent number */
 
 .section-number {
 
+	align-self: center;
+
+	padding: 0;
+
+	margin: 0;
+
 	font-family:
-		"Noto Sans TC",
-		sans-serif;
+		"Noto Serif TC",
+		Georgia,
+		serif;
 
-	color: rgba(247, 243, 236, 0.62);
+	color: rgba(247, 243, 236, 0.24);
 
-	font-size: 0.74em;
+	font-size: 5.2em;
 
-	font-weight: 600;
+	font-weight: 400;
 
-	letter-spacing: 0.14em;
+	letter-spacing: -0.04em;
 
-	align-self: start;
-
-	padding-top: 0.3em;
+	line-height: 0.9;
 
 }
 
@@ -824,9 +872,9 @@ select:focus-visible {
 
 .section-label {
 
-	margin: 0 0 0.35em 0;
+	margin: 0 0 0.45em 0;
 
-	color: rgba(247, 243, 236, 0.8);
+	color: rgba(247, 243, 236, 0.88);
 
 	font-family:
 		"Noto Sans TC",
@@ -836,7 +884,7 @@ select:focus-visible {
 
 	font-weight: 600;
 
-	letter-spacing: 0.22em;
+	letter-spacing: 0.24em;
 
 	line-height: 1.4;
 
@@ -855,7 +903,7 @@ select:focus-visible {
 		"Noto Serif TC",
 		serif;
 
-	font-size: 1.8em;
+	font-size: 1.85em;
 
 	font-weight: 500;
 
@@ -874,208 +922,148 @@ select:focus-visible {
 
 
 /* ==========================================================
-   10. Shared Homepage Card System
+   10. WHAT I DO
+   Asymmetric Editorial Grid
    ========================================================== */
 
-/* WHAT I DO — 2 × 2 */
-
-.practice-list {
+.practice-editorial-grid {
 
 	display: grid;
 
 	grid-template-columns:
-		repeat(2, minmax(0, 1fr));
+		repeat(4, minmax(0, 1fr));
 
-	gap: 1.6em;
-
-	border: 0;
-
-}
-
-
-/* WHO I AM — 3 cards */
-
-.explore-links {
-
-	display: grid;
-
-	grid-template-columns:
-		repeat(3, minmax(0, 1fr));
-
-	gap: 1.6em;
-
-	border: 0;
-
-}
-
-
-/* Shared editorial card */
-
-.practice-item,
-.explore-item {
-
-	position: relative;
-
-	box-sizing: border-box;
-
-	min-width: 0;
-
-	min-height: 14.5em;
-
-	padding: 1.65em 1.5em;
-
-	background: transparent;
-
-	border: 0;
-
-	border-top:
-		solid 1px
-		var(--angie-green);
-
-	color: var(--angie-charcoal);
-
-	text-decoration: none;
-
-	overflow: hidden;
-
-	transition:
-		transform 0.22s ease,
-		background-color 0.22s ease,
-		border-color 0.22s ease,
-		box-shadow 0.22s ease;
-
-}
-
-
-/* Shared hover */
-
-.practice-item:hover,
-.explore-item:hover {
-
-	background: rgba(220, 234, 223, 0.42);
-
-	border-top-color: var(--angie-green);
-
-	box-shadow:
-		0 6px 16px
-		rgba(41, 43, 41, 0.035);
-
-	transform: translateY(-2px);
-
-	color: var(--angie-charcoal) !important;
-
-}
-
-
-/* ==========================================================
-   11. WHAT I DO Cards
-   ========================================================== */
-
-.practice-item {
-
-	display: grid;
-
-	grid-template-columns:
-		minmax(0, 1fr)
-		auto;
-
-	grid-template-rows:
-		auto
-		auto
-		1fr;
-
-	gap: 0.8em 1em;
+	gap: 2.3em;
 
 	align-items: start;
 
 }
 
 
-/* Card number */
+/* Shared field item */
+
+.practice-editorial-item {
+
+	position: relative;
+
+	display: flex;
+
+	flex-direction: column;
+
+	min-width: 0;
+
+	min-height: 21.5em;
+
+	box-sizing: border-box;
+
+	padding: 1.8em 1.55em 1.6em 1.55em;
+
+	border: 0;
+
+	color: var(--angie-charcoal);
+
+	background: transparent;
+
+	text-decoration: none;
+
+	transition:
+		transform 0.22s ease,
+		background-color 0.22s ease;
+
+}
+
+
+/* 01 — fine editorial frame */
+
+.practice-outline {
+
+	border:
+		solid 1px
+		rgba(17, 107, 61, 0.34);
+
+	clip-path: polygon(
+		0.75em 0,
+		calc(100% - 0.75em) 0,
+		100% 0.75em,
+		100% 100%,
+		0 100%,
+		0 0.75em
+	);
+
+}
+
+
+/* 02 — plain */
+
+.practice-plain {
+
+	padding-top: 2.6em;
+
+}
+
+
+/* 03 — soft editorial block */
+
+.practice-soft {
+
+	background:
+		rgba(220, 234, 223, 0.34);
+
+	padding-top: 2.2em;
+
+}
+
+
+/* 04 — lower placement */
+
+.practice-illustration {
+
+	margin-top: 1.4em;
+
+}
+
+
+/* Number */
 
 .practice-number {
 
-	grid-column: 1;
+	display: block;
 
-	grid-row: 1;
+	margin-bottom: 1.5em;
 
-	align-self: start;
-
-	padding: 0;
+	color: var(--angie-orange);
 
 	font-family:
 		"Noto Sans TC",
 		sans-serif;
 
-	color: var(--angie-orange);
-
-	font-size: 0.76em;
+	font-size: 0.7em;
 
 	font-weight: 600;
 
-	letter-spacing: 0.14em;
-
-	line-height: 1.4;
+	letter-spacing: 0.16em;
 
 }
 
 
-/* Arrow */
-
-.practice-arrow {
-
-	grid-column: 2;
-
-	grid-row: 1;
-
-	justify-self: end;
-
-	align-self: start;
-
-	color: var(--angie-green);
-
-	font-size: 1.3em;
-
-	line-height: 1;
-
-	transition:
-		transform 0.2s ease,
-		color 0.2s ease;
-
-}
-
-
-.practice-item:hover .practice-arrow {
-
-	transform: translate(0.18em, -0.14em);
-
-	color: var(--angie-orange);
-
-}
-
-
-/* Card title */
+/* Title */
 
 .practice-title {
 
-	grid-column: 1 / -1;
-
-	grid-row: 2;
-
-	margin-top: 0.55em;
+	margin: 0;
 
 }
 
 
 .practice-title h3 {
 
-	margin: 0 0 0.25em 0;
+	margin: 0 0 0.28em 0;
 
 	font-family:
 		"Noto Serif TC",
 		serif;
 
-	font-size: 1.72em;
+	font-size: 1.7em;
 
 	font-weight: 500;
 
@@ -1084,15 +1072,18 @@ select:focus-visible {
 }
 
 
-/* English subtitle */
-
 .practice-en {
 
-	margin: 0;
+	display: block;
 
 	color: var(--angie-green-dark);
 
-	font-size: 0.9em;
+	font-family:
+		"Noto Serif TC",
+		Georgia,
+		serif;
+
+	font-size: 0.84em;
 
 	font-style: italic;
 
@@ -1105,69 +1096,28 @@ select:focus-visible {
 
 .practice-description {
 
-	grid-column: 1 / -1;
-
-	grid-row: 3;
-
-	align-self: end;
-
-	margin: 1.2em 0 0 0;
-
-	max-width: 31em;
+	margin: 1.7em 0 2.5em 0;
 
 	color: var(--angie-grey);
 
-	font-size: 0.92em;
+	font-size: 0.9em;
 
-	line-height: 1.85;
+	line-height: 1.9;
 
 }
 
 
-/* ==========================================================
-   12. WHO I AM Cards
-   ========================================================== */
+/* Arrow and rule */
 
-.explore-item {
-
-	display: block;
+.practice-arrow {
 
 	position: relative;
 
-	min-height: 11.5em;
+	display: block;
 
-	padding:
-		4.1em
-		4.2em
-		1.6em
-		1.6em;
+	margin-top: auto;
 
-	font-family:
-		"Noto Serif TC",
-		serif;
-
-	font-size: 1.22em;
-
-	font-weight: 500;
-
-	line-height: 1.65;
-
-	text-align: left;
-
-	color: var(--angie-charcoal);
-
-}
-
-
-/* Arrow */
-
-.explore-item > span:last-child {
-
-	position: absolute;
-
-	top: 1.5em;
-
-	right: 1.6em;
+	padding-bottom: 0.8em;
 
 	color: var(--angie-green);
 
@@ -1175,9 +1125,228 @@ select:focus-visible {
 		"Noto Sans TC",
 		sans-serif;
 
-	font-size: 1.05em;
+	font-size: 1.15em;
 
-	font-weight: 400;
+	line-height: 1;
+
+	transition:
+		color 0.2s ease,
+		transform 0.2s ease;
+
+}
+
+
+.practice-arrow::after {
+
+	content: "";
+
+	position: absolute;
+
+	left: 0;
+
+	bottom: 0;
+
+	width: 4.5em;
+
+	height: 1px;
+
+	background: var(--angie-green-soft);
+
+	transition:
+		width 0.25s ease,
+		background-color 0.25s ease;
+
+}
+
+
+.practice-editorial-item:hover {
+
+	color: var(--angie-charcoal) !important;
+
+	transform: translateY(-3px);
+
+}
+
+
+.practice-editorial-item:hover .practice-arrow {
+
+	color: var(--angie-orange);
+
+	transform: translate(0.12em, -0.08em);
+
+}
+
+
+.practice-editorial-item:hover .practice-arrow::after {
+
+	width: 6em;
+
+	background: var(--angie-green);
+
+}
+
+
+/* ==========================================================
+   11. WHO I AM
+   Editorial Index
+   ========================================================== */
+
+.explore-editorial-grid {
+
+	display: grid;
+
+	grid-template-columns:
+		repeat(3, minmax(0, 1fr));
+
+	gap: 0;
+
+	align-items: start;
+
+}
+
+
+/* Individual index entry */
+
+.explore-editorial-item {
+
+	position: relative;
+
+	display: flex;
+
+	flex-direction: column;
+
+	min-height: 13.5em;
+
+	box-sizing: border-box;
+
+	padding:
+		1.2em
+		3em
+		1.5em
+		2.2em;
+
+	border: 0;
+
+	border-right:
+		solid 1px
+		var(--angie-line);
+
+	color: var(--angie-charcoal);
+
+	background: transparent;
+
+	text-decoration: none;
+
+	transition:
+		transform 0.22s ease,
+		background-color 0.22s ease;
+
+}
+
+
+.explore-editorial-item:first-child {
+
+	padding-left: 0.5em;
+
+}
+
+
+.explore-editorial-item:last-child {
+
+	border-right: 0;
+
+}
+
+
+/* Controlled asymmetry */
+
+.explore-offset {
+
+	margin-top: 2.8em;
+
+}
+
+
+/* Small English label */
+
+.explore-kicker {
+
+	margin: 0 0 1.2em 0;
+
+	color: var(--angie-green);
+
+	font-family:
+		"Noto Sans TC",
+		sans-serif;
+
+	font-size: 0.66em;
+
+	font-weight: 600;
+
+	letter-spacing: 0.18em;
+
+	line-height: 1.4;
+
+}
+
+
+/* Title */
+
+.explore-editorial-item h3 {
+
+	margin: 0;
+
+	padding-bottom: 0.55em;
+
+	border-bottom:
+		solid 1px
+		var(--angie-green-soft);
+
+	font-family:
+		"Noto Serif TC",
+		serif;
+
+	font-size: 1.35em;
+
+	font-weight: 500;
+
+	line-height: 1.5;
+
+}
+
+
+/* Description */
+
+.explore-description {
+
+	margin: 1.2em 0 2em 0;
+
+	max-width: 20em;
+
+	color: var(--angie-grey);
+
+	font-size: 0.88em;
+
+	line-height: 1.85;
+
+}
+
+
+/* Arrow */
+
+.explore-arrow {
+
+	display: block;
+
+	margin-top: auto;
+
+	color: var(--angie-green);
+
+	font-family:
+		"Noto Sans TC",
+		sans-serif;
+
+	font-size: 1.1em;
 
 	line-height: 1;
 
@@ -1188,24 +1357,29 @@ select:focus-visible {
 }
 
 
-.explore-item:hover > span:last-child {
+.explore-editorial-item:hover {
 
-	transform: translate(0.18em, -0.14em);
+	color: var(--angie-charcoal) !important;
 
-	color: var(--angie-orange);
+	background:
+		rgba(220, 234, 223, 0.22);
+
+	transform: translateY(-2px);
 
 }
 
 
-.explore-contact {
+.explore-editorial-item:hover .explore-arrow {
 
-	color: var(--angie-charcoal);
+	color: var(--angie-orange);
+
+	transform: translate(0.14em, -0.1em);
 
 }
 
 
 /* ==========================================================
-   13. General Elements For Future Pages
+   12. General Elements
    ========================================================== */
 
 hr,
@@ -1273,7 +1447,7 @@ input[type="button"]:hover {
 
 
 /* ==========================================================
-   14. Tablet
+   13. Tablet
    ========================================================== */
 
 @media screen and (max-width: 1280px) {
@@ -1292,28 +1466,56 @@ input[type="button"]:hover {
 	}
 
 
-	/* WHAT I DO cards */
+	.home-section-heading {
 
-	.practice-item {
+		--chapter-width: 21em;
 
-		min-height: 14em;
+		grid-template-columns:
+			5.5em
+			1fr;
+
+		min-height: 8em;
 
 	}
 
 
-	/* WHO I AM cards */
+	.section-number {
 
-	.explore-item {
+		font-size: 4.5em;
 
-		min-height: 11em;
+	}
 
-		padding:
-			4em
-			3.6em
-			1.5em
-			1.5em;
 
-		font-size: 1.12em;
+	.practice-editorial-grid {
+
+		gap: 1.5em;
+
+	}
+
+
+	.practice-editorial-item {
+
+		min-height: 20em;
+
+		padding-left: 1.25em;
+
+		padding-right: 1.25em;
+
+	}
+
+
+	.practice-title h3 {
+
+		font-size: 1.5em;
+
+	}
+
+
+	.explore-editorial-item {
+
+		padding-right: 2em;
+
+		padding-left: 1.6em;
 
 	}
 
@@ -1321,7 +1523,7 @@ input[type="button"]:hover {
 
 
 /* ==========================================================
-   15. Smaller Screens
+   14. Smaller Screens
    ========================================================== */
 
 @media screen and (max-width: 980px) {
@@ -1347,40 +1549,94 @@ input[type="button"]:hover {
 		padding-top: 0;
 
 		max-width: 100%;
+
 		justify-self: start;
+
 	}
 
-
-	/* Chapter bar becomes wider */
 
 	.home-section-heading {
 
-	--chapter-block-width: 72%;
+		--chapter-width: 19em;
 
-}
+		grid-template-columns:
+			5em
+			1fr;
+
+		min-height: 7.5em;
+
+	}
 
 
-	/* Cards become one column */
+	/* WHAT I DO becomes 2 × 2 */
 
-	.practice-list,
-	.explore-links {
+	.practice-editorial-grid {
+
+		grid-template-columns:
+			repeat(2, minmax(0, 1fr));
+
+		gap:
+			2em
+			2.5em;
+
+	}
+
+
+	.practice-editorial-item {
+
+		min-height: 18em;
+
+	}
+
+
+	.practice-illustration {
+
+		margin-top: 0;
+
+	}
+
+
+	/* WHO I AM becomes stacked */
+
+	.explore-editorial-grid {
 
 		grid-template-columns: 1fr;
 
+		gap: 0;
+
 	}
 
 
-	.practice-item,
-	.explore-item {
+	.explore-editorial-item,
+	.explore-editorial-item:first-child {
 
 		min-height: auto;
 
+		padding:
+			2em
+			2.5em
+			2em
+			0;
+
+		border-right: 0;
+
+		border-bottom:
+			solid 1px
+			var(--angie-line);
+
 	}
 
 
-	.practice-description {
+	.explore-editorial-item:last-child {
 
-		align-self: start;
+		border-bottom: 0;
+
+	}
+
+
+	.explore-offset {
+
+		margin-top: 0;
 
 	}
 
@@ -1388,7 +1644,7 @@ input[type="button"]:hover {
 
 
 /* ==========================================================
-   16. Mobile
+   15. Mobile
    ========================================================== */
 
 @media screen and (max-width: 736px) {
@@ -1451,65 +1707,93 @@ input[type="button"]:hover {
 	.home-fields,
 	.home-explore {
 
-		padding: 4em 0;
+		padding: 4.5em 0;
 
 	}
 
 
-	/* Chapter bar returns to full width */
+	/* Full green chapter heading on mobile */
 
 	.home-section-heading {
 
-	--chapter-block-width: 100%;
+		--chapter-width: 100%;
 
-	width: 100%;
+		width: 100%;
 
-	grid-template-columns: 2.6em 1fr;
+		min-height: auto;
 
-	gap: 0.8em;
+		grid-template-columns:
+			4.2em
+			1fr;
 
-	padding: 1.45em 1.25em;
+		gap: 0.8em;
 
-	margin-bottom: 2.4em;
+		padding: 1.35em 1.25em;
 
-	background: var(--angie-green);
+		margin-bottom: 3em;
 
-}
+		background: var(--angie-green);
+
+		overflow: hidden;
+
+	}
 
 
-.home-section-heading::after {
+	.home-section-heading::before {
 
-	display: none;
+		width: 100%;
 
-}
+		clip-path: none;
+
+	}
+
+
+	.home-section-heading::after {
+
+		display: none;
+
+	}
+
+
+	.section-number {
+
+		font-size: 3.4em;
+
+	}
 
 
 	.home-section-heading h2 {
 
-		font-size: 1.65em;
+		font-size: 1.6em;
 
 	}
 
 
-	.practice-list,
-	.explore-links {
+	/* WHAT I DO becomes one column */
 
-		gap: 1em;
+	.practice-editorial-grid {
 
-	}
+		grid-template-columns: 1fr;
 
-
-	.practice-item,
-	.explore-item {
-
-		padding: 1.5em 1.3em;
+		gap: 2em;
 
 	}
 
 
-	.practice-item {
+	.practice-editorial-item,
+	.practice-plain,
+	.practice-soft,
+	.practice-illustration {
 
-		gap: 0.7em 0.8em;
+		min-height: auto;
+
+		margin-top: 0;
+
+		padding:
+			1.5em
+			1.2em
+			1.4em
+			1.2em;
 
 	}
 
@@ -1521,44 +1805,36 @@ input[type="button"]:hover {
 	}
 
 
-	.practice-en {
-
-		font-size: 0.86em;
-
-	}
-
-
 	.practice-description {
 
-		margin-top: 0.8em;
+		margin:
+			1.2em
+			0
+			2em
+			0;
 
 		font-size: 0.88em;
 
-		line-height: 1.8;
-
 	}
 
 
-	.explore-item {
+	/* WHO I AM */
 
-		min-height: 9em;
+	.explore-editorial-item,
+	.explore-editorial-item:first-child {
 
 		padding:
-			3.8em
-			3.8em
-			1.5em
-			1.4em;
-
-		font-size: 1.1em;
+			1.8em
+			0
+			1.8em
+			0;
 
 	}
 
 
-	.explore-item > span:last-child {
+	.explore-editorial-item h3 {
 
-		top: 1.25em;
-
-		right: 1.25em;
+		font-size: 1.25em;
 
 	}
 
