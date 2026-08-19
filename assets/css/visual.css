@@ -1127,7 +1127,7 @@ a:hover {
 
 /* Arrow */
 
-.explore-item > span {
+.explore-item > span:last-child {
 
 	position: absolute;
 
@@ -1154,7 +1154,7 @@ a:hover {
 }
 
 
-.explore-item:hover > span {
+.explore-item:hover > span:last-child {
 
 	transform: translate(0.18em, -0.14em);
 
@@ -1493,12 +1493,11 @@ input[type="button"]:hover {
 }
 
 
-	.explore-item > span {
+	.explore-item > span:last-child {
 
-		top: 1.25em;
+	top: 1.25em;
 
-		right: 1.25em;
+	right: 1.25em;
 
-	}
-
+}
 }
