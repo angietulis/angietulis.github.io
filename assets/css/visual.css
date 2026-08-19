@@ -504,10 +504,10 @@ select:focus-visible {
 	display: grid;
 
 	grid-template-columns:
-		minmax(0, 0.9fr)
-		minmax(0, 1.1fr);
+		minmax(19em, 0.88fr)
+		minmax(27em, 1.12fr);
 
-	gap: 7em;
+	gap: 7.5em;
 
 	align-items: start;
 
@@ -646,12 +646,11 @@ select:focus-visible {
 
 	padding-top: 1.4em;
 
-	max-width: 38em;
+	max-width: 35.5em;
 
-	justify-self: start;
+	justify-self: end;
 
 }
-
 
 .home-intro p {
 
@@ -741,6 +740,10 @@ select:focus-visible {
 
 .home-section-heading {
 
+	--chapter-block-width: 60%;
+
+	position: relative;
+
 	display: grid;
 
 	grid-template-columns: 3.8em 1fr;
@@ -749,29 +752,47 @@ select:focus-visible {
 
 	gap: 1em;
 
-	width: 72%;
+	width: 100%;
 
 	box-sizing: border-box;
 
-	margin-bottom: 2.8em;
+	margin-bottom: 2.6em;
 
 	padding: 1.55em 1.8em;
 
-	background: var(--angie-green);
+	background:
+		linear-gradient(
+			to right,
+			var(--angie-green) 0,
+			var(--angie-green) var(--chapter-block-width),
+			transparent var(--chapter-block-width),
+			transparent 100%
+		);
 
 }
 
 
-/* Both chapters use the same green */
+/* Thin editorial line extending from the color block */
 
-.home-fields .home-section-heading,
-.home-explore .home-section-heading {
+.home-section-heading::after {
+
+	content: "";
+
+	position: absolute;
+
+	left: var(--chapter-block-width);
+
+	right: 0;
+
+	top: 50%;
+
+	height: 1px;
 
 	background: var(--angie-green);
 
-	border-top-color: var(--angie-green);
+	transform: translateY(-50%);
 
-	border-bottom-color: var(--angie-green);
+	pointer-events: none;
 
 }
 
@@ -901,14 +922,14 @@ select:focus-visible {
 
 	min-height: 14.5em;
 
-	padding: 1.7em;
+	padding: 1.65em 1.5em;
 
-	background: rgba(255, 255, 255, 0.14);
+	background: transparent;
 
 	border: 0;
 
 	border-top:
-		solid 2px
+		solid 1px
 		var(--angie-green);
 
 	color: var(--angie-charcoal);
@@ -918,10 +939,10 @@ select:focus-visible {
 	overflow: hidden;
 
 	transition:
-		transform 0.24s ease,
-		background-color 0.24s ease,
-		border-color 0.24s ease,
-		box-shadow 0.24s ease;
+		transform 0.22s ease,
+		background-color 0.22s ease,
+		border-color 0.22s ease,
+		box-shadow 0.22s ease;
 
 }
 
@@ -931,15 +952,15 @@ select:focus-visible {
 .practice-item:hover,
 .explore-item:hover {
 
-	background: rgba(220, 234, 223, 0.55);
+	background: rgba(220, 234, 223, 0.42);
 
 	border-top-color: var(--angie-green);
 
 	box-shadow:
-		0 8px 20px
-		rgba(41, 43, 41, 0.045);
+		0 6px 16px
+		rgba(41, 43, 41, 0.035);
 
-	transform: translateY(-3px);
+	transform: translateY(-2px);
 
 	color: var(--angie-charcoal) !important;
 
@@ -1326,7 +1347,7 @@ input[type="button"]:hover {
 		padding-top: 0;
 
 		max-width: 100%;
-
+		justify-self: start;
 	}
 
 
@@ -1334,9 +1355,9 @@ input[type="button"]:hover {
 
 	.home-section-heading {
 
-		width: 84%;
+	--chapter-block-width: 72%;
 
-	}
+}
 
 
 	/* Cards become one column */
@@ -1439,17 +1460,28 @@ input[type="button"]:hover {
 
 	.home-section-heading {
 
-		width: 100%;
+	--chapter-block-width: 100%;
 
-		grid-template-columns: 2.6em 1fr;
+	width: 100%;
 
-		gap: 0.8em;
+	grid-template-columns: 2.6em 1fr;
 
-		padding: 1.45em 1.25em;
+	gap: 0.8em;
 
-		margin-bottom: 2.4em;
+	padding: 1.45em 1.25em;
 
-	}
+	margin-bottom: 2.4em;
+
+	background: var(--angie-green);
+
+}
+
+
+.home-section-heading::after {
+
+	display: none;
+
+}
 
 
 	.home-section-heading h2 {
