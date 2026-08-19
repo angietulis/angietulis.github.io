@@ -1,6 +1,6 @@
 /* ==========================================================
    Angie 劉泀嗪
-   Visual Identity V3
+   Visual Identity V3.1
 
    Editorial / Literary / Contemporary
    ========================================================== */
@@ -42,12 +42,12 @@
 	--angie-green-pale: #dceadf;
 
 
-	/* Terracotta */
-	--angie-terracotta: #c86445;
+	/* Energetic orange */
+	--angie-orange: #f47a1f;
 
-	--angie-terracotta-dark: #a94e34;
+	--angie-orange-dark: #d95f0f;
 
-	--angie-terracotta-pale: #f0ddd4;
+	--angie-orange-pale: #fde4d2;
 
 }
 
@@ -111,18 +111,18 @@ p {
 
 ::selection {
 
-	background: var(--angie-green);
+	background: var(--angie-orange);
 
-	color: #ffffff;
+	color: var(--angie-charcoal);
 
 }
 
 
 ::-moz-selection {
 
-	background: var(--angie-green);
+	background: var(--angie-orange);
 
-	color: #ffffff;
+	color: var(--angie-charcoal);
 
 }
 
@@ -229,9 +229,9 @@ a {
 
 a:hover {
 
-	color: var(--angie-terracotta) !important;
+	color: var(--angie-orange-dark) !important;
 
-	border-bottom-color: var(--angie-terracotta);
+	border-bottom-color: var(--angie-orange);
 
 }
 
@@ -615,7 +615,7 @@ a:hover {
 
 .home-disciplines a:hover {
 
-	color: var(--angie-green) !important;
+	color: var(--angie-orange-dark) !important;
 
 }
 
@@ -683,7 +683,16 @@ a:hover {
 
 .editorial-link span {
 
-	transition: transform 0.2s ease;
+	transition:
+		transform 0.2s ease,
+		color 0.2s ease;
+
+}
+
+
+.editorial-link:hover {
+
+	color: var(--angie-orange-dark) !important;
 
 }
 
@@ -691,6 +700,8 @@ a:hover {
 .editorial-link:hover span {
 
 	transform: translate(0.3em, -0.15em);
+
+	color: var(--angie-orange);
 
 }
 
@@ -727,15 +738,6 @@ a:hover {
 
 	padding: 1.9em 2.1em;
 
-}
-
-
-/* ----------------------------------------------------------
-   WHAT I DO — Green Chapter
-   ---------------------------------------------------------- */
-
-.home-fields .home-section-heading {
-
 	background: var(--angie-green);
 
 	border-top: solid 1px var(--angie-green);
@@ -745,59 +747,16 @@ a:hover {
 }
 
 
-.home-fields .section-number {
+/* Both chapters use the same green */
 
-	color: rgba(247, 243, 236, 0.72);
-
-}
-
-
-.home-fields .section-label {
-
-	color: rgba(247, 243, 236, 0.78);
-
-}
-
-
-.home-fields .home-section-heading h2 {
-
-	color: var(--angie-paper);
-
-}
-
-
-/* ----------------------------------------------------------
-   WHO I AM — Terracotta Chapter
-   ---------------------------------------------------------- */
-
+.home-fields .home-section-heading,
 .home-explore .home-section-heading {
 
-	background: var(--angie-terracotta);
+	background: var(--angie-green);
 
-	border-top: solid 1px var(--angie-terracotta);
+	border-top-color: var(--angie-green);
 
-	border-bottom: solid 1px var(--angie-terracotta);
-
-}
-
-
-.home-explore .section-number {
-
-	color: rgba(247, 243, 236, 0.72);
-
-}
-
-
-.home-explore .section-label {
-
-	color: rgba(247, 243, 236, 0.82);
-
-}
-
-
-.home-explore .home-section-heading h2 {
-
-	color: var(--angie-paper);
+	border-bottom-color: var(--angie-green);
 
 }
 
@@ -809,6 +768,8 @@ a:hover {
 	font-family:
 		"Noto Sans TC",
 		sans-serif;
+
+	color: rgba(247, 243, 236, 0.72);
 
 	font-size: 0.8em;
 
@@ -828,6 +789,8 @@ a:hover {
 .section-label {
 
 	margin: 0 0 0.4em 0;
+
+	color: rgba(247, 243, 236, 0.82);
 
 	font-family:
 		"Noto Sans TC",
@@ -849,6 +812,8 @@ a:hover {
 .home-section-heading h2 {
 
 	margin: 0;
+
+	color: var(--angie-paper);
 
 	font-family:
 		"Noto Serif TC",
@@ -929,6 +894,10 @@ a:hover {
 		solid 1px
 		var(--angie-line);
 
+	border-top:
+		solid 3px
+		var(--angie-green);
+
 	color: var(--angie-charcoal);
 
 	text-decoration: none;
@@ -944,32 +913,14 @@ a:hover {
 }
 
 
-/* WHAT I DO accent */
-
-.practice-item {
-
-	border-top:
-		solid 3px
-		var(--angie-green);
-
-}
-
-
-/* WHO I AM accent */
-
-.explore-item {
-
-	border-top:
-		solid 3px
-		var(--angie-terracotta);
-
-}
-
-
 /* Shared hover */
 
 .practice-item:hover,
 .explore-item:hover {
+
+	background: var(--angie-green-pale);
+
+	border-color: var(--angie-green);
 
 	box-shadow:
 		0 12px 30px
@@ -978,28 +929,6 @@ a:hover {
 	transform: translateY(-5px);
 
 	color: var(--angie-charcoal) !important;
-
-}
-
-
-/* WHAT I DO hover */
-
-.practice-item:hover {
-
-	background: var(--angie-green-pale);
-
-	border-color: var(--angie-green);
-
-}
-
-
-/* WHO I AM hover */
-
-.explore-item:hover {
-
-	background: var(--angie-terracotta-pale);
-
-	border-color: var(--angie-terracotta);
 
 }
 
@@ -1044,7 +973,7 @@ a:hover {
 		"Noto Sans TC",
 		sans-serif;
 
-	color: var(--angie-terracotta);
+	color: var(--angie-orange);
 
 	font-size: 0.76em;
 
@@ -1086,7 +1015,7 @@ a:hover {
 
 	transform: translate(0.18em, -0.14em);
 
-	color: var(--angie-terracotta);
+	color: var(--angie-orange);
 
 }
 
@@ -1200,7 +1129,7 @@ a:hover {
 
 	right: 1.45em;
 
-	color: var(--angie-terracotta);
+	color: var(--angie-green);
 
 	font-family:
 		"Noto Sans TC",
@@ -1223,7 +1152,7 @@ a:hover {
 
 	transform: translate(0.18em, -0.14em);
 
-	color: var(--angie-green-dark);
+	color: var(--angie-orange);
 
 }
 
