@@ -1,6 +1,6 @@
 /* ==========================================================
    Angie 劉泀嗪
-   Visual Identity V2
+   Visual Identity V3
 
    Editorial / Literary / Contemporary
    ========================================================== */
@@ -16,29 +16,38 @@
 
 :root {
 
+	/* Paper */
 	--angie-paper: #f7f3ec;
 
 	--angie-paper-deep: #eee8dd;
 
+	--angie-card: #fbf7ef;
+
+
+	/* Text */
 	--angie-charcoal: #292b29;
 
 	--angie-grey: #74766f;
 
-	--angie-line: #d7d0c5;
+	--angie-line: #cfc7ba;
 
 
-	/* 347C-inspired green */
-	--angie-green: #2f8f5b;
+	/* Botanical green */
+	--angie-green: #168a4c;
 
-	--angie-green-dark: #267548;
+	--angie-green-dark: #116b3d;
 
-	--angie-green-soft: #b9d8c4;
+	--angie-green-soft: #9bc9aa;
 
-	--angie-green-pale: #e2eee5;
+	--angie-green-pale: #dceadf;
 
 
-	/* Small contrast accent */
+	/* Terracotta */
 	--angie-terracotta: #c86445;
+
+	--angie-terracotta-dark: #a94e34;
+
+	--angie-terracotta-pale: #f0ddd4;
 
 }
 
@@ -48,7 +57,9 @@
    ========================================================== */
 
 html {
+
 	background: var(--angie-paper);
+
 }
 
 
@@ -100,7 +111,7 @@ p {
 
 ::selection {
 
-	background: #009a44;
+	background: var(--angie-green);
 
 	color: #ffffff;
 
@@ -109,7 +120,7 @@ p {
 
 ::-moz-selection {
 
-	background: #009a44;
+	background: var(--angie-green);
 
 	color: #ffffff;
 
@@ -153,8 +164,8 @@ h6 {
 /* ----------------------------------------------------------
    Chinese Name
 
-   Do NOT use the decorative Chinese web fonts here.
-   Use native Traditional Chinese system fonts first.
+   Keep system Traditional Chinese fonts here because they
+   correctly display 泀.
    ---------------------------------------------------------- */
 
 .name-zh,
@@ -189,7 +200,7 @@ h6 {
 }
 
 
-/* English labels inside the portfolio */
+/* English labels inside cards */
 
 .practice-en {
 
@@ -211,7 +222,7 @@ a {
 
 	color: var(--angie-green-dark);
 
-	border-bottom-color: rgba(47, 143, 91, 0.35);
+	border-bottom-color: rgba(22, 138, 76, 0.35);
 
 }
 
@@ -254,15 +265,15 @@ a:hover {
 
 .sidebar-brand a {
 
-	border: 0;
-
-	color: var(--angie-charcoal);
-
 	display: flex;
 
 	align-items: baseline;
 
 	gap: 0.45em;
+
+	border: 0;
+
+	color: var(--angie-charcoal);
 
 }
 
@@ -479,7 +490,9 @@ a:hover {
 
 	display: grid;
 
-	grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+	grid-template-columns:
+		minmax(0, 0.9fr)
+		minmax(0, 1.1fr);
 
 	gap: 7em;
 
@@ -683,7 +696,7 @@ a:hover {
 
 
 /* ==========================================================
-   08. Homepage Section Headings
+   08. Homepage Sections
    ========================================================== */
 
 .home-fields,
@@ -696,6 +709,10 @@ a:hover {
 }
 
 
+/* ==========================================================
+   09. Shared Section Heading
+   ========================================================== */
+
 .home-section-heading {
 
 	display: grid;
@@ -706,18 +723,86 @@ a:hover {
 
 	gap: 1.2em;
 
-	margin-bottom: 3.4em;
+	margin-bottom: 3.2em;
 
-	padding: 1.7em 2em;
-
-	background: var(--angie-green-pale);
-
-	border-top: solid 1px var(--angie-green-soft);
-
-	border-bottom: solid 1px var(--angie-green-soft);
+	padding: 1.9em 2.1em;
 
 }
 
+
+/* ----------------------------------------------------------
+   WHAT I DO — Green Chapter
+   ---------------------------------------------------------- */
+
+.home-fields .home-section-heading {
+
+	background: var(--angie-green);
+
+	border-top: solid 1px var(--angie-green);
+
+	border-bottom: solid 1px var(--angie-green);
+
+}
+
+
+.home-fields .section-number {
+
+	color: rgba(247, 243, 236, 0.72);
+
+}
+
+
+.home-fields .section-label {
+
+	color: rgba(247, 243, 236, 0.78);
+
+}
+
+
+.home-fields .home-section-heading h2 {
+
+	color: var(--angie-paper);
+
+}
+
+
+/* ----------------------------------------------------------
+   WHO I AM — Terracotta Chapter
+   ---------------------------------------------------------- */
+
+.home-explore .home-section-heading {
+
+	background: var(--angie-terracotta);
+
+	border-top: solid 1px var(--angie-terracotta);
+
+	border-bottom: solid 1px var(--angie-terracotta);
+
+}
+
+
+.home-explore .section-number {
+
+	color: rgba(247, 243, 236, 0.72);
+
+}
+
+
+.home-explore .section-label {
+
+	color: rgba(247, 243, 236, 0.82);
+
+}
+
+
+.home-explore .home-section-heading h2 {
+
+	color: var(--angie-paper);
+
+}
+
+
+/* Section number */
 
 .section-number {
 
@@ -725,26 +810,24 @@ a:hover {
 		"Noto Sans TC",
 		sans-serif;
 
-	color: var(--angie-terracotta);
-
 	font-size: 0.8em;
 
 	font-weight: 600;
 
-	letter-spacing: 0.12em;
+	letter-spacing: 0.14em;
 
 	align-self: start;
 
-	padding-top: 0.25em;
+	padding-top: 0.3em;
 
 }
 
 
+/* English chapter label */
+
 .section-label {
 
 	margin: 0 0 0.4em 0;
-
-	color: var(--angie-green-dark);
 
 	font-family:
 		"Noto Sans TC",
@@ -754,105 +837,269 @@ a:hover {
 
 	font-weight: 600;
 
-	letter-spacing: 0.2em;
+	letter-spacing: 0.22em;
 
 	line-height: 1.4;
 
 }
 
+
+/* Chinese chapter title */
 
 .home-section-heading h2 {
 
 	margin: 0;
 
-	color: var(--angie-charcoal);
-
 	font-family:
 		"Noto Serif TC",
 		serif;
 
-	font-size: 1.9em;
+	font-size: 1.95em;
 
 	font-weight: 500;
 
 	line-height: 1.4;
 
-	letter-spacing: 0.05em;
+	letter-spacing: 0.06em;
 
 }
 
+
 .section-heading-text {
+
 	min-width: 0;
+
 }
 
 
 /* ==========================================================
-   09. Practice / Fields List
+   10. Shared Homepage Card System
    ========================================================== */
 
+/* WHAT I DO — 2 × 2 */
+
 .practice-list {
-
-	border-top: solid 1px var(--angie-charcoal);
-
-}
-
-
-.practice-item {
 
 	display: grid;
 
 	grid-template-columns:
-		4.6em
-		minmax(12em, 1fr)
-		minmax(16em, 1.35fr)
-		2.5em;
+		repeat(2, minmax(0, 1fr));
 
-	gap: 1.4em;
-
-	align-items: center;
-
-	padding: 2.15em 0;
+	gap: 1.6em;
 
 	border: 0;
-
-	border-bottom: solid 1px var(--angie-line);
-
-	color: var(--angie-charcoal);
-
-	transition:
-		background-color 0.2s ease,
-		padding-left 0.2s ease,
-		padding-right 0.2s ease;
 
 }
 
 
-.practice-item:hover {
+/* WHO I AM — 3 cards */
 
-	background: rgba(47, 143, 91, 0.045);
+.explore-links {
 
-	padding-left: 1em;
+	display: grid;
 
-	padding-right: 1em;
+	grid-template-columns:
+		repeat(3, minmax(0, 1fr));
+
+	gap: 1.6em;
+
+	border: 0;
+
+}
+
+
+/* Shared card */
+
+.practice-item,
+.explore-item {
+
+	position: relative;
+
+	box-sizing: border-box;
+
+	min-width: 0;
+
+	min-height: 16.5em;
+
+	padding: 1.9em;
+
+	background: var(--angie-card);
+
+	border:
+		solid 1px
+		var(--angie-line);
+
+	color: var(--angie-charcoal);
+
+	text-decoration: none;
+
+	overflow: hidden;
+
+	transition:
+		transform 0.24s ease,
+		background-color 0.24s ease,
+		border-color 0.24s ease,
+		box-shadow 0.24s ease;
+
+}
+
+
+/* WHAT I DO accent */
+
+.practice-item {
+
+	border-top:
+		solid 3px
+		var(--angie-green);
+
+}
+
+
+/* WHO I AM accent */
+
+.explore-item {
+
+	border-top:
+		solid 3px
+		var(--angie-terracotta);
+
+}
+
+
+/* Shared hover */
+
+.practice-item:hover,
+.explore-item:hover {
+
+	box-shadow:
+		0 12px 30px
+		rgba(41, 43, 41, 0.09);
+
+	transform: translateY(-5px);
 
 	color: var(--angie-charcoal) !important;
 
 }
 
 
+/* WHAT I DO hover */
+
+.practice-item:hover {
+
+	background: var(--angie-green-pale);
+
+	border-color: var(--angie-green);
+
+}
+
+
+/* WHO I AM hover */
+
+.explore-item:hover {
+
+	background: var(--angie-terracotta-pale);
+
+	border-color: var(--angie-terracotta);
+
+}
+
+
+/* ==========================================================
+   11. WHAT I DO Cards
+   ========================================================== */
+
+.practice-item {
+
+	display: grid;
+
+	grid-template-columns:
+		minmax(0, 1fr)
+		auto;
+
+	grid-template-rows:
+		auto
+		auto
+		1fr;
+
+	gap: 0.8em 1em;
+
+	align-items: start;
+
+}
+
+
+/* Card number */
+
 .practice-number {
+
+	grid-column: 1;
+
+	grid-row: 1;
 
 	align-self: start;
 
-	padding-top: 0.3em;
+	padding: 0;
 
 	font-family:
-		Georgia,
-		serif;
+		"Noto Sans TC",
+		sans-serif;
 
 	color: var(--angie-terracotta);
 
-	font-size: 0.9em;
+	font-size: 0.76em;
+
+	font-weight: 600;
+
+	letter-spacing: 0.14em;
+
+	line-height: 1.4;
+
+}
+
+
+/* Arrow */
+
+.practice-arrow {
+
+	grid-column: 2;
+
+	grid-row: 1;
+
+	justify-self: end;
+
+	align-self: start;
+
+	color: var(--angie-green);
+
+	font-size: 1.3em;
+
+	line-height: 1;
+
+	transition:
+		transform 0.2s ease,
+		color 0.2s ease;
+
+}
+
+
+.practice-item:hover .practice-arrow {
+
+	transform: translate(0.18em, -0.14em);
+
+	color: var(--angie-terracotta);
+
+}
+
+
+/* Card title */
+
+.practice-title {
+
+	grid-column: 1 / -1;
+
+	grid-row: 2;
+
+	margin-top: 0.55em;
 
 }
 
@@ -865,117 +1112,131 @@ a:hover {
 		"Noto Serif TC",
 		serif;
 
-	font-size: 1.55em;
+	font-size: 1.72em;
 
 	font-weight: 500;
 
+	line-height: 1.35;
+
 }
 
+
+/* English subtitle */
 
 .practice-en {
 
-	color: var(--angie-green-dark);
-
-	font-size: 0.82em;
-
-	font-style: italic;
-
-}
-
-
-.practice-description {
-
 	margin: 0;
 
-	color: var(--angie-grey);
+	color: var(--angie-green-dark);
 
 	font-size: 0.9em;
 
-	line-height: 1.8;
+	font-style: italic;
+
+	line-height: 1.6;
 
 }
 
 
-.practice-arrow {
+/* Description */
 
-	text-align: right;
+.practice-description {
 
-	color: var(--angie-green);
+	grid-column: 1 / -1;
 
-	font-size: 1.3em;
+	grid-row: 3;
 
-	transition: transform 0.2s ease;
+	align-self: end;
 
-}
+	margin: 1.2em 0 0 0;
 
+	max-width: 31em;
 
-.practice-item:hover .practice-arrow {
+	color: var(--angie-grey);
 
-	transform: translate(0.25em, -0.15em);
+	font-size: 0.92em;
 
-	color: var(--angie-terracotta);
+	line-height: 1.85;
 
 }
 
 
 /* ==========================================================
-   10. Explore
+   12. WHO I AM Cards
    ========================================================== */
-
-.explore-links {
-
-	border-top: solid 1px var(--angie-charcoal);
-
-}
-
 
 .explore-item {
 
 	display: flex;
 
-	align-items: center;
+	flex-direction: column;
 
-	justify-content: space-between;
+	align-items: flex-start;
 
-	padding: 1.7em 0;
+	justify-content: flex-end;
 
-	border: 0;
-
-	border-bottom: solid 1px var(--angie-line);
-
-	color: var(--angie-charcoal);
+	padding-top: 4.5em;
 
 	font-family:
 		"Noto Serif TC",
 		serif;
 
-	font-size: 1.25em;
+	font-size: 1.22em;
+
+	font-weight: 500;
+
+	line-height: 1.55;
 
 }
 
 
-.explore-item:hover {
+/* Arrow in existing HTML */
 
-	padding-left: 0.7em;
+.explore-item > span {
 
-	padding-right: 0.7em;
+	position: absolute;
 
-	background: rgba(47, 143, 91, 0.045);
+	top: 1.45em;
 
-	color: var(--angie-green-dark) !important;
+	right: 1.45em;
+
+	color: var(--angie-terracotta);
+
+	font-family:
+		"Noto Sans TC",
+		sans-serif;
+
+	font-size: 1em;
+
+	font-weight: 400;
+
+	line-height: 1;
+
+	transition:
+		transform 0.2s ease,
+		color 0.2s ease;
+
+}
+
+
+.explore-item:hover > span {
+
+	transform: translate(0.18em, -0.14em);
+
+	color: var(--angie-green-dark);
 
 }
 
 
 .explore-contact {
 
-	color: var(--angie-green-dark);
+	color: var(--angie-charcoal);
 
 }
 
 
 /* ==========================================================
-   11. General Elements For Future Pages
+   13. General Elements For Future Pages
    ========================================================== */
 
 hr,
@@ -1001,7 +1262,9 @@ input[type="button"] {
 
 	background: transparent;
 
-	box-shadow: inset 0 0 0 1px var(--angie-green);
+	box-shadow:
+		inset 0 0 0 1px
+		var(--angie-green);
 
 	color: var(--angie-green-dark) !important;
 
@@ -1024,7 +1287,9 @@ input[type="button"]:hover {
 
 	background: var(--angie-green);
 
-	box-shadow: inset 0 0 0 1px var(--angie-green);
+	box-shadow:
+		inset 0 0 0 1px
+		var(--angie-green);
 
 	color: #ffffff !important;
 
@@ -1039,7 +1304,7 @@ input[type="button"]:hover {
 
 
 /* ==========================================================
-   12. Tablet
+   14. Tablet
    ========================================================== */
 
 @media screen and (max-width: 1280px) {
@@ -1058,13 +1323,10 @@ input[type="button"]:hover {
 	}
 
 
-	.practice-item {
+	.practice-item,
+	.explore-item {
 
-		grid-template-columns:
-			3.8em
-			minmax(10em, 1fr)
-			minmax(12em, 1.1fr)
-			2em;
+		min-height: 15em;
 
 	}
 
@@ -1072,7 +1334,7 @@ input[type="button"]:hover {
 
 
 /* ==========================================================
-   13. Smaller screens
+   15. Smaller Screens
    ========================================================== */
 
 @media screen and (max-width: 980px) {
@@ -1102,25 +1364,25 @@ input[type="button"]:hover {
 	}
 
 
-	.practice-item {
+	.practice-list,
+	.explore-links {
 
-		grid-template-columns: 3em 1fr 2em;
+		grid-template-columns: 1fr;
+
+	}
+
+
+	.practice-item,
+	.explore-item {
+
+		min-height: auto;
 
 	}
 
 
 	.practice-description {
 
-		grid-column: 2 / 4;
-
-	}
-
-
-	.practice-arrow {
-
-		grid-column: 3;
-
-		grid-row: 1;
+		align-self: start;
 
 	}
 
@@ -1128,7 +1390,7 @@ input[type="button"]:hover {
 
 
 /* ==========================================================
-   14. Mobile
+   16. Mobile
    ========================================================== */
 
 @media screen and (max-width: 736px) {
@@ -1198,46 +1460,88 @@ input[type="button"]:hover {
 
 	.home-section-heading {
 
-		grid-template-columns: 3em 1fr;
+		grid-template-columns: 2.6em 1fr;
+
+		gap: 0.8em;
+
+		padding: 1.45em 1.25em;
+
+		margin-bottom: 2.4em;
 
 	}
 
 
 	.home-section-heading h2 {
 
-		font-size: 1.7em;
+		font-size: 1.65em;
+
+	}
+
+
+	.practice-list,
+	.explore-links {
+
+		gap: 1em;
+
+	}
+
+
+	.practice-item,
+	.explore-item {
+
+		padding: 1.5em 1.3em;
 
 	}
 
 
 	.practice-item {
 
-		grid-template-columns: 2.5em 1fr 1.5em;
-
-		gap: 0.8em;
-
-		padding: 1.7em 0;
+		gap: 0.7em 0.8em;
 
 	}
 
 
 	.practice-title h3 {
 
-		font-size: 1.35em;
+		font-size: 1.45em;
 
 	}
 
 
-	.practice-description {
+	.practice-en {
 
 		font-size: 0.86em;
 
 	}
 
 
+	.practice-description {
+
+		margin-top: 0.8em;
+
+		font-size: 0.88em;
+
+		line-height: 1.8;
+
+	}
+
+
 	.explore-item {
 
-		font-size: 1.05em;
+		min-height: 10.5em;
+
+		padding-top: 3.8em;
+
+		font-size: 1.1em;
+
+	}
+
+
+	.explore-item > span {
+
+		top: 1.25em;
+
+		right: 1.25em;
 
 	}
 
