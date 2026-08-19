@@ -1,0 +1,298 @@
+/* =========================================
+   Angie 劉泀嗪 — Visual Identity V1
+   ========================================= */
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Klee+One:wght@400;600&family=Noto+Sans+TC:wght@400;500&family=Noto+Serif+TC:wght@400;500;600&display=swap');
+
+
+/* -----------------------------------------
+   Color System
+   ----------------------------------------- */
+
+:root {
+	--angie-cream: #f7f3ec;
+	--angie-cream-deep: #eee7dc;
+
+	--angie-charcoal: #292a2a;
+	--angie-grey: #6f706b;
+
+	--angie-green: #284b3b;
+	--angie-green-light: #7ea88a;
+
+	--angie-terracotta: #c85a3d;
+
+	--angie-line: #d8d1c6;
+}
+
+
+/* -----------------------------------------
+   Base
+   ----------------------------------------- */
+
+body {
+	background-color: var(--angie-cream);
+	color: var(--angie-charcoal);
+
+	font-family:
+		"Noto Serif TC",
+		serif;
+
+	line-height: 1.9;
+	letter-spacing: 0.02em;
+}
+
+
+/* -----------------------------------------
+   Text Selection
+   滑鼠反白
+   ----------------------------------------- */
+
+::selection {
+	background: var(--angie-green);
+	color: #ffffff;
+}
+
+::-moz-selection {
+	background: var(--angie-green);
+	color: #ffffff;
+}
+
+
+/* -----------------------------------------
+   Headings
+   ----------------------------------------- */
+
+h1,
+h2 {
+	color: var(--angie-charcoal);
+
+	font-family:
+		"Klee One",
+		"Noto Serif TC",
+		serif;
+
+	font-weight: 600;
+	letter-spacing: 0.04em;
+}
+
+
+h1 {
+	line-height: 1.35;
+}
+
+
+h3,
+h4,
+h5,
+h6 {
+	color: var(--angie-charcoal);
+
+	font-family:
+		"Noto Serif TC",
+		serif;
+}
+
+
+/* -----------------------------------------
+   English / Logo
+   ----------------------------------------- */
+
+.logo strong {
+	font-family:
+		"Fraunces",
+		"Klee One",
+		"Noto Serif TC",
+		serif;
+
+	font-weight: 500;
+	letter-spacing: 0.02em;
+}
+
+
+/* -----------------------------------------
+   Links
+   ----------------------------------------- */
+
+a {
+	color: var(--angie-green);
+	border-bottom-color: rgba(40, 75, 59, 0.35);
+}
+
+a:hover {
+	color: var(--angie-terracotta) !important;
+	border-bottom-color: var(--angie-terracotta);
+}
+
+
+/* -----------------------------------------
+   Main Area
+   ----------------------------------------- */
+
+#main {
+	background-color: var(--angie-cream);
+}
+
+#main > .inner {
+	max-width: 78em;
+}
+
+
+/* -----------------------------------------
+   Header
+   ----------------------------------------- */
+
+#header {
+	border-bottom-color: var(--angie-green);
+}
+
+#header .logo {
+	color: var(--angie-charcoal);
+}
+
+
+/* -----------------------------------------
+   Sidebar
+   ----------------------------------------- */
+
+#sidebar {
+	background-color: var(--angie-cream-deep);
+}
+
+#sidebar .inner {
+	background-color: transparent;
+}
+
+#menu ul a,
+#menu ul span {
+	font-family:
+		"Noto Sans TC",
+		sans-serif;
+
+	color: var(--angie-charcoal);
+	letter-spacing: 0.05em;
+}
+
+#menu ul a:hover,
+#menu ul span:hover {
+	color: var(--angie-green) !important;
+}
+
+
+/* -----------------------------------------
+   Section Headers
+   ----------------------------------------- */
+
+header.major > :last-child {
+	border-bottom-color: var(--angie-green);
+}
+
+
+/* -----------------------------------------
+   Buttons
+   ----------------------------------------- */
+
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+
+	background-color: transparent;
+	box-shadow: inset 0 0 0 2px var(--angie-green);
+
+	color: var(--angie-green) !important;
+
+	font-family:
+		"Noto Sans TC",
+		sans-serif;
+
+	letter-spacing: 0.08em;
+}
+
+
+.button:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover {
+
+	background-color: var(--angie-green);
+
+	box-shadow: inset 0 0 0 2px var(--angie-green);
+
+	color: #ffffff !important;
+}
+
+
+/* -----------------------------------------
+   Dividers
+   ----------------------------------------- */
+
+hr {
+	border-bottom-color: var(--angie-line);
+}
+
+hr.major {
+	border-bottom-color: var(--angie-line);
+}
+
+
+/* -----------------------------------------
+   Article Cards / Posts
+   ----------------------------------------- */
+
+.posts article {
+	border-color: var(--angie-line);
+}
+
+.posts article h3 {
+	font-family:
+		"Klee One",
+		"Noto Serif TC",
+		serif;
+}
+
+
+/* -----------------------------------------
+   Paragraphs
+   ----------------------------------------- */
+
+p {
+	color: var(--angie-charcoal);
+}
+
+
+/* -----------------------------------------
+   Accent text
+   ----------------------------------------- */
+
+strong {
+	color: var(--angie-charcoal);
+}
+
+
+/* -----------------------------------------
+   Footer
+   ----------------------------------------- */
+
+#footer {
+	color: var(--angie-grey);
+}
+
+
+/* -----------------------------------------
+   Small screens
+   ----------------------------------------- */
+
+@media screen and (max-width: 736px) {
+
+	body {
+		line-height: 1.8;
+	}
+
+	h1 {
+		line-height: 1.4;
+	}
+
+}
