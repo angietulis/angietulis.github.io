@@ -1,6 +1,6 @@
 /* ==========================================================
    Angie 劉泀嗪
-   Visual Identity V4.2
+   Visual Identity V4.3
 
    Editorial / Literary / Contemporary
    ========================================================== */
@@ -42,14 +42,8 @@
 	--angie-green-pale: #dceadf;
 
 
-	/* Energetic orange family */
+	/* Energetic orange */
 	--angie-orange: #f47a1f;
-
-	--angie-orange-light: #ff8a2a;
-
-	--angie-orange-deep: #e96b16;
-
-	--angie-orange-soft: #f98532;
 
 	--angie-orange-dark: #d95f0f;
 
@@ -929,7 +923,7 @@ select:focus-visible {
 
 /* ==========================================================
    10. WHAT I DO
-   Asymmetric Editorial Grid
+   Editorial Grid
    ========================================================== */
 
 .practice-editorial-grid {
@@ -941,7 +935,7 @@ select:focus-visible {
 
 	gap: 2.3em;
 
-	align-items: start;
+	align-items: stretch;
 
 }
 
@@ -949,8 +943,6 @@ select:focus-visible {
 /* Shared field item */
 
 .practice-editorial-item {
-
-	--card-hover-orange: var(--angie-orange);
 
 	position: relative;
 
@@ -961,6 +953,8 @@ select:focus-visible {
 	min-width: 0;
 
 	min-height: 21.5em;
+
+	height: 100%;
 
 	box-sizing: border-box;
 
@@ -978,36 +972,6 @@ select:focus-visible {
 		transform 0.22s ease,
 		background-color 0.22s ease,
 		color 0.22s ease;
-
-}
-
-
-/* Slightly different orange for each field */
-
-.practice-editorial-item:nth-child(1) {
-
-	--card-hover-orange: var(--angie-orange);
-
-}
-
-
-.practice-editorial-item:nth-child(2) {
-
-	--card-hover-orange: var(--angie-orange-light);
-
-}
-
-
-.practice-editorial-item:nth-child(3) {
-
-	--card-hover-orange: var(--angie-orange-deep);
-
-}
-
-
-.practice-editorial-item:nth-child(4) {
-
-	--card-hover-orange: var(--angie-orange-soft);
 
 }
 
@@ -1032,32 +996,32 @@ select:focus-visible {
 }
 
 
-/* 02 — plain */
+/* 02 — plain, aligned with other items */
 
 .practice-plain {
 
-	padding-top: 2.6em;
+	padding-top: 1.8em;
 
 }
 
 
-/* 03 — soft editorial block */
+/* 03 — soft editorial block, aligned */
 
 .practice-soft {
 
 	background:
 		rgba(220, 234, 223, 0.34);
 
-	padding-top: 2.2em;
+	padding-top: 1.8em;
 
 }
 
 
-/* 04 — lower placement */
+/* 04 — aligned */
 
 .practice-illustration {
 
-	margin-top: 1.4em;
+	margin-top: 0;
 
 }
 
@@ -1211,12 +1175,12 @@ select:focus-visible {
 
 
 /* ----------------------------------------------------------
-   WHAT I DO — Orange Hover
+   WHAT I DO — Unified Orange Hover
    ---------------------------------------------------------- */
 
 .practice-editorial-item:hover {
 
-	background: var(--card-hover-orange);
+	background: var(--angie-orange);
 
 	color: var(--angie-charcoal) !important;
 
@@ -1273,7 +1237,7 @@ select:focus-visible {
 
 .practice-outline:hover {
 
-	border-color: var(--card-hover-orange);
+	border-color: var(--angie-orange);
 
 }
 
@@ -1292,7 +1256,7 @@ select:focus-visible {
 
 	gap: 0;
 
-	align-items: start;
+	align-items: stretch;
 
 }
 
@@ -1301,8 +1265,6 @@ select:focus-visible {
 
 .explore-editorial-item {
 
-	--card-hover-orange: var(--angie-orange);
-
 	position: relative;
 
 	display: flex;
@@ -1310,6 +1272,8 @@ select:focus-visible {
 	flex-direction: column;
 
 	min-height: 13.5em;
+
+	height: 100%;
 
 	box-sizing: border-box;
 
@@ -1339,29 +1303,6 @@ select:focus-visible {
 }
 
 
-/* Slightly different orange for each WHO I AM entry */
-
-.explore-editorial-item:nth-child(1) {
-
-	--card-hover-orange: var(--angie-orange-light);
-
-}
-
-
-.explore-editorial-item:nth-child(2) {
-
-	--card-hover-orange: var(--angie-orange-deep);
-
-}
-
-
-.explore-editorial-item:nth-child(3) {
-
-	--card-hover-orange: var(--angie-orange);
-
-}
-
-
 .explore-editorial-item:first-child {
 
 	padding-left: 0.5em;
@@ -1376,11 +1317,11 @@ select:focus-visible {
 }
 
 
-/* Controlled asymmetry */
+/* All three items aligned */
 
 .explore-offset {
 
-	margin-top: 2.8em;
+	margin-top: 0;
 
 }
 
@@ -1486,12 +1427,12 @@ select:focus-visible {
 
 
 /* ----------------------------------------------------------
-   WHO I AM — Orange Hover
+   WHO I AM — Unified Orange Hover
    ---------------------------------------------------------- */
 
 .explore-editorial-item:hover {
 
-	background: var(--card-hover-orange);
+	background: var(--angie-orange);
 
 	color: var(--angie-charcoal) !important;
 
@@ -1741,12 +1682,16 @@ input[type="button"]:hover {
 			2em
 			2.5em;
 
+		align-items: stretch;
+
 	}
 
 
 	.practice-editorial-item {
 
 		min-height: 18em;
+
+		height: 100%;
 
 	}
 
@@ -1773,6 +1718,8 @@ input[type="button"]:hover {
 	.explore-editorial-item:first-child {
 
 		min-height: auto;
+
+		height: auto;
 
 		padding:
 			2em
@@ -1948,6 +1895,8 @@ input[type="button"]:hover {
 	.practice-illustration {
 
 		min-height: auto;
+
+		height: auto;
 
 		margin-top: 0;
 
