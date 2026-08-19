@@ -150,28 +150,56 @@ h6 {
 }
 
 
-/* Always keep the Chinese name in Noto Serif TC */
+/* ----------------------------------------------------------
+   Chinese Name
+
+   Do NOT use the decorative Chinese web fonts here.
+   Use native Traditional Chinese system fonts first.
+   ---------------------------------------------------------- */
 
 .name-zh,
 .sidebar-name-zh {
 
 	font-family:
-		"Noto Serif TC",
-		serif;
+		"Microsoft JhengHei",
+		"Microsoft JhengHei UI",
+		"PingFang TC",
+		"Heiti TC",
+		"Noto Sans TC",
+		sans-serif !important;
+
+	font-weight: 500;
 
 }
 
 
-/* English display type */
+/* ----------------------------------------------------------
+   English Signature
+   ---------------------------------------------------------- */
 
 .name-en,
 .sidebar-name-en {
-	font-family: "Allura", cursive;
+
+	font-family:
+		"Allura",
+		cursive;
+
+	font-weight: 400;
+
 }
 
+
+/* English labels inside the portfolio */
+
 .practice-en {
-	font-family: "Noto Serif TC", serif;
+
+	font-family:
+		"Noto Serif TC",
+		Georgia,
+		serif;
+
 	font-style: italic;
+
 }
 
 
@@ -241,9 +269,13 @@ a:hover {
 
 .sidebar-name-en {
 
-	font-size: 1.65em;
+	font-size: 2em;
 
-	font-weight: 500;
+	font-weight: 400;
+
+	line-height: 1;
+
+	color: var(--angie-green-dark);
 
 }
 
@@ -354,13 +386,12 @@ a:hover {
 .sidebar-location {
 
 	font-family:
-		"Fraunces",
-		"Noto Serif TC",
-		serif;
+		"Noto Sans TC",
+		sans-serif;
 
 	color: var(--angie-green-dark);
 
-	letter-spacing: 0.04em;
+	letter-spacing: 0.06em;
 
 }
 
@@ -487,23 +518,46 @@ a:hover {
 }
 
 
+/* Angie */
+
 .home-name .name-en {
+
 	display: block;
-	font-family: "Allura", cursive;
+
+	font-family:
+		"Allura",
+		cursive;
+
 	font-size: 6.2rem;
+
 	font-style: normal;
+
 	font-weight: 400;
+
 	color: var(--angie-green-dark);
+
 	line-height: 0.9;
+
 	letter-spacing: 0;
+
 }
 
+
+/* 劉泀嗪 */
 
 .home-name .name-zh {
 
 	display: block;
 
-	margin-top: 0.35em;
+	margin-top: 0.4em;
+
+	font-family:
+		"Microsoft JhengHei",
+		"Microsoft JhengHei UI",
+		"PingFang TC",
+		"Heiti TC",
+		"Noto Sans TC",
+		sans-serif !important;
 
 	font-size: 2.3rem;
 
@@ -511,7 +565,7 @@ a:hover {
 
 	color: var(--angie-charcoal);
 
-	letter-spacing: 0.14em;
+	letter-spacing: 0.12em;
 
 }
 
@@ -658,7 +712,7 @@ a:hover {
 .section-number {
 
 	font-family:
-		"Fraunces",
+		Georgia,
 		serif;
 
 	color: var(--angie-terracotta);
@@ -755,7 +809,7 @@ a:hover {
 	padding-top: 0.3em;
 
 	font-family:
-		"Fraunces",
+		Georgia,
 		serif;
 
 	color: var(--angie-terracotta);
@@ -767,9 +821,15 @@ a:hover {
 
 .practice-title h3 {
 
+	margin: 0 0 0.25em 0;
+
 	font-family:
 		"Noto Serif TC",
 		serif;
+
+	font-size: 1.55em;
+
+	font-weight: 500;
 
 }
 
@@ -955,7 +1015,7 @@ input[type="button"]:hover {
 
 	.home-name .name-en {
 
-		font-size: 4.3rem;
+		font-size: 5rem;
 
 	}
 
@@ -1062,7 +1122,7 @@ input[type="button"]:hover {
 
 	.home-name .name-en {
 
-		font-size: 3.4rem;
+		font-size: 4.2rem;
 
 	}
 
