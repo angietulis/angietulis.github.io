@@ -1,84 +1,139 @@
-/* =========================================
-   Angie 劉泀嗪 — Visual Identity V1
-   ========================================= */
+/* ==========================================================
+   Angie 劉泀嗪
+   Visual Identity V2
 
-/* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Klee+One:wght@400;600&family=Noto+Sans+TC:wght@400;500&family=Noto+Serif+TC:wght@400;500;600&display=swap');
+   Editorial / Literary / Contemporary
+   ========================================================== */
 
 
-/* -----------------------------------------
-   Color System
-   ----------------------------------------- */
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Iansui&family=Noto+Sans+TC:wght@400;500;600&family=Noto+Serif+TC:wght@400;500;600&display=swap');
+
+
+/* ==========================================================
+   01. Color System
+   ========================================================== */
 
 :root {
-	--angie-cream: #f7f3ec;
-	--angie-cream-deep: #eee7dc;
 
-	--angie-charcoal: #292a2a;
-	--angie-grey: #6f706b;
+	--angie-paper: #f7f3ec;
 
-	--angie-green: #284b3b;
-	--angie-green-light: #7ea88a;
+	--angie-paper-deep: #eee8dd;
 
-	--angie-terracotta: #c85a3d;
+	--angie-charcoal: #292b29;
 
-	--angie-line: #d8d1c6;
+	--angie-grey: #74766f;
+
+	--angie-line: #d7d0c5;
+
+
+	/* 347C-inspired green */
+	--angie-green: #2f8f5b;
+
+	--angie-green-dark: #267548;
+
+	--angie-green-soft: #b9d8c4;
+
+	--angie-green-pale: #e2eee5;
+
+
+	/* Small contrast accent */
+	--angie-terracotta: #c86445;
+
 }
 
 
-/* -----------------------------------------
-   Base
-   ----------------------------------------- */
+/* ==========================================================
+   02. Base
+   ========================================================== */
+
+html {
+	background: var(--angie-paper);
+}
+
 
 body {
-	background-color: var(--angie-cream);
+
+	background: var(--angie-paper);
+
 	color: var(--angie-charcoal);
 
 	font-family:
 		"Noto Serif TC",
 		serif;
 
+	font-size: 16px;
+
 	line-height: 1.9;
+
 	letter-spacing: 0.02em;
+
 }
 
 
-/* -----------------------------------------
-   Text Selection
-   滑鼠反白
-   ----------------------------------------- */
+#main {
+
+	background: var(--angie-paper);
+
+}
+
+
+#main > .inner {
+
+	max-width: 82em;
+
+	padding-top: 0;
+
+}
+
+
+p {
+
+	color: var(--angie-charcoal);
+
+}
+
+
+/* ==========================================================
+   03. Text Selection
+   ========================================================== */
 
 ::selection {
-	background: var(--angie-green);
+
+	background: #009a44;
+
 	color: #ffffff;
+
 }
+
 
 ::-moz-selection {
-	background: var(--angie-green);
+
+	background: #009a44;
+
 	color: #ffffff;
+
 }
 
 
-/* -----------------------------------------
-   Headings
-   ----------------------------------------- */
+/* ==========================================================
+   04. Typography
+   ========================================================== */
 
 h1,
 h2 {
-	color: var(--angie-charcoal);
 
 	font-family:
-		"Klee One",
+		"Iansui",
 		"Noto Serif TC",
 		serif;
 
-	font-weight: 600;
-	letter-spacing: 0.04em;
-}
+	color: var(--angie-charcoal);
 
+	font-weight: 400;
 
-h1 {
-	line-height: 1.35;
+	letter-spacing: 0.03em;
+
 }
 
 
@@ -86,111 +141,769 @@ h3,
 h4,
 h5,
 h6 {
-	color: var(--angie-charcoal);
 
 	font-family:
 		"Noto Serif TC",
 		serif;
+
+	color: var(--angie-charcoal);
+
 }
 
 
-/* -----------------------------------------
-   English / Logo
-   ----------------------------------------- */
+/* Always keep the Chinese name in Noto Serif TC */
 
-.logo strong {
+.name-zh,
+.sidebar-name-zh {
+
+	font-family:
+		"Noto Serif TC",
+		serif;
+
+}
+
+
+/* English display type */
+
+.name-en,
+.sidebar-name-en,
+.practice-en,
+.section-label {
+
 	font-family:
 		"Fraunces",
-		"Klee One",
-		"Noto Serif TC",
 		serif;
 
-	font-weight: 500;
-	letter-spacing: 0.02em;
 }
 
 
-/* -----------------------------------------
-   Links
-   ----------------------------------------- */
+/* ==========================================================
+   05. Links
+   ========================================================== */
 
 a {
-	color: var(--angie-green);
-	border-bottom-color: rgba(40, 75, 59, 0.35);
+
+	color: var(--angie-green-dark);
+
+	border-bottom-color: rgba(47, 143, 91, 0.35);
+
 }
+
 
 a:hover {
+
 	color: var(--angie-terracotta) !important;
+
 	border-bottom-color: var(--angie-terracotta);
+
 }
 
 
-/* -----------------------------------------
-   Main Area
-   ----------------------------------------- */
-
-#main {
-	background-color: var(--angie-cream);
-}
-
-#main > .inner {
-	max-width: 78em;
-}
-
-
-/* -----------------------------------------
-   Header
-   ----------------------------------------- */
-
-#header {
-	border-bottom-color: var(--angie-green);
-}
-
-#header .logo {
-	color: var(--angie-charcoal);
-}
-
-
-/* -----------------------------------------
-   Sidebar
-   ----------------------------------------- */
+/* ==========================================================
+   06. Sidebar
+   ========================================================== */
 
 #sidebar {
-	background-color: var(--angie-cream-deep);
+
+	background: var(--angie-paper-deep);
+
 }
 
-#sidebar .inner {
-	background-color: transparent;
+
+#sidebar > .inner {
+
+	background: transparent;
+
 }
 
-#menu ul a,
-#menu ul span {
+
+.sidebar-brand {
+
+	padding: 3.4em 0 2.8em 0;
+
+	border-bottom: solid 1px var(--angie-line);
+
+}
+
+
+.sidebar-brand a {
+
+	border: 0;
+
+	color: var(--angie-charcoal);
+
+	display: flex;
+
+	align-items: baseline;
+
+	gap: 0.45em;
+
+}
+
+
+.sidebar-name-en {
+
+	font-size: 1.65em;
+
+	font-weight: 500;
+
+}
+
+
+.sidebar-name-zh {
+
+	font-size: 1.05em;
+
+	font-weight: 500;
+
+	letter-spacing: 0.08em;
+
+}
+
+
+/* Menu */
+
+#menu {
+
+	border: 0;
+
+	margin: 0;
+
+	padding: 2.4em 0;
+
+}
+
+
+#menu > ul {
+
+	margin: 0;
+
+}
+
+
+#menu ul a {
+
+	border: 0;
+
+	color: var(--angie-charcoal);
+
 	font-family:
 		"Noto Sans TC",
 		sans-serif;
 
-	color: var(--angie-charcoal);
-	letter-spacing: 0.05em;
+	font-size: 0.92em;
+
+	font-weight: 400;
+
+	letter-spacing: 0.09em;
+
+	padding: 0.72em 0;
+
+	text-transform: none;
+
 }
 
-#menu ul a:hover,
-#menu ul span:hover {
+
+#menu ul a:hover {
+
 	color: var(--angie-green) !important;
+
+	padding-left: 0.35em;
+
 }
 
 
-/* -----------------------------------------
-   Section Headers
-   ----------------------------------------- */
+#menu ul > li {
+
+	border: 0;
+
+}
+
+
+#menu .sidebar-menu-space {
+
+	margin-top: 1.8em;
+
+	padding-top: 1.8em;
+
+	border-top: solid 1px var(--angie-line);
+
+}
+
+
+/* Sidebar note */
+
+.sidebar-note {
+
+	border-top: solid 1px var(--angie-line);
+
+	padding-top: 2em;
+
+	margin-top: 0;
+
+}
+
+
+.sidebar-note p {
+
+	font-size: 0.82em;
+
+	line-height: 1.8;
+
+}
+
+
+.sidebar-location {
+
+	font-family:
+		"Fraunces",
+		"Noto Serif TC",
+		serif;
+
+	color: var(--angie-green-dark);
+
+	letter-spacing: 0.04em;
+
+}
+
+
+.sidebar-contact-link {
+
+	font-family:
+		"Noto Sans TC",
+		sans-serif;
+
+	font-size: 0.92em;
+
+	border: 0;
+
+}
+
+
+/* Footer */
+
+#footer {
+
+	border-top: solid 1px var(--angie-line);
+
+	margin-top: 2.5em;
+
+	padding-top: 2em;
+
+}
+
+
+#footer .copyright {
+
+	color: var(--angie-grey);
+
+	font-size: 0.68em;
+
+	line-height: 1.8;
+
+}
+
+
+/* ==========================================================
+   07. Homepage Hero
+   ========================================================== */
+
+.home-hero {
+
+	border-bottom: solid 1px var(--angie-line);
+
+	padding: 4em 0 5.5em 0;
+
+}
+
+
+.home-topline {
+
+	display: flex;
+
+	justify-content: space-between;
+
+	align-items: center;
+
+	margin-bottom: 6em;
+
+	padding-bottom: 1em;
+
+	border-bottom: solid 1px var(--angie-line);
+
+	font-family:
+		"Noto Sans TC",
+		sans-serif;
+
+	font-size: 0.72em;
+
+	letter-spacing: 0.16em;
+
+	color: var(--angie-grey);
+
+	text-transform: uppercase;
+
+}
+
+
+.home-hero-grid {
+
+	display: grid;
+
+	grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+
+	gap: 7em;
+
+	align-items: start;
+
+}
+
+
+.home-eyebrow {
+
+	margin: 0 0 1.2em 0;
+
+	color: var(--angie-green);
+
+	font-family:
+		"Iansui",
+		"Noto Serif TC",
+		serif;
+
+	font-size: 1.02em;
+
+	letter-spacing: 0.12em;
+
+}
+
+
+.home-name {
+
+	margin: 0;
+
+	font-weight: 400;
+
+	line-height: 1;
+
+	letter-spacing: 0;
+
+}
+
+
+.home-name .name-en {
+
+	display: block;
+
+	font-size: 5rem;
+
+	font-weight: 500;
+
+	color: var(--angie-green-dark);
+
+	line-height: 0.95;
+
+}
+
+
+.home-name .name-zh {
+
+	display: block;
+
+	margin-top: 0.35em;
+
+	font-size: 2.3rem;
+
+	font-weight: 500;
+
+	color: var(--angie-charcoal);
+
+	letter-spacing: 0.14em;
+
+}
+
+
+.home-disciplines {
+
+	display: flex;
+
+	flex-wrap: wrap;
+
+	gap: 0.55em;
+
+	margin: 2.4em 0 0 0;
+
+	font-family:
+		"Noto Sans TC",
+		sans-serif;
+
+	font-size: 0.9em;
+
+	letter-spacing: 0.08em;
+
+}
+
+
+.home-disciplines a {
+
+	border: 0;
+
+	color: var(--angie-charcoal);
+
+}
+
+
+.home-disciplines a:hover {
+
+	color: var(--angie-green) !important;
+
+}
+
+
+.home-disciplines span {
+
+	color: var(--angie-green-soft);
+
+}
+
+
+/* Intro */
+
+.home-intro {
+
+	padding-top: 1.4em;
+
+	max-width: 46em;
+
+}
+
+
+.home-intro p {
+
+	font-size: 1.04em;
+
+	line-height: 2.05;
+
+	margin-bottom: 1.7em;
+
+}
+
+
+.home-intro-link {
+
+	margin-top: 2.5em;
+
+}
+
+
+.editorial-link {
+
+	display: inline-flex;
+
+	align-items: center;
+
+	gap: 1.1em;
+
+	border: 0;
+
+	font-family:
+		"Noto Sans TC",
+		sans-serif;
+
+	font-size: 0.9em;
+
+	font-weight: 500;
+
+	letter-spacing: 0.08em;
+
+	color: var(--angie-green-dark);
+
+}
+
+
+.editorial-link span {
+
+	transition: transform 0.2s ease;
+
+}
+
+
+.editorial-link:hover span {
+
+	transform: translate(0.3em, -0.15em);
+
+}
+
+
+/* ==========================================================
+   08. Homepage Section Headings
+   ========================================================== */
+
+.home-fields,
+.home-explore {
+
+	padding: 5.5em 0;
+
+	border-bottom: solid 1px var(--angie-line);
+
+}
+
+
+.home-section-heading {
+
+	display: grid;
+
+	grid-template-columns: 4.6em 1fr;
+
+	align-items: start;
+
+	margin-bottom: 3.4em;
+
+}
+
+
+.section-number {
+
+	font-family:
+		"Fraunces",
+		serif;
+
+	color: var(--angie-terracotta);
+
+	font-size: 1.05em;
+
+}
+
+
+.section-label {
+
+	margin: 0 0 0.25em 0;
+
+	color: var(--angie-green);
+
+	font-size: 0.72em;
+
+	letter-spacing: 0.18em;
+
+}
+
+
+.home-section-heading h2 {
+
+	margin: 0;
+
+	font-size: 2.15em;
+
+}
+
+
+/* ==========================================================
+   09. Practice / Fields List
+   ========================================================== */
+
+.practice-list {
+
+	border-top: solid 1px var(--angie-charcoal);
+
+}
+
+
+.practice-item {
+
+	display: grid;
+
+	grid-template-columns:
+		4.6em
+		minmax(12em, 1fr)
+		minmax(16em, 1.35fr)
+		2.5em;
+
+	gap: 1.4em;
+
+	align-items: center;
+
+	padding: 2.15em 0;
+
+	border: 0;
+
+	border-bottom: solid 1px var(--angie-line);
+
+	color: var(--angie-charcoal);
+
+	transition:
+		background-color 0.2s ease,
+		padding-left 0.2s ease,
+		padding-right 0.2s ease;
+
+}
+
+
+.practice-item:hover {
+
+	background: rgba(47, 143, 91, 0.045);
+
+	padding-left: 1em;
+
+	padding-right: 1em;
+
+	color: var(--angie-charcoal) !important;
+
+}
+
+
+.practice-number {
+
+	align-self: start;
+
+	padding-top: 0.3em;
+
+	font-family:
+		"Fraunces",
+		serif;
+
+	color: var(--angie-terracotta);
+
+	font-size: 0.9em;
+
+}
+
+
+.practice-title h3 {
+
+	margin: 0 0 0.25em 0;
+
+	font-family:
+		"Iansui",
+		"Noto Serif TC",
+		serif;
+
+	font-size: 1.55em;
+
+	font-weight: 400;
+
+}
+
+
+.practice-en {
+
+	color: var(--angie-green-dark);
+
+	font-size: 0.82em;
+
+	font-style: italic;
+
+}
+
+
+.practice-description {
+
+	margin: 0;
+
+	color: var(--angie-grey);
+
+	font-size: 0.9em;
+
+	line-height: 1.8;
+
+}
+
+
+.practice-arrow {
+
+	text-align: right;
+
+	color: var(--angie-green);
+
+	font-size: 1.3em;
+
+	transition: transform 0.2s ease;
+
+}
+
+
+.practice-item:hover .practice-arrow {
+
+	transform: translate(0.25em, -0.15em);
+
+	color: var(--angie-terracotta);
+
+}
+
+
+/* ==========================================================
+   10. Explore
+   ========================================================== */
+
+.explore-links {
+
+	border-top: solid 1px var(--angie-charcoal);
+
+}
+
+
+.explore-item {
+
+	display: flex;
+
+	align-items: center;
+
+	justify-content: space-between;
+
+	padding: 1.7em 0;
+
+	border: 0;
+
+	border-bottom: solid 1px var(--angie-line);
+
+	color: var(--angie-charcoal);
+
+	font-family:
+		"Iansui",
+		"Noto Serif TC",
+		serif;
+
+	font-size: 1.25em;
+
+}
+
+
+.explore-item:hover {
+
+	padding-left: 0.7em;
+
+	padding-right: 0.7em;
+
+	background: rgba(47, 143, 91, 0.045);
+
+	color: var(--angie-green-dark) !important;
+
+}
+
+
+.explore-contact {
+
+	color: var(--angie-green-dark);
+
+}
+
+
+/* ==========================================================
+   11. General Elements For Future Pages
+   ========================================================== */
+
+hr,
+hr.major {
+
+	border-bottom-color: var(--angie-line);
+
+}
+
 
 header.major > :last-child {
+
 	border-bottom-color: var(--angie-green);
+
 }
 
-
-/* -----------------------------------------
-   Buttons
-   ----------------------------------------- */
 
 .button,
 button,
@@ -198,16 +911,20 @@ input[type="submit"],
 input[type="reset"],
 input[type="button"] {
 
-	background-color: transparent;
-	box-shadow: inset 0 0 0 2px var(--angie-green);
+	background: transparent;
 
-	color: var(--angie-green) !important;
+	box-shadow: inset 0 0 0 1px var(--angie-green);
+
+	color: var(--angie-green-dark) !important;
 
 	font-family:
 		"Noto Sans TC",
 		sans-serif;
 
+	font-weight: 500;
+
 	letter-spacing: 0.08em;
+
 }
 
 
@@ -217,82 +934,223 @@ input[type="submit"]:hover,
 input[type="reset"]:hover,
 input[type="button"]:hover {
 
-	background-color: var(--angie-green);
+	background: var(--angie-green);
 
-	box-shadow: inset 0 0 0 2px var(--angie-green);
+	box-shadow: inset 0 0 0 1px var(--angie-green);
 
 	color: #ffffff !important;
+
 }
 
-
-/* -----------------------------------------
-   Dividers
-   ----------------------------------------- */
-
-hr {
-	border-bottom-color: var(--angie-line);
-}
-
-hr.major {
-	border-bottom-color: var(--angie-line);
-}
-
-
-/* -----------------------------------------
-   Article Cards / Posts
-   ----------------------------------------- */
 
 .posts article {
+
 	border-color: var(--angie-line);
-}
 
-.posts article h3 {
-	font-family:
-		"Klee One",
-		"Noto Serif TC",
-		serif;
 }
 
 
-/* -----------------------------------------
-   Paragraphs
-   ----------------------------------------- */
+/* ==========================================================
+   12. Tablet
+   ========================================================== */
 
-p {
-	color: var(--angie-charcoal);
+@media screen and (max-width: 1280px) {
+
+	.home-hero-grid {
+
+		gap: 4em;
+
+	}
+
+
+	.home-name .name-en {
+
+		font-size: 4.3rem;
+
+	}
+
+
+	.practice-item {
+
+		grid-template-columns:
+			3.8em
+			minmax(10em, 1fr)
+			minmax(12em, 1.1fr)
+			2em;
+
+	}
+
 }
 
 
-/* -----------------------------------------
-   Accent text
-   ----------------------------------------- */
+/* ==========================================================
+   13. Smaller screens
+   ========================================================== */
 
-strong {
-	color: var(--angie-charcoal);
+@media screen and (max-width: 980px) {
+
+	.home-topline {
+
+		margin-bottom: 4em;
+
+	}
+
+
+	.home-hero-grid {
+
+		grid-template-columns: 1fr;
+
+		gap: 3.5em;
+
+	}
+
+
+	.home-intro {
+
+		padding-top: 0;
+
+		max-width: 100%;
+
+	}
+
+
+	.practice-item {
+
+		grid-template-columns: 3em 1fr 2em;
+
+	}
+
+
+	.practice-description {
+
+		grid-column: 2 / 4;
+
+	}
+
+
+	.practice-arrow {
+
+		grid-column: 3;
+
+		grid-row: 1;
+
+	}
+
 }
 
 
-/* -----------------------------------------
-   Footer
-   ----------------------------------------- */
-
-#footer {
-	color: var(--angie-grey);
-}
-
-
-/* -----------------------------------------
-   Small screens
-   ----------------------------------------- */
+/* ==========================================================
+   14. Mobile
+   ========================================================== */
 
 @media screen and (max-width: 736px) {
 
 	body {
+
+		font-size: 15px;
+
 		line-height: 1.8;
+
 	}
 
-	h1 {
-		line-height: 1.4;
+
+	.home-hero {
+
+		padding: 2.5em 0 4em 0;
+
+	}
+
+
+	.home-topline {
+
+		margin-bottom: 3em;
+
+		font-size: 0.65em;
+
+	}
+
+
+	.home-name .name-en {
+
+		font-size: 3.4rem;
+
+	}
+
+
+	.home-name .name-zh {
+
+		font-size: 1.75rem;
+
+	}
+
+
+	.home-disciplines {
+
+		line-height: 2;
+
+	}
+
+
+	.home-intro p {
+
+		font-size: 1em;
+
+		line-height: 1.95;
+
+	}
+
+
+	.home-fields,
+	.home-explore {
+
+		padding: 4em 0;
+
+	}
+
+
+	.home-section-heading {
+
+		grid-template-columns: 3em 1fr;
+
+	}
+
+
+	.home-section-heading h2 {
+
+		font-size: 1.7em;
+
+	}
+
+
+	.practice-item {
+
+		grid-template-columns: 2.5em 1fr 1.5em;
+
+		gap: 0.8em;
+
+		padding: 1.7em 0;
+
+	}
+
+
+	.practice-title h3 {
+
+		font-size: 1.35em;
+
+	}
+
+
+	.practice-description {
+
+		font-size: 0.86em;
+
+	}
+
+
+	.explore-item {
+
+		font-size: 1.05em;
+
 	}
 
 }
