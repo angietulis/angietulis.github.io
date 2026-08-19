@@ -7,7 +7,7 @@
 
 
 /* Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Iansui&family=Noto+Sans+TC:wght@400;500;600&family=Noto+Serif+TC:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Noto+Sans+TC:wght@400;500;600&family=Noto+Serif+TC:wght@400;500;600&display=swap');
 
 
 /* ==========================================================
@@ -124,13 +124,12 @@ h1,
 h2 {
 
 	font-family:
-		"Iansui",
 		"Noto Serif TC",
 		serif;
 
 	color: var(--angie-charcoal);
 
-	font-weight: 400;
+	font-weight: 500;
 
 	letter-spacing: 0.03em;
 
@@ -167,11 +166,10 @@ h6 {
 
 .name-en,
 .sidebar-name-en,
-.practice-en,
-.section-label {
+.practice-en {
 
 	font-family:
-		"Fraunces",
+		"Cormorant Garamond",
 		serif;
 
 }
@@ -466,7 +464,6 @@ a:hover {
 	color: var(--angie-green);
 
 	font-family:
-		"Iansui",
 		"Noto Serif TC",
 		serif;
 
@@ -494,13 +491,19 @@ a:hover {
 
 	display: block;
 
-	font-size: 5rem;
+	font-family: "Cormorant Garamond", serif;
 
-	font-weight: 500;
+	font-size: 5.2rem;
+
+	font-style: italic;
+
+	font-weight: 400;
 
 	color: var(--angie-green-dark);
 
 	line-height: 0.95;
+
+	letter-spacing: -0.02em;
 
 }
 
@@ -680,6 +683,10 @@ a:hover {
 
 	color: var(--angie-green);
 
+	font-family:
+		"Noto Sans TC",
+		sans-serif;
+
 	font-size: 0.72em;
 
 	letter-spacing: 0.18em;
@@ -769,16 +776,9 @@ a:hover {
 
 .practice-title h3 {
 
-	margin: 0 0 0.25em 0;
-
 	font-family:
-		"Iansui",
 		"Noto Serif TC",
 		serif;
-
-	font-size: 1.55em;
-
-	font-weight: 400;
 
 }
 
@@ -857,7 +857,6 @@ a:hover {
 	color: var(--angie-charcoal);
 
 	font-family:
-		"Iansui",
 		"Noto Serif TC",
 		serif;
 
