@@ -232,7 +232,19 @@ a:hover {
 	color: var(--angie-orange-dark) !important;
 
 	border-bottom-color: var(--angie-orange);
+}
+	
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
 
+	outline: solid 2px var(--angie-orange);
+
+	outline-offset: 3px;
+
+	
 }
 
 
@@ -347,12 +359,11 @@ a:hover {
 
 #menu ul a:hover {
 
-	color: var(--angie-green) !important;
+	color: var(--angie-orange-dark) !important;
 
 	padding-left: 0.35em;
 
 }
-
 
 #menu ul > li {
 
@@ -633,7 +644,9 @@ a:hover {
 
 	padding-top: 1.4em;
 
-	max-width: 46em;
+	max-width: 38em;
+
+	justify-self: start;
 
 }
 
@@ -728,21 +741,17 @@ a:hover {
 
 	display: grid;
 
-	grid-template-columns: 4.5em 1fr;
+	grid-template-columns: 3.8em 1fr;
 
 	align-items: center;
 
-	gap: 1.2em;
+	gap: 1em;
 
-	margin-bottom: 3.2em;
+	margin-bottom: 2.8em;
 
-	padding: 1.9em 2.1em;
+	padding: 1.55em 1.8em;
 
 	background: var(--angie-green);
-
-	border-top: solid 1px var(--angie-green);
-
-	border-bottom: solid 1px var(--angie-green);
 
 }
 
@@ -769,9 +778,9 @@ a:hover {
 		"Noto Sans TC",
 		sans-serif;
 
-	color: rgba(247, 243, 236, 0.72);
+	color: rgba(247, 243, 236, 0.62);
 
-	font-size: 0.8em;
+	font-size: 0.74em;
 
 	font-weight: 600;
 
@@ -788,15 +797,15 @@ a:hover {
 
 .section-label {
 
-	margin: 0 0 0.4em 0;
+	margin: 0 0 0.35em 0;
 
-	color: rgba(247, 243, 236, 0.82);
+	color: rgba(247, 243, 236, 0.8);
 
 	font-family:
 		"Noto Sans TC",
 		sans-serif;
 
-	font-size: 0.72em;
+	font-size: 0.68em;
 
 	font-weight: 600;
 
@@ -819,7 +828,7 @@ a:hover {
 		"Noto Serif TC",
 		serif;
 
-	font-size: 1.95em;
+	font-size: 1.8em;
 
 	font-weight: 500;
 
@@ -884,9 +893,9 @@ a:hover {
 
 	min-width: 0;
 
-	min-height: 16.5em;
+	min-height: 14.5em;
 
-	padding: 1.9em;
+	padding: 1.7em;
 
 	background: var(--angie-card);
 
@@ -1100,13 +1109,13 @@ a:hover {
 
 	position: relative;
 
-	min-height: 13em;
+	min-height: 11.5em;
 
 	padding:
-		4.8em
-		4.5em
-		1.8em
-		1.8em;
+		4.1em
+		4.2em
+		1.6em
+		1.6em;
 
 	font-family:
 		"Noto Serif TC",
@@ -1219,13 +1228,13 @@ input[type="submit"]:hover,
 input[type="reset"]:hover,
 input[type="button"]:hover {
 
-	background: var(--angie-green);
+	background: var(--angie-orange);
 
 	box-shadow:
 		inset 0 0 0 1px
-		var(--angie-green);
+		var(--angie-orange);
 
-	color: #ffffff !important;
+	color: var(--angie-charcoal) !important;
 
 }
 
@@ -1261,26 +1270,24 @@ input[type="button"]:hover {
 
 	.practice-item {
 
-		min-height: 15em;
+	min-height: 14em;
 
-	}
+}
 
 
-	/* WHO I AM cards */
+.explore-item {
 
-	.explore-item {
+	min-height: 11em;
 
-		min-height: 12.5em;
+	padding:
+		4em
+		3.6em
+		1.5em
+		1.5em;
 
-		padding:
-			4.4em
-			3.8em
-			1.7em
-			1.7em;
+	font-size: 1.12em;
 
-		font-size: 1.12em;
-
-	}
+}
 
 }
 
