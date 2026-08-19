@@ -7,7 +7,7 @@
 
 
 /* Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Noto+Sans+TC:wght@400;500;600&family=Noto+Serif+TC:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Noto+Sans+TC:wght@400;500;600&family=Noto+Serif+TC:wght@400;500;600&display=swap');
 
 
 /* ==========================================================
@@ -165,13 +165,13 @@ h6 {
 /* English display type */
 
 .name-en,
-.sidebar-name-en,
+.sidebar-name-en {
+	font-family: "Allura", cursive;
+}
+
 .practice-en {
-
-	font-family:
-		"Cormorant Garamond",
-		serif;
-
+	font-family: "Noto Serif TC", serif;
+	font-style: italic;
 }
 
 
@@ -488,23 +488,14 @@ a:hover {
 
 
 .home-name .name-en {
-
 	display: block;
-
-	font-family: "Cormorant Garamond", serif;
-
-	font-size: 5.2rem;
-
-	font-style: italic;
-
+	font-family: "Allura", cursive;
+	font-size: 6.2rem;
+	font-style: normal;
 	font-weight: 400;
-
 	color: var(--angie-green-dark);
-
-	line-height: 0.95;
-
-	letter-spacing: -0.02em;
-
+	line-height: 0.9;
+	letter-spacing: 0;
 }
 
 
