@@ -1974,4 +1974,136 @@ input[type="button"]:hover {
 
 	}
 
+/* ==========================================================
+   16. Mobile Touch Interaction
+   ========================================================== */
+
+@media (hover: none) and (pointer: coarse) {
+
+	/* Remove browser default tap flash */
+	.practice-editorial-item,
+	.explore-editorial-item {
+
+		-webkit-tap-highlight-color: transparent;
+
+	}
+
+
+	/* ------------------------------------------
+	   WHAT I DO — Touch
+	   ------------------------------------------ */
+
+	.practice-editorial-item:active {
+
+		background: var(--angie-accent);
+
+		color: var(--angie-charcoal) !important;
+
+		transform: translateY(-3px);
+
+	}
+
+
+	.practice-editorial-item:active .practice-number {
+
+		color: var(--angie-green-dark);
+
+	}
+
+
+	.practice-editorial-item:active .practice-title h3 {
+
+		color: var(--angie-charcoal);
+
+	}
+
+
+	.practice-editorial-item:active .practice-en {
+
+		color: var(--angie-green-dark);
+
+	}
+
+
+	.practice-editorial-item:active .practice-description {
+
+		color: var(--angie-charcoal);
+
+	}
+
+
+	.practice-editorial-item:active .practice-arrow {
+
+		color: var(--angie-green-dark);
+
+		transform: translate(0.12em, -0.08em);
+
+	}
+
+
+	.practice-editorial-item:active .practice-arrow::after {
+
+		width: 6em;
+
+		background: var(--angie-green-dark);
+
+	}
+
+
+	.practice-outline:active {
+
+		border-color: var(--angie-accent);
+
+	}
+
+
+
+	/* ------------------------------------------
+	   WHO I AM — Touch
+	   ------------------------------------------ */
+
+	.explore-editorial-item:active {
+
+		background: var(--angie-accent);
+
+		color: var(--angie-charcoal) !important;
+
+		transform: translateY(-3px);
+
+	}
+
+
+	.explore-editorial-item:active .explore-kicker {
+
+		color: var(--angie-green-dark);
+
+	}
+
+
+	.explore-editorial-item:active h3 {
+
+		color: var(--angie-charcoal);
+
+		border-bottom-color: var(--angie-green-dark);
+
+	}
+
+
+	.explore-editorial-item:active .explore-description {
+
+		color: var(--angie-charcoal);
+
+	}
+
+
+	.explore-editorial-item:active .explore-arrow {
+
+		color: var(--angie-green-dark);
+
+		transform: translate(0.14em, -0.1em);
+
+	}
+
+}
+	
 }
