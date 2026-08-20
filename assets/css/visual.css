@@ -2350,18 +2350,20 @@ input[type="button"]:hover {
 		serif;
 
 	font-size: clamp(
-		2.25em,
-		4vw,
-		3.65em
+		2em,
+		3vw,
+		2.75em
 	);
 
 	font-weight: 500;
 
 	line-height: 1.35;
 
-	letter-spacing: 0.08em;
+	letter-spacing: 0.05em;
 
 	color: var(--angie-charcoal);
+
+	white-space: nowrap;
 
 }
 
@@ -3425,6 +3427,8 @@ input[type="button"]:hover {
 		line-height: 1.45;
 
 		letter-spacing: 0.06em;
+
+		white-space: normal;
 
 	}
 
