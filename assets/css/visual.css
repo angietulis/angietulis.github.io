@@ -2593,10 +2593,6 @@ input[type="button"]:hover {
 
 	object-position: center;
 
-	filter:
-		saturate(0.82)
-		contrast(0.96);
-
 }
 
 
