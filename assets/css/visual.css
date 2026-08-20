@@ -1,7 +1,8 @@
 /* ==========================================================
    Angie 劉泀嗪
-   Visual Identity V4.3
+   Visual Identity V4.4
 
+   Forest Green × Dusty Pink
    Editorial / Literary / Contemporary
    ========================================================== */
 
@@ -18,34 +19,27 @@
 
 	/* Paper */
 	--angie-paper: #f7f3ec;
-
 	--angie-paper-deep: #eee8dd;
-
 	--angie-card: #fbf7ef;
 
 
 	/* Text */
 	--angie-charcoal: #292b29;
-
 	--angie-grey: #74766f;
-
 	--angie-line: #cfc7ba;
 
 
-	/* Botanical green */
-	--angie-green: #168a4c;
-
-	--angie-green-dark: #116b3d;
-
-	--angie-green-soft: #9bc9aa;
-
-	--angie-green-pale: #dceadf;
+	/* Forest green */
+	--angie-green: #287052;
+	--angie-green-dark: #1e5540;
+	--angie-green-soft: #afcdbd;
+	--angie-green-pale: #e2ece5;
 
 
-	/* Energetic orange */
-	--angie-orange: #eda56f;
---angie-orange-dark: #cf8150;
---angie-orange-pale: #f7e5d7;
+	/* Dusty pink accent */
+	--angie-accent: #d98b8b;
+	--angie-accent-dark: #c97878;
+	--angie-accent-pale: #f3e2e2;
 
 }
 
@@ -109,7 +103,7 @@ p {
 
 ::selection {
 
-	background: var(--angie-orange);
+	background: var(--angie-accent);
 
 	color: var(--angie-charcoal);
 
@@ -118,7 +112,7 @@ p {
 
 ::-moz-selection {
 
-	background: var(--angie-orange);
+	background: var(--angie-accent);
 
 	color: var(--angie-charcoal);
 
@@ -199,16 +193,16 @@ a {
 
 	color: var(--angie-green-dark);
 
-	border-bottom-color: rgba(22, 138, 76, 0.35);
+	border-bottom-color: rgba(40, 112, 82, 0.35);
 
 }
 
 
 a:hover {
 
-	color: var(--angie-orange-dark) !important;
+	color: var(--angie-accent-dark) !important;
 
-	border-bottom-color: var(--angie-orange);
+	border-bottom-color: var(--angie-accent);
 
 }
 
@@ -219,7 +213,7 @@ input:focus-visible,
 textarea:focus-visible,
 select:focus-visible {
 
-	outline: solid 2px var(--angie-orange);
+	outline: solid 2px var(--angie-accent);
 
 	outline-offset: 3px;
 
@@ -243,6 +237,8 @@ select:focus-visible {
 
 }
 
+
+/* Sidebar brand */
 
 .sidebar-brand {
 
@@ -292,7 +288,7 @@ select:focus-visible {
 }
 
 
-/* Menu */
+/* Sidebar menu */
 
 #menu {
 
@@ -337,7 +333,7 @@ select:focus-visible {
 
 #menu ul a:hover {
 
-	color: var(--angie-orange-dark) !important;
+	color: var(--angie-accent-dark) !important;
 
 	padding-left: 0.35em;
 
@@ -362,7 +358,8 @@ select:focus-visible {
 }
 
 
-/* Sidebar note */
+/* Sidebar note
+   Kept here in case other pages still use it */
 
 .sidebar-note {
 
@@ -447,6 +444,8 @@ select:focus-visible {
 }
 
 
+/* Top line */
+
 .home-topline {
 
 	display: flex;
@@ -476,6 +475,8 @@ select:focus-visible {
 }
 
 
+/* Hero grid */
+
 .home-hero-grid {
 
 	display: grid;
@@ -490,6 +491,8 @@ select:focus-visible {
 
 }
 
+
+/* Eyebrow */
 
 .home-eyebrow {
 
@@ -507,6 +510,8 @@ select:focus-visible {
 
 }
 
+
+/* Name */
 
 .home-name {
 
@@ -573,6 +578,8 @@ select:focus-visible {
 }
 
 
+/* Disciplines */
+
 .home-disciplines {
 
 	display: flex;
@@ -605,7 +612,7 @@ select:focus-visible {
 
 .home-disciplines a:hover {
 
-	color: var(--angie-orange-dark) !important;
+	color: var(--angie-accent-dark) !important;
 
 }
 
@@ -648,6 +655,8 @@ select:focus-visible {
 }
 
 
+/* Editorial text link */
+
 .editorial-link {
 
 	display: inline-flex;
@@ -684,7 +693,7 @@ select:focus-visible {
 
 .editorial-link:hover {
 
-	color: var(--angie-orange-dark) !important;
+	color: var(--angie-accent-dark) !important;
 
 }
 
@@ -693,7 +702,7 @@ select:focus-visible {
 
 	transform: translate(0.3em, -0.15em);
 
-	color: var(--angie-orange);
+	color: var(--angie-accent);
 
 }
 
@@ -780,7 +789,7 @@ select:focus-visible {
 }
 
 
-/* Fine line extending from the plate */
+/* Fine green line with dusty-pink endpoint */
 
 .home-section-heading::after {
 
@@ -803,8 +812,8 @@ select:focus-visible {
 	background:
 		radial-gradient(
 			circle at right center,
-			var(--angie-orange) 0,
-			var(--angie-orange) 2px,
+			var(--angie-accent) 0,
+			var(--angie-accent) 2px,
 			transparent 2.5px
 		),
 		linear-gradient(
@@ -853,7 +862,7 @@ select:focus-visible {
 		Georgia,
 		serif;
 
-	color: rgba(247, 243, 236, 0.24);
+	color: rgba(247, 243, 236, 0.27);
 
 	font-size: 5.2em;
 
@@ -872,7 +881,7 @@ select:focus-visible {
 
 	margin: 0 0 0.45em 0;
 
-	color: rgba(247, 243, 236, 0.88);
+	color: rgba(247, 243, 236, 0.9);
 
 	font-family:
 		"Noto Sans TC",
@@ -980,7 +989,7 @@ select:focus-visible {
 
 	border:
 		solid 1px
-		rgba(17, 107, 61, 0.34);
+		rgba(40, 112, 82, 0.34);
 
 	clip-path: polygon(
 		0.75em 0,
@@ -994,7 +1003,7 @@ select:focus-visible {
 }
 
 
-/* 02 — plain, aligned with other items */
+/* 02 — plain and aligned */
 
 .practice-plain {
 
@@ -1003,12 +1012,12 @@ select:focus-visible {
 }
 
 
-/* 03 — soft editorial block, aligned */
+/* 03 — pale green block and aligned */
 
 .practice-soft {
 
 	background:
-		rgba(220, 234, 223, 0.34);
+		rgba(226, 236, 229, 0.62);
 
 	padding-top: 1.8em;
 
@@ -1032,7 +1041,7 @@ select:focus-visible {
 
 	margin-bottom: 1.5em;
 
-	color: var(--angie-orange);
+	color: var(--angie-accent-dark);
 
 	font-family:
 		"Noto Sans TC",
@@ -1078,6 +1087,8 @@ select:focus-visible {
 
 }
 
+
+/* English subtitle */
 
 .practice-en {
 
@@ -1173,12 +1184,12 @@ select:focus-visible {
 
 
 /* ----------------------------------------------------------
-   WHAT I DO — Unified Orange Hover
+   WHAT I DO — Dusty Pink Hover
    ---------------------------------------------------------- */
 
 .practice-editorial-item:hover {
 
-	background: var(--angie-orange);
+	background: var(--angie-accent);
 
 	color: var(--angie-charcoal) !important;
 
@@ -1187,12 +1198,16 @@ select:focus-visible {
 }
 
 
+/* Number */
+
 .practice-editorial-item:hover .practice-number {
 
-	color: var(--angie-paper);
+	color: var(--angie-green-dark);
 
 }
 
+
+/* Chinese title */
 
 .practice-editorial-item:hover .practice-title h3 {
 
@@ -1201,12 +1216,16 @@ select:focus-visible {
 }
 
 
+/* English subtitle */
+
 .practice-editorial-item:hover .practice-en {
 
-	color: var(--angie-charcoal);
+	color: var(--angie-green-dark);
 
 }
 
+
+/* Description */
 
 .practice-editorial-item:hover .practice-description {
 
@@ -1215,27 +1234,33 @@ select:focus-visible {
 }
 
 
+/* Arrow */
+
 .practice-editorial-item:hover .practice-arrow {
 
-	color: var(--angie-paper);
+	color: var(--angie-green-dark);
 
 	transform: translate(0.12em, -0.08em);
 
 }
 
 
+/* Rule */
+
 .practice-editorial-item:hover .practice-arrow::after {
 
 	width: 6em;
 
-	background: var(--angie-paper);
+	background: var(--angie-green-dark);
 
 }
 
 
+/* Border disappears into hover */
+
 .practice-outline:hover {
 
-	border-color: var(--angie-orange);
+	border-color: var(--angie-accent);
 
 }
 
@@ -1315,7 +1340,7 @@ select:focus-visible {
 }
 
 
-/* All three items aligned */
+/* All three entries aligned */
 
 .explore-offset {
 
@@ -1425,12 +1450,12 @@ select:focus-visible {
 
 
 /* ----------------------------------------------------------
-   WHO I AM — Unified Orange Hover
+   WHO I AM — Dusty Pink Hover
    ---------------------------------------------------------- */
 
 .explore-editorial-item:hover {
 
-	background: var(--angie-orange);
+	background: var(--angie-accent);
 
 	color: var(--angie-charcoal) !important;
 
@@ -1443,7 +1468,7 @@ select:focus-visible {
 
 .explore-editorial-item:hover .explore-kicker {
 
-	color: var(--angie-paper);
+	color: var(--angie-green-dark);
 
 }
 
@@ -1454,7 +1479,7 @@ select:focus-visible {
 
 	color: var(--angie-charcoal);
 
-	border-bottom-color: var(--angie-paper);
+	border-bottom-color: var(--angie-green-dark);
 
 }
 
@@ -1472,7 +1497,7 @@ select:focus-visible {
 
 .explore-editorial-item:hover .explore-arrow {
 
-	color: var(--angie-paper);
+	color: var(--angie-green-dark);
 
 	transform: translate(0.14em, -0.1em);
 
@@ -1497,6 +1522,8 @@ header.major > :last-child {
 
 }
 
+
+/* Buttons */
 
 .button,
 button,
@@ -1529,11 +1556,11 @@ input[type="submit"]:hover,
 input[type="reset"]:hover,
 input[type="button"]:hover {
 
-	background: var(--angie-orange);
+	background: var(--angie-accent);
 
 	box-shadow:
 		inset 0 0 0 1px
-		var(--angie-orange);
+		var(--angie-accent);
 
 	color: var(--angie-charcoal) !important;
 
