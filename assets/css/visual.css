@@ -2273,3 +2273,51 @@ input[type="button"]:hover {
 
 }
 
+/* ==========================================================
+   EXPERIENCE — Skill Map Image
+   ========================================================== */
+
+.experience-skill-map-image {
+	width: min(100%, 58em);
+	margin: 0 auto;
+	padding: 0;
+	line-height: 0;
+}
+
+.experience-skill-map-image img {
+	display: block;
+	width: 100%;
+	height: auto;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+
+/* Tablet */
+
+@media screen and (max-width: 980px) {
+
+	.experience-skill-map-image {
+		width: 100%;
+	}
+
+}
+
+
+/* Mobile */
+
+@media screen and (max-width: 736px) {
+
+	.experience-skill-map-image {
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	.experience-skill-map-image img {
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+
+}
