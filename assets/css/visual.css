@@ -2207,3 +2207,14 @@ input[type="button"]:hover {
     left: -2.35em;
   }
 }
+
+/* ==========================================================
+   EXPERIENCE — Force circle content to true center
+   ========================================================== */
+
+.skill-circle > * {
+  width: 62%;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center;
+}
