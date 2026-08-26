@@ -1944,6 +1944,17 @@ input[type="button"]:hover {
   color: var(--angie-green-dark);
 }
 
+.experience-skill-card h3 a {
+  color: inherit;
+  border: 0;
+  text-decoration: none;
+}
+
+.experience-skill-card h3 a:hover {
+  color: var(--angie-accent-dark) !important;
+}
+
+
 .experience-skill-card ul {
   margin: 0 0 2em;
   padding-left: 1.1em;
