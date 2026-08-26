@@ -3572,8 +3572,8 @@ input[type="button"]:hover {
 .skill-map {
 	position: relative;
 
-	width: min(100%, 52em);
-	aspect-ratio: 1.22 / 1;
+	width: min(100%, 58em);
+	aspect-ratio: 1.18 / 1;
 
 	margin: 0 auto;
 
@@ -3589,7 +3589,7 @@ input[type="button"]:hover {
 	position: absolute;
 	z-index: 1;
 
-	width: 44%;
+	width: 47%;
 	aspect-ratio: 1 / 1;
 
 	box-sizing: border-box;
@@ -3607,40 +3607,31 @@ input[type="button"]:hover {
 /* 01 — Literature */
 
 .skill-circle-literature {
-	top: 2%;
-	left: 14%;
+	top: 1%;
+	left: 10%;
 
 	background: rgba(226, 236, 229, 0.72);
 }
 
-
-/* 02 — Content */
-
 .skill-circle-content {
-	top: 2%;
-	right: 14%;
+	top: 1%;
+	right: 10%;
 
 	background: rgba(243, 226, 226, 0.72);
 
 	border-color: rgba(217, 139, 139, 0.22);
 }
 
-
-/* 03 — Teaching */
-
 .skill-circle-teaching {
-	left: 14%;
-	bottom: 7%;
+	left: 10%;
+	bottom: 4%;
 
 	background: rgba(226, 236, 229, 0.66);
 }
 
-
-/* 04 — Governance */
-
 .skill-circle-governance {
-	right: 14%;
-	bottom: 7%;
+	right: 10%;
+	bottom: 4%;
 
 	background: rgba(243, 226, 226, 0.66);
 
@@ -3726,7 +3717,7 @@ input[type="button"]:hover {
 	margin: 0 0 0.28em 0;
 
 	font-family: "Noto Serif TC", serif;
-	font-size: 1.08em;
+	font-size: 1.12em;
 	font-weight: 500;
 	line-height: 1.45;
 	letter-spacing: 0.035em;
@@ -3742,9 +3733,9 @@ input[type="button"]:hover {
 	margin-bottom: 0.9em !important;
 
 	font-family: "Noto Sans TC", sans-serif;
-	font-size: 0.58em;
+	font-size: 0.6em;
 	font-weight: 400;
-	line-height: 1.5;
+	line-height: 1.55;
 	letter-spacing: 0.04em;
 
 	color: var(--angie-grey);
@@ -3779,13 +3770,12 @@ input[type="button"]:hover {
 	padding: 0;
 
 	font-family: "Noto Sans TC", sans-serif;
-	font-size: 0.68em;
+	font-size: 0.7em;
 	font-weight: 400;
-	line-height: 1.4;
+	line-height: 1.45;
 
 	color: var(--angie-charcoal);
 }
-
 
 /* ==========================================================
    SHARED SKILLS
@@ -3899,7 +3889,7 @@ input[type="button"]:hover {
 	margin: 0 0 0.35em 0;
 
 	font-family: "Noto Sans TC", sans-serif;
-	font-size: 0.48em;
+	font-size: 0.5em;
 	font-weight: 600;
 	line-height: 1.3;
 	letter-spacing: 0.12em;
@@ -3907,14 +3897,11 @@ input[type="button"]:hover {
 	color: var(--angie-accent-dark);
 }
 
-
-/* 核心能力 */
-
 .skill-core h2 {
 	margin: 0 0 0.6em 0;
 
 	font-family: "Noto Serif TC", serif;
-	font-size: 0.98em;
+	font-size: 1.02em;
 	font-weight: 500;
 	line-height: 1.3;
 	letter-spacing: 0.06em;
@@ -3922,24 +3909,13 @@ input[type="button"]:hover {
 	color: var(--angie-green-dark);
 }
 
-
-/* Core capability list */
-
-.skill-core ul {
-	margin: 0;
-	padding: 0;
-
-	list-style: none;
-}
-
-
 .skill-core li {
 	margin: 0 0 0.28em 0;
 
 	font-family: "Noto Sans TC", sans-serif;
-	font-size: 0.59em;
+	font-size: 0.61em;
 	font-weight: 400;
-	line-height: 1.35;
+	line-height: 1.4;
 
 	color: var(--angie-charcoal);
 }
