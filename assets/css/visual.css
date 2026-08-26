@@ -2090,7 +2090,7 @@ input[type="button"]:hover {
 	border: 0;
 
 	font-family: "Noto Sans TC", sans-serif;
-	font-size: clamp(1.15em, 2vw, 1.55em);
+	font-size: 0.9em;
 	font-weight: 500;
 	letter-spacing: 0.02em;
 
