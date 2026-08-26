@@ -2320,4 +2320,13 @@ input[type="button"]:hover {
 	}
 
 }
+
+}
+/* EXPERIENCE — Slightly shift skill map left on desktop */
+@media screen and (min-width: 981px) {
+
+	.experience-skill-map-image {
+		transform: translateX(-2.5em);
+	}
+
 }
