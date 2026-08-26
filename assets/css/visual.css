@@ -1587,27 +1587,68 @@ input[type="button"]:hover {
 
 /* ==========================================================
    22. EXPERIENCE — Skill Map Image
+   Keep original image proportions
    ========================================================== */
-.skill-map-section {
-  margin: 4.5em 0 0;
-}
 
 .experience-skill-map-image {
-  position: relative;
-  left: -3em;
-  width: min(100%, 36em);
-  margin: 0 auto;
-  padding: 0;
-  line-height: 0;
+	width: min(100%, 36em);
+	margin: 0 auto;
+	padding: 0;
+	line-height: 0;
 }
 
 .experience-skill-map-image img {
-  display: block;
-  width: 100%;
-  height: auto;
-  margin: 0;
-  padding: 0;
-  border: 0;
+	display: block;
+
+	width: 100%;
+	max-width: 100%;
+
+	height: auto;
+
+	margin: 0;
+	padding: 0;
+	border: 0;
+
+	object-fit: contain;
+}
+
+
+/* Desktop — slight left shift */
+
+@media screen and (min-width: 981px) {
+
+	.experience-skill-map-image {
+		position: relative;
+		left: -3em;
+	}
+
+}
+
+
+/* Tablet */
+
+@media screen and (max-width: 980px) {
+
+	.experience-skill-map-image {
+		width: min(82%, 31em);
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+}
+
+
+/* Mobile */
+
+@media screen and (max-width: 736px) {
+
+	.experience-skill-map-image {
+		width: 100%;
+		max-width: 26em;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
 }
 
 /* ==========================================================
