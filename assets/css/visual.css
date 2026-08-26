@@ -2220,57 +2220,56 @@ input[type="button"]:hover {
 }
 
 /* ==========================================================
-   EXPERIENCE — Desktop Circle Alignment
-   Equal circles + aligned lower domains
+   EXPERIENCE — Lower Circle Alignment Fix
    ========================================================== */
 
 @media screen and (min-width: 981px) {
 
-	/* Keep all four circles exactly the same size */
+  /* 03 / 04 must remain true circles */
+  .skill-circle-teaching,
+  .skill-circle-governance {
+    display: block !important;
 
-	.skill-circle-literature,
-	.skill-circle-content,
-	.skill-circle-teaching,
-	.skill-circle-governance {
-		width: 47% !important;
-		aspect-ratio: 1 / 1;
-	}
+    width: 47% !important;
+    height: auto !important;
+    min-height: 0 !important;
 
+    aspect-ratio: 1 / 1 !important;
 
-	/* Perfect vertical symmetry */
-
-	.skill-circle-literature,
-	.skill-circle-content {
-		top: 1%;
-	}
-
-	.skill-circle-teaching,
-	.skill-circle-governance {
-		bottom: 1%;
-	}
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
 
 
-	/* 03 + 04 start from exactly the same height */
-
-	.skill-circle-teaching,
-	.skill-circle-governance {
-		display: flex !important;
-		flex-direction: column !important;
-		justify-content: flex-start !important;
-
-		padding-top: 52% !important;
-		padding-bottom: 0 !important;
-	}
+  /* Perfect vertical symmetry with 01 / 02 */
+  .skill-circle-teaching,
+  .skill-circle-governance {
+    bottom: 1% !important;
+  }
 
 
-	/* Keep their content horizontally centred */
+  /*
+     Move the LOWER content group down
+     WITHOUT changing the size of the circle.
 
-	.skill-circle-teaching > *,
-	.skill-circle-governance > * {
-		width: 62%;
-		margin-left: auto !important;
-		margin-right: auto !important;
-		text-align: center;
-	}
+     The margin is applied only to the first element (03 / 04),
+     so the rest of the content naturally follows it.
+  */
+  .skill-circle-teaching .skill-circle-number,
+  .skill-circle-governance .skill-circle-number {
+    margin-top: 48% !important;
+  }
+
+
+  /*
+     03 English title has two lines,
+     04 English title has one line.
+     Reserve the same vertical space so their skill rows align.
+  */
+  .skill-circle-teaching .skill-circle-en,
+  .skill-circle-governance .skill-circle-en {
+    min-height: 3.1em;
+  }
 
 }
+
