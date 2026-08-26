@@ -1661,10 +1661,15 @@ input[type="button"]:hover {
   padding-top: 8.5%;
 }
 
-/* Lower pair: identical vertical start */
+/* Lower pair: anchor content safely inside the lower circles.
+   Using flex-end avoids pushing the text outside the circle when its size changes. */
 .skill-circle-teaching,
 .skill-circle-governance {
-  padding-top: 52%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-top: 0;
+  padding-bottom: 10%;
 }
 
 .skill-circle-number {
@@ -1913,6 +1918,23 @@ input[type="button"]:hover {
   color: var(--angie-accent-dark);
 }
 
+.experience-skill-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55em;
+  margin: 0 0 0.75em;
+  border: 0;
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 0.68em;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: var(--angie-green-dark);
+}
+
+.experience-skill-link:hover {
+  color: var(--angie-accent-dark) !important;
+}
+
 .experience-skill-card h3 {
   margin: 0 0 1.3em;
   font-family: "Noto Serif TC", serif;
@@ -2007,43 +2029,6 @@ input[type="button"]:hover {
   color: var(--angie-grey);
 }
 
-.experience-related {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  margin-top: 5.5em;
-  border-top: 1px solid var(--angie-line);
-  border-bottom: 1px solid var(--angie-line);
-}
-
-.experience-related a {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.35em 1.25em;
-  border: 0;
-  border-right: 1px solid var(--angie-line);
-  font-family: "Noto Sans TC", sans-serif;
-  font-size: 0.82em;
-  letter-spacing: 0.05em;
-  color: var(--angie-charcoal);
-}
-
-.experience-related a:last-child { border-right: 0; }
-.experience-related a span {
-  color: var(--angie-green);
-  transition: transform 0.2s ease, color 0.2s ease;
-}
-
-.experience-related a:hover {
-  background: var(--angie-accent);
-  color: var(--angie-charcoal) !important;
-}
-
-.experience-related a:hover span {
-  color: var(--angie-green-dark);
-  transform: translate(0.12em, -0.08em);
-}
-
 /* ==========================================================
    24. EXPERIENCE — Responsive
    ========================================================== */
@@ -2080,11 +2065,6 @@ input[type="button"]:hover {
   .experience-skill-card:nth-child(-n+2) { border-bottom: 1px solid var(--angie-line); }
   .experience-skill-card:first-child { padding-left: 1.6em; }
 
-  .experience-related {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-  .experience-related a:nth-child(2) { border-right: 0; }
-  .experience-related a:nth-child(-n+2) { border-bottom: 1px solid var(--angie-line); }
 }
 
 @media screen and (max-width: 736px) {
@@ -2131,7 +2111,8 @@ input[type="button"]:hover {
   }
   .skill-circle-teaching,
   .skill-circle-governance {
-    padding-top: 51%;
+    padding-top: 0;
+    padding-bottom: 8%;
   }
   .skill-circle-literature > *,
   .skill-circle-teaching > * {
@@ -2221,12 +2202,4 @@ input[type="button"]:hover {
   .education-timeline-marker {
     left: -2.35em;
   }
-  .experience-related {
-    grid-template-columns: 1fr;
-  }
-  .experience-related a {
-    border-right: 0;
-    border-bottom: 1px solid var(--angie-line);
-  }
-  .experience-related a:last-child { border-bottom: 0; }
 }
