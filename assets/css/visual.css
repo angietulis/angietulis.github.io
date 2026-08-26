@@ -2201,20 +2201,19 @@ input[type="button"]:hover {
 	grid-template-columns:
 		repeat(4, minmax(0, 1fr));
 
+	width: 100%;
+
 	border-top: solid 1px var(--angie-line);
 	border-bottom: solid 1px var(--angie-line);
 }
 
 .contact-collaboration-item {
 	min-width: 0;
+	box-sizing: border-box;
 
-	padding: 1.8em 1.4em 2em;
+	padding: 1.8em 1.6em 2em;
 
 	border-right: solid 1px var(--angie-line);
-}
-
-.contact-collaboration-item:first-child {
-	padding-left: 0.5em;
 }
 
 .contact-collaboration-item:last-child {
