@@ -1,4045 +1,2232 @@
 /* ==========================================================
    Angie 劉泀嗪
-   Visual Identity V4.4
+   Visual Identity V4.5
 
    Forest Green × Dusty Pink
    Editorial / Literary / Contemporary
    ========================================================== */
 
-
 /* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Allura&family=Noto+Sans+TC:wght@400;500;600&family=Noto+Serif+TC:wght@400;500;600&display=swap');
-
 
 /* ==========================================================
    01. Color System
    ========================================================== */
-
 :root {
-
-	/* Paper */
-	--angie-paper: #f7f3ec;
-	--angie-paper-deep: #eee8dd;
-	--angie-card: #fbf7ef;
-
-
-	/* Text */
-	--angie-charcoal: #292b29;
-	--angie-grey: #74766f;
-	--angie-line: #cfc7ba;
-
-
-	/* Forest green */
-	--angie-green: #287052;
-	--angie-green-dark: #1e5540;
-	--angie-green-soft: #afcdbd;
-	--angie-green-pale: #e2ece5;
-
-
-	/* Dusty pink accent */
-	--angie-accent: #d98b8b;
-	--angie-accent-dark: #c97878;
-	--angie-accent-pale: #f3e2e2;
-
+  --angie-paper: #f7f3ec;
+  --angie-paper-deep: #eee8dd;
+  --angie-card: #fbf7ef;
+  --angie-charcoal: #292b29;
+  --angie-grey: #74766f;
+  --angie-line: #cfc7ba;
+  --angie-green: #287052;
+  --angie-green-dark: #1e5540;
+  --angie-green-soft: #afcdbd;
+  --angie-green-pale: #e2ece5;
+  --angie-accent: #d98b8b;
+  --angie-accent-dark: #c97878;
+  --angie-accent-pale: #f3e2e2;
 }
-
 
 /* ==========================================================
    02. Base
    ========================================================== */
-
-html {
-
-	background: var(--angie-paper);
-
+html,
+body,
+#main {
+  background: var(--angie-paper);
 }
-
 
 body {
-
-	background: var(--angie-paper);
-
-	color: var(--angie-charcoal);
-
-	font-family:
-		"Noto Serif TC",
-		serif;
-
-	font-size: 16px;
-
-	line-height: 1.9;
-
-	letter-spacing: 0.02em;
-
+  color: var(--angie-charcoal);
+  font-family: "Noto Serif TC", serif;
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.02em;
 }
-
-
-#main {
-
-	background: var(--angie-paper);
-
-}
-
 
 #main > .inner {
-
-	max-width: 82em;
-
-	padding-top: 0;
-
+  max-width: 82em;
+  padding-top: 0;
 }
-
 
 p {
-
-	color: var(--angie-charcoal);
-
+  color: var(--angie-charcoal);
 }
-
 
 /* ==========================================================
    03. Text Selection
    ========================================================== */
-
 ::selection {
-
-	background: var(--angie-accent);
-
-	color: var(--angie-charcoal);
-
+  background: var(--angie-accent);
+  color: var(--angie-charcoal);
 }
-
 
 ::-moz-selection {
-
-	background: var(--angie-accent);
-
-	color: var(--angie-charcoal);
-
+  background: var(--angie-accent);
+  color: var(--angie-charcoal);
 }
-
 
 /* ==========================================================
    04. Typography
    ========================================================== */
-
 h1,
 h2 {
-
-	font-family:
-		"Noto Serif TC",
-		serif;
-
-	color: var(--angie-charcoal);
-
-	font-weight: 500;
-
-	letter-spacing: 0.03em;
-
+  font-family: "Noto Serif TC", serif;
+  color: var(--angie-charcoal);
+  font-weight: 500;
+  letter-spacing: 0.03em;
 }
-
 
 h3,
 h4,
 h5,
 h6 {
-
-	font-family:
-		"Noto Serif TC",
-		serif;
-
-	color: var(--angie-charcoal);
-
+  font-family: "Noto Serif TC", serif;
+  color: var(--angie-charcoal);
 }
-
-
-/* Chinese name */
 
 .name-zh,
 .sidebar-name-zh {
-
-	font-family:
-		"Microsoft JhengHei",
-		"Microsoft JhengHei UI",
-		"PingFang TC",
-		"Heiti TC",
-		"Noto Sans TC",
-		sans-serif !important;
-
-	font-weight: 500;
-
+  font-family: "Microsoft JhengHei", "Microsoft JhengHei UI", "PingFang TC", "Heiti TC", "Noto Sans TC", sans-serif !important;
+  font-weight: 500;
 }
-
-
-/* English signature */
 
 .name-en,
 .sidebar-name-en {
-
-	font-family:
-		"Allura",
-		cursive;
-
-	font-weight: 400;
-
+  font-family: "Allura", cursive;
+  font-weight: 400;
 }
-
 
 /* ==========================================================
    05. Links
    ========================================================== */
-
 a {
-
-	color: var(--angie-green-dark);
-
-	border-bottom-color: rgba(40, 112, 82, 0.35);
-
+  color: var(--angie-green-dark);
+  border-bottom-color: rgba(40, 112, 82, 0.35);
 }
-
 
 a:hover {
-
-	color: var(--angie-accent-dark) !important;
-
-	border-bottom-color: var(--angie-accent);
-
+  color: var(--angie-accent-dark) !important;
+  border-bottom-color: var(--angie-accent);
 }
-
 
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
 textarea:focus-visible,
 select:focus-visible {
-
-	outline: solid 2px var(--angie-accent);
-
-	outline-offset: 3px;
-
+  outline: solid 2px var(--angie-accent);
+  outline-offset: 3px;
 }
-
 
 /* ==========================================================
    06. Sidebar
    ========================================================== */
-
 #sidebar {
-
-	background: var(--angie-paper-deep);
-
+  background: var(--angie-paper-deep);
 }
-
 
 #sidebar > .inner {
-
-	background: transparent;
-
+  background: transparent;
 }
-
-
-/* Sidebar brand */
 
 .sidebar-brand {
-
-	padding: 3.4em 0 2.8em 0;
-
-	border-bottom: solid 1px var(--angie-line);
-
+  padding: 3.4em 0 2.8em;
+  border-bottom: solid 1px var(--angie-line);
 }
-
 
 .sidebar-brand a {
-
-	display: flex;
-
-	align-items: baseline;
-
-	gap: 0.45em;
-
-	border: 0;
-
-	color: var(--angie-charcoal);
-
+  display: flex;
+  align-items: baseline;
+  gap: 0.45em;
+  border: 0;
+  color: var(--angie-charcoal);
 }
-
 
 .sidebar-name-en {
-
-	font-size: 2em;
-
-	font-weight: 400;
-
-	line-height: 1;
-
-	color: var(--angie-green-dark);
-
+  font-size: 2em;
+  line-height: 1;
+  color: var(--angie-green-dark);
 }
-
 
 .sidebar-name-zh {
-
-	font-size: 1.05em;
-
-	font-weight: 500;
-
-	letter-spacing: 0.08em;
-
+  font-size: 1.05em;
+  letter-spacing: 0.08em;
 }
-
-
-/* Sidebar menu */
 
 #menu {
-
-	border: 0;
-
-	margin: 0;
-
-	padding: 2.4em 0;
-
+  border: 0;
+  margin: 0;
+  padding: 2.4em 0;
 }
-
 
 #menu > ul {
-
-	margin: 0;
-
+  margin: 0;
 }
-
 
 #menu ul a {
-
-	border: 0;
-
-	color: var(--angie-charcoal);
-
-	font-family:
-		"Noto Sans TC",
-		sans-serif;
-
-	font-size: 0.92em;
-
-	font-weight: 400;
-
-	letter-spacing: 0.09em;
-
-	padding: 0.72em 0;
-
-	text-transform: none;
-
+  border: 0;
+  color: var(--angie-charcoal);
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 0.92em;
+  font-weight: 400;
+  letter-spacing: 0.09em;
+  padding: 0.72em 0;
+  text-transform: none;
 }
-
 
 #menu ul a:hover {
-
-	color: var(--angie-accent-dark) !important;
-
-	padding-left: 0.35em;
-
+  color: var(--angie-accent-dark) !important;
+  padding-left: 0.35em;
 }
-
 
 #menu ul > li {
-
-	border: 0;
-
+  border: 0;
 }
-
 
 #menu .sidebar-menu-space {
-
-	margin-top: 1.8em;
-
-	padding-top: 1.8em;
-
-	border-top: solid 1px var(--angie-line);
-
+  margin-top: 1.8em;
+  padding-top: 1.8em;
+  border-top: solid 1px var(--angie-line);
 }
-
-
-/* Sidebar note
-   Kept here in case other pages still use it */
 
 .sidebar-note {
-
-	border-top: solid 1px var(--angie-line);
-
-	padding-top: 2em;
-
-	margin-top: 0;
-
+  border-top: solid 1px var(--angie-line);
+  padding-top: 2em;
+  margin-top: 0;
 }
-
 
 .sidebar-note p {
-
-	font-size: 0.82em;
-
-	line-height: 1.8;
-
+  font-size: 0.82em;
+  line-height: 1.8;
 }
-
 
 .sidebar-location {
-
-	font-family:
-		"Noto Sans TC",
-		sans-serif;
-
-	color: var(--angie-green-dark);
-
-	letter-spacing: 0.06em;
-
+  font-family: "Noto Sans TC", sans-serif;
+  color: var(--angie-green-dark);
+  letter-spacing: 0.06em;
 }
-
 
 .sidebar-contact-link {
-
-	font-family:
-		"Noto Sans TC",
-		sans-serif;
-
-	font-size: 0.92em;
-
-	border: 0;
-
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 0.92em;
+  border: 0;
 }
-
-
-/* Footer */
 
 #footer {
-
-	border-top: solid 1px var(--angie-line);
-
-	margin-top: 2.5em;
-
-	padding-top: 2em;
-
+  border-top: solid 1px var(--angie-line);
+  margin-top: 2.5em;
+  padding-top: 2em;
 }
-
 
 #footer .copyright {
-
-	color: var(--angie-grey);
-
-	font-size: 0.68em;
-
-	line-height: 1.8;
-
+  color: var(--angie-grey);
+  font-size: 0.68em;
+  line-height: 1.8;
 }
-
 
 /* ==========================================================
    07. Homepage Hero
    ========================================================== */
-
 .home-hero {
-
-	border-bottom: solid 1px var(--angie-line);
-
-	padding: 4em 0 5.5em 0;
-
+  border-bottom: solid 1px var(--angie-line);
+  padding: 4em 0 5.5em;
 }
-
-
-/* Top line */
 
 .home-topline {
-
-	display: flex;
-
-	justify-content: space-between;
-
-	align-items: center;
-
-	margin-bottom: 6em;
-
-	padding-bottom: 1em;
-
-	border-bottom: solid 1px var(--angie-line);
-
-	font-family:
-		"Noto Sans TC",
-		sans-serif;
-
-	font-size: 0.72em;
-
-	letter-spacing: 0.16em;
-
-	color: var(--angie-grey);
-
-	text-transform: uppercase;
-
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6em;
+  padding-bottom: 1em;
+  border-bottom: solid 1px var(--angie-line);
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 0.72em;
+  letter-spacing: 0.16em;
+  color: var(--angie-grey);
+  text-transform: uppercase;
 }
-
-
-/* Hero grid */
 
 .home-hero-grid {
-
-	display: grid;
-
-	grid-template-columns:
-		minmax(19em, 0.88fr)
-		minmax(27em, 1.12fr);
-
-	gap: 7.5em;
-
-	align-items: start;
-
+  display: grid;
+  grid-template-columns: minmax(19em, 0.88fr) minmax(27em, 1.12fr);
+  gap: 7.5em;
+  align-items: start;
 }
-
-
-/* Eyebrow */
 
 .home-eyebrow {
-
-	margin: 0 0 1.2em 0;
-
-	color: var(--angie-green);
-
-	font-family:
-		"Noto Serif TC",
-		serif;
-
-	font-size: 1.02em;
-
-	letter-spacing: 0.12em;
-
+  margin: 0 0 1.2em;
+  color: var(--angie-green);
+  font-family: "Noto Serif TC", serif;
+  font-size: 1.02em;
+  letter-spacing: 0.12em;
 }
-
-
-/* Name */
 
 .home-name {
-
-	margin: 0;
-
-	font-weight: 400;
-
-	line-height: 1;
-
-	letter-spacing: 0;
-
+  margin: 0;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0;
 }
-
-
-/* Angie */
 
 .home-name .name-en {
-
-	display: block;
-
-	font-family:
-		"Allura",
-		cursive;
-
-	font-size: 6.2rem;
-
-	font-style: normal;
-
-	font-weight: 400;
-
-	color: var(--angie-green-dark);
-
-	line-height: 0.9;
-
-	letter-spacing: 0;
-
+  display: block;
+  font-family: "Allura", cursive;
+  font-size: 6.2rem;
+  font-style: normal;
+  font-weight: 400;
+  color: var(--angie-green-dark);
+  line-height: 0.9;
+  letter-spacing: 0;
 }
-
-
-/* 劉泀嗪 */
 
 .home-name .name-zh {
-
-	display: block;
-
-	margin-top: 0.4em;
-
-	font-family:
-		"Microsoft JhengHei",
-		"Microsoft JhengHei UI",
-		"PingFang TC",
-		"Heiti TC",
-		"Noto Sans TC",
-		sans-serif !important;
-
-	font-size: 2.3rem;
-
-	font-weight: 500;
-
-	color: var(--angie-charcoal);
-
-	letter-spacing: 0.12em;
-
+  display: block;
+  margin-top: 0.4em;
+  font-family: "Microsoft JhengHei", "Microsoft JhengHei UI", "PingFang TC", "Heiti TC", "Noto Sans TC", sans-serif !important;
+  font-size: 2.3rem;
+  font-weight: 500;
+  color: var(--angie-charcoal);
+  letter-spacing: 0.12em;
 }
-
-
-/* Disciplines */
 
 .home-disciplines {
-
-	display: flex;
-
-	flex-wrap: wrap;
-
-	gap: 0.55em;
-
-	margin: 2.4em 0 0 0;
-
-	font-family:
-		"Noto Sans TC",
-		sans-serif;
-
-	font-size: 0.9em;
-
-	letter-spacing: 0.08em;
-
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55em;
+  margin: 2.4em 0 0;
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 0.9em;
+  letter-spacing: 0.08em;
 }
-
 
 .home-disciplines a {
-
-	border: 0;
-
-	color: var(--angie-charcoal);
-
+  border: 0;
+  color: var(--angie-charcoal);
 }
-
 
 .home-disciplines a:hover {
-
-	color: var(--angie-accent-dark) !important;
-
+  color: var(--angie-accent-dark) !important;
 }
-
 
 .home-disciplines span {
-
-	color: var(--angie-green-soft);
-
+  color: var(--angie-green-soft);
 }
-
-
-/* Intro */
 
 .home-intro {
-
-	padding-top: 1.4em;
-
-	max-width: 35.5em;
-
-	justify-self: end;
-
+  padding-top: 1.4em;
+  max-width: 35.5em;
+  justify-self: end;
 }
-
 
 .home-intro p {
-
-	font-size: 1.04em;
-
-	line-height: 2.05;
-
-	margin-bottom: 1.7em;
-
+  font-size: 1.04em;
+  line-height: 2.05;
+  margin-bottom: 1.7em;
 }
-
 
 .home-intro-link {
-
-	margin-top: 2.5em;
-
+  margin-top: 2.5em;
 }
-
-
-/* Editorial text link */
 
 .editorial-link {
-
-	display: inline-flex;
-
-	align-items: center;
-
-	gap: 1.1em;
-
-	border: 0;
-
-	font-family:
-		"Noto Sans TC",
-		sans-serif;
-
-	font-size: 0.9em;
-
-	font-weight: 500;
-
-	letter-spacing: 0.08em;
-
-	color: var(--angie-green-dark);
-
+  display: inline-flex;
+  align-items: center;
+  gap: 1.1em;
+  border: 0;
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 0.9em;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--angie-green-dark);
 }
-
 
 .editorial-link span {
-
-	transition:
-		transform 0.2s ease,
-		color 0.2s ease;
-
+  transition: transform 0.2s ease, color 0.2s ease;
 }
-
 
 .editorial-link:hover {
-
-	color: var(--angie-accent-dark) !important;
-
+  color: var(--angie-accent-dark) !important;
 }
-
 
 .editorial-link:hover span {
-
-	transform: translate(0.3em, -0.15em);
-
-	color: var(--angie-accent);
-
+  transform: translate(0.3em, -0.15em);
+  color: var(--angie-accent);
 }
-
 
 /* ==========================================================
    08. Homepage Sections
    ========================================================== */
-
 .home-fields,
 .home-explore {
-
-	padding: 6.5em 0;
-
-	border-bottom: solid 1px var(--angie-line);
-
+  padding: 6.5em 0;
+  border-bottom: solid 1px var(--angie-line);
 }
-
 
 /* ==========================================================
    09. Editorial Chapter Heading
    ========================================================== */
-
 .home-section-heading {
-
-	--chapter-width: 24em;
-
-	position: relative;
-
-	display: grid;
-
-	grid-template-columns:
-		6.7em
-		1fr;
-
-	align-items: center;
-
-	gap: 1.25em;
-
-	width: 100%;
-
-	min-height: 8.8em;
-
-	box-sizing: border-box;
-
-	margin-bottom: 4.5em;
-
-	padding: 1.35em 1.7em;
-
-	background: transparent;
-
-	overflow: visible;
-
+  --chapter-width: 24em;
+  position: relative;
+  display: grid;
+  grid-template-columns: 6.7em 1fr;
+  align-items: center;
+  gap: 1.25em;
+  width: 100%;
+  min-height: 8.8em;
+  box-sizing: border-box;
+  margin-bottom: 4.5em;
+  padding: 1.35em 1.7em;
+  background: transparent;
+  overflow: visible;
 }
-
-
-/* Green chapter plate */
 
 .home-section-heading::before {
-
-	content: "";
-
-	position: absolute;
-
-	z-index: 0;
-
-	top: 0;
-
-	left: 0;
-
-	width: var(--chapter-width);
-
-	height: 100%;
-
-	background: var(--angie-green);
-
-	clip-path: polygon(
-		0 0,
-		calc(100% - 0.8em) 0,
-		100% 0.8em,
-		100% 100%,
-		0 100%
-	);
-
+  content: "";
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  width: var(--chapter-width);
+  height: 100%;
+  background: var(--angie-green);
+  clip-path: polygon(0 0, calc(100% - 0.8em) 0, 100% 0.8em, 100% 100%, 0 100%);
 }
-
-
-/* Fine green line with dusty-pink endpoint */
 
 .home-section-heading::after {
-
-	content: "";
-
-	position: absolute;
-
-	z-index: 0;
-
-	left: var(--chapter-width);
-
-	right: 0;
-
-	top: 50%;
-
-	height: 6px;
-
-	transform: translateY(-50%);
-
-	background:
-		radial-gradient(
-			circle at right center,
-			var(--angie-accent) 0,
-			var(--angie-accent) 2px,
-			transparent 2.5px
-		),
-		linear-gradient(
-			var(--angie-green),
-			var(--angie-green)
-		);
-
-	background-repeat:
-		no-repeat,
-		no-repeat;
-
-	background-position:
-		right center,
-		left center;
-
-	background-size:
-		6px 6px,
-		100% 1px;
-
-	pointer-events: none;
-
+  content: "";
+  position: absolute;
+  z-index: 0;
+  left: var(--chapter-width);
+  right: 0;
+  top: 50%;
+  height: 6px;
+  transform: translateY(-50%);
+  background:
+    radial-gradient(circle at right center, var(--angie-accent) 0, var(--angie-accent) 2px, transparent 2.5px),
+    linear-gradient(var(--angie-green), var(--angie-green));
+  background-repeat: no-repeat, no-repeat;
+  background-position: right center, left center;
+  background-size: 6px 6px, 100% 1px;
+  pointer-events: none;
 }
-
 
 .home-section-heading > * {
-
-	position: relative;
-
-	z-index: 1;
-
+  position: relative;
+  z-index: 1;
 }
-
-
-/* Large translucent number */
 
 .section-number {
-
-	align-self: center;
-
-	padding: 0;
-
-	margin: 0;
-
-	font-family:
-		"Noto Serif TC",
-		Georgia,
-		serif;
-
-	color: rgba(247, 243, 236, 0.27);
-
-	font-size: 5.2em;
-
-	font-weight: 400;
-
-	letter-spacing: -0.04em;
-
-	line-height: 0.9;
-
+  align-self: center;
+  padding: 0;
+  margin: 0;
+  font-family: "Noto Serif TC", Georgia, serif;
+  color: rgba(247, 243, 236, 0.27);
+  font-size: 5.2em;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 0.9;
 }
-
-
-/* English chapter label */
 
 .section-label {
-
-	margin: 0 0 0.45em 0;
-
-	color: rgba(247, 243, 236, 0.9);
-
-	font-family:
-		"Noto Sans TC",
-		sans-serif;
-
-	font-size: 0.68em;
-
-	font-weight: 600;
-
-	letter-spacing: 0.24em;
-
-	line-height: 1.4;
-
+  margin: 0 0 0.45em;
+  color: rgba(247, 243, 236, 0.9);
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 0.68em;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  line-height: 1.4;
 }
-
-
-/* Chinese chapter title */
 
 .home-section-heading h2 {
-
-	margin: 0;
-
-	color: var(--angie-paper);
-
-	font-family:
-		"Noto Serif TC",
-		serif;
-
-	font-size: 1.85em;
-
-	font-weight: 500;
-
-	line-height: 1.4;
-
-	letter-spacing: 0.06em;
-
+  margin: 0;
+  color: var(--angie-paper);
+  font-family: "Noto Serif TC", serif;
+  font-size: 1.85em;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.06em;
 }
-
 
 .section-heading-text {
-
-	min-width: 0;
-
+  min-width: 0;
 }
-
 
 /* ==========================================================
-   10. WHAT I DO
-   Editorial Grid
+   10. WHAT I DO — Editorial Grid
    ========================================================== */
-
 .practice-editorial-grid {
-
-	display: grid;
-
-	grid-template-columns:
-		repeat(4, minmax(0, 1fr));
-
-	gap: 2.3em;
-
-	align-items: stretch;
-
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 2.3em;
+  align-items: stretch;
 }
-
-
-/* Shared field item */
 
 .practice-editorial-item {
-
-	position: relative;
-
-	display: flex;
-
-	flex-direction: column;
-
-	min-width: 0;
-
-	min-height: 21.5em;
-
-	height: 100%;
-
-	box-sizing: border-box;
-
-	padding: 1.8em 1.55em 1.6em 1.55em;
-
-	border: 0;
-
-	color: var(--angie-charcoal);
-
-	background: transparent;
-
-	text-decoration: none;
-
-	transition:
-		transform 0.22s ease,
-		background-color 0.22s ease,
-		color 0.22s ease;
-
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 21.5em;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 1.8em 1.55em 1.6em;
+  border: 0;
+  color: var(--angie-charcoal);
+  background: transparent;
+  text-decoration: none;
+  transition: transform 0.22s ease, background-color 0.22s ease, color 0.22s ease;
 }
-
-
-/* 01 — fine editorial frame */
 
 .practice-outline {
-
-	border:
-		solid 1px
-		rgba(40, 112, 82, 0.34);
-
-	clip-path: polygon(
-		0.75em 0,
-		calc(100% - 0.75em) 0,
-		100% 0.75em,
-		100% 100%,
-		0 100%,
-		0 0.75em
-	);
-
+  border: solid 1px rgba(40, 112, 82, 0.34);
+  clip-path: polygon(0.75em 0, calc(100% - 0.75em) 0, 100% 0.75em, 100% 100%, 0 100%, 0 0.75em);
 }
 
-
-/* 02 — plain and aligned */
-
-.practice-plain {
-
-	padding-top: 1.8em;
-
+.practice-plain,
+.practice-soft {
+  padding-top: 1.8em;
 }
-
-
-/* 03 — pale green block and aligned */
 
 .practice-soft {
-
-	background:
-		rgba(226, 236, 229, 0.62);
-
-	padding-top: 1.8em;
-
+  background: rgba(226, 236, 229, 0.62);
 }
-
-
-/* 04 — aligned */
 
 .practice-illustration {
-
-	margin-top: 0;
-
+  margin-top: 0;
 }
-
-
-/* Number */
 
 .practice-number {
-
-	display: block;
-
-	margin-bottom: 1.5em;
-
-	color: var(--angie-accent-dark);
-
-	font-family:
-		"Noto Sans TC",
-		sans-serif;
-
-	font-size: 0.7em;
-
-	font-weight: 600;
-
-	letter-spacing: 0.16em;
-
-	transition:
-		color 0.2s ease;
-
+  display: block;
+  margin-bottom: 1.5em;
+  color: var(--angie-accent-dark);
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 0.7em;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  transition: color 0.2s ease;
 }
-
-
-/* Title */
 
 .practice-title {
-
-	margin: 0;
-
+  margin: 0;
 }
-
 
 .practice-title h3 {
-
-	margin: 0 0 0.28em 0;
-
-	font-family:
-		"Noto Serif TC",
-		serif;
-
-	font-size: 1.7em;
-
-	font-weight: 500;
-
-	line-height: 1.35;
-
-	transition:
-		color 0.2s ease;
-
+  margin: 0 0 0.28em;
+  font-family: "Noto Serif TC", serif;
+  font-size: 1.7em;
+  font-weight: 500;
+  line-height: 1.35;
+  transition: color 0.2s ease;
 }
-
-
-/* English subtitle */
 
 .practice-en {
-
-	display: block;
-
-	color: var(--angie-green-dark);
-
-	font-family:
-		"Noto Serif TC",
-		Georgia,
-		serif;
-
-	font-size: 0.84em;
-
-	font-style: italic;
-
-	line-height: 1.6;
-
-	transition:
-		color 0.2s ease;
-
+  display: block;
+  color: var(--angie-green-dark);
+  font-family: "Noto Serif TC", Georgia, serif;
+  font-size: 0.84em;
+  font-style: italic;
+  line-height: 1.6;
+  transition: color 0.2s ease;
 }
-
-
-/* Description */
 
 .practice-description {
-
-	margin: 1.7em 0 2.5em 0;
-
-	color: var(--angie-grey);
-
-	font-size: 0.9em;
-
-	line-height: 1.9;
-
-	transition:
-		color 0.2s ease;
-
+  margin: 1.7em 0 2.5em;
+  color: var(--angie-grey);
+  font-size: 0.9em;
+  line-height: 1.9;
+  transition: color 0.2s ease;
 }
-
-
-/* Arrow and rule */
 
 .practice-arrow {
-
-	position: relative;
-
-	display: block;
-
-	margin-top: auto;
-
-	padding-bottom: 0.8em;
-
-	color: var(--angie-green);
-
-	font-family:
-		"Noto Sans TC",
-		sans-serif;
-
-	font-size: 1.15em;
-
-	line-height: 1;
-
-	transition:
-		color 0.2s ease,
-		transform 0.2s ease;
-
+  position: relative;
+  display: block;
+  margin-top: auto;
+  padding-bottom: 0.8em;
+  color: var(--angie-green);
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 1.15em;
+  line-height: 1;
+  transition: color 0.2s ease, transform 0.2s ease;
 }
-
 
 .practice-arrow::after {
-
-	content: "";
-
-	position: absolute;
-
-	left: 0;
-
-	bottom: 0;
-
-	width: 4.5em;
-
-	height: 1px;
-
-	background: var(--angie-green-soft);
-
-	transition:
-		width 0.25s ease,
-		background-color 0.25s ease;
-
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 4.5em;
+  height: 1px;
+  background: var(--angie-green-soft);
+  transition: width 0.25s ease, background-color 0.25s ease;
 }
-
-
-/* ----------------------------------------------------------
-   WHAT I DO — Dusty Pink Hover
-   ---------------------------------------------------------- */
 
 .practice-editorial-item:hover {
-
-	background: var(--angie-accent);
-
-	color: var(--angie-charcoal) !important;
-
-	transform: translateY(-3px);
-
+  background: var(--angie-accent);
+  color: var(--angie-charcoal) !important;
+  transform: translateY(-3px);
 }
 
-
-/* Number */
-
-.practice-editorial-item:hover .practice-number {
-
-	color: var(--angie-green-dark);
-
+.practice-editorial-item:hover .practice-number,
+.practice-editorial-item:hover .practice-en,
+.practice-editorial-item:hover .practice-arrow {
+  color: var(--angie-green-dark);
 }
 
-
-/* Chinese title */
-
-.practice-editorial-item:hover .practice-title h3 {
-
-	color: var(--angie-charcoal);
-
-}
-
-
-/* English subtitle */
-
-.practice-editorial-item:hover .practice-en {
-
-	color: var(--angie-green-dark);
-
-}
-
-
-/* Description */
-
+.practice-editorial-item:hover .practice-title h3,
 .practice-editorial-item:hover .practice-description {
-
-	color: var(--angie-charcoal);
-
+  color: var(--angie-charcoal);
 }
-
-
-/* Arrow */
 
 .practice-editorial-item:hover .practice-arrow {
-
-	color: var(--angie-green-dark);
-
-	transform: translate(0.12em, -0.08em);
-
+  transform: translate(0.12em, -0.08em);
 }
-
-
-/* Rule */
 
 .practice-editorial-item:hover .practice-arrow::after {
-
-	width: 6em;
-
-	background: var(--angie-green-dark);
-
+  width: 6em;
+  background: var(--angie-green-dark);
 }
-
-
-/* Border disappears into hover */
 
 .practice-outline:hover {
-
-	border-color: var(--angie-accent);
-
+  border-color: var(--angie-accent);
 }
-
 
 /* ==========================================================
-   11. WHO I AM
-   Editorial Index
+   11. WHO I AM — Editorial Index
    ========================================================== */
-
 .explore-editorial-grid {
-
-	display: grid;
-
-	grid-template-columns:
-		repeat(3, minmax(0, 1fr));
-
-	gap: 0;
-
-	align-items: stretch;
-
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0;
+  align-items: stretch;
 }
-
-
-/* Individual index entry */
 
 .explore-editorial-item {
-
-	position: relative;
-
-	display: flex;
-
-	flex-direction: column;
-
-	min-height: 13.5em;
-
-	height: 100%;
-
-	box-sizing: border-box;
-
-	padding:
-		1.2em
-		3em
-		1.5em
-		2.2em;
-
-	border: 0;
-
-	border-right:
-		solid 1px
-		var(--angie-line);
-
-	color: var(--angie-charcoal);
-
-	background: transparent;
-
-	text-decoration: none;
-
-	transition:
-		transform 0.22s ease,
-		background-color 0.22s ease,
-		color 0.22s ease;
-
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 13.5em;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 1.2em 3em 1.5em 2.2em;
+  border: 0;
+  border-right: solid 1px var(--angie-line);
+  color: var(--angie-charcoal);
+  background: transparent;
+  text-decoration: none;
+  transition: transform 0.22s ease, background-color 0.22s ease, color 0.22s ease;
 }
-
 
 .explore-editorial-item:first-child {
-
-	padding-left: 0.5em;
-
+  padding-left: 0.5em;
 }
-
 
 .explore-editorial-item:last-child {
-
-	border-right: 0;
-
+  border-right: 0;
 }
-
-
-/* All three entries aligned */
 
 .explore-offset {
-
-	margin-top: 0;
-
+  margin-top: 0;
 }
-
-
-/* Small English label */
 
 .explore-kicker {
-
-	margin: 0 0 1.2em 0;
-
-	color: var(--angie-green);
-
-	font-family:
-		"Noto Sans TC",
-		sans-serif;
-
-	font-size: 0.66em;
-
-	font-weight: 600;
-
-	letter-spacing: 0.18em;
-
-	line-height: 1.4;
-
-	transition:
-		color 0.2s ease;
-
+  margin: 0 0 1.2em;
+  color: var(--angie-green);
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 0.66em;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  line-height: 1.4;
+  transition: color 0.2s ease;
 }
-
-
-/* Title */
 
 .explore-editorial-item h3 {
-
-	margin: 0;
-
-	padding-bottom: 0.55em;
-
-	border-bottom:
-		solid 1px
-		var(--angie-green-soft);
-
-	font-family:
-		"Noto Serif TC",
-		serif;
-
-	font-size: 1.35em;
-
-	font-weight: 500;
-
-	line-height: 1.5;
-
-	transition:
-		color 0.2s ease,
-		border-color 0.2s ease;
-
+  margin: 0;
+  padding-bottom: 0.55em;
+  border-bottom: solid 1px var(--angie-green-soft);
+  font-family: "Noto Serif TC", serif;
+  font-size: 1.35em;
+  font-weight: 500;
+  line-height: 1.5;
+  transition: color 0.2s ease, border-color 0.2s ease;
 }
-
-
-/* Description */
 
 .explore-description {
-
-	margin: 1.2em 0 2em 0;
-
-	max-width: 20em;
-
-	color: var(--angie-grey);
-
-	font-size: 0.88em;
-
-	line-height: 1.85;
-
-	transition:
-		color 0.2s ease;
-
+  margin: 1.2em 0 2em;
+  max-width: 20em;
+  color: var(--angie-grey);
+  font-size: 0.88em;
+  line-height: 1.85;
+  transition: color 0.2s ease;
 }
-
-
-/* Arrow */
 
 .explore-arrow {
-
-	display: block;
-
-	margin-top: auto;
-
-	color: var(--angie-green);
-
-	font-family:
-		"Noto Sans TC",
-		sans-serif;
-
-	font-size: 1.1em;
-
-	line-height: 1;
-
-	transition:
-		transform 0.2s ease,
-		color 0.2s ease;
-
+  display: block;
+  margin-top: auto;
+  color: var(--angie-green);
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 1.1em;
+  line-height: 1;
+  transition: transform 0.2s ease, color 0.2s ease;
 }
-
-
-/* ----------------------------------------------------------
-   WHO I AM — Dusty Pink Hover
-   ---------------------------------------------------------- */
 
 .explore-editorial-item:hover {
-
-	background: var(--angie-accent);
-
-	color: var(--angie-charcoal) !important;
-
-	transform: translateY(-3px);
-
+  background: var(--angie-accent);
+  color: var(--angie-charcoal) !important;
+  transform: translateY(-3px);
 }
 
-
-/* English label */
-
-.explore-editorial-item:hover .explore-kicker {
-
-	color: var(--angie-green-dark);
-
+.explore-editorial-item:hover .explore-kicker,
+.explore-editorial-item:hover .explore-arrow {
+  color: var(--angie-green-dark);
 }
-
-
-/* Chinese title */
 
 .explore-editorial-item:hover h3 {
-
-	color: var(--angie-charcoal);
-
-	border-bottom-color: var(--angie-green-dark);
-
+  color: var(--angie-charcoal);
+  border-bottom-color: var(--angie-green-dark);
 }
-
-
-/* Description */
 
 .explore-editorial-item:hover .explore-description {
-
-	color: var(--angie-charcoal);
-
+  color: var(--angie-charcoal);
 }
-
-
-/* Arrow */
 
 .explore-editorial-item:hover .explore-arrow {
-
-	color: var(--angie-green-dark);
-
-	transform: translate(0.14em, -0.1em);
-
+  transform: translate(0.14em, -0.1em);
 }
-
 
 /* ==========================================================
    12. General Elements
    ========================================================== */
-
 hr,
 hr.major {
-
-	border-bottom-color: var(--angie-line);
-
+  border-bottom-color: var(--angie-line);
 }
-
 
 header.major > :last-child {
-
-	border-bottom-color: var(--angie-green);
-
+  border-bottom-color: var(--angie-green);
 }
-
-
-/* Buttons */
 
 .button,
 button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
-
-	background: transparent;
-
-	box-shadow:
-		inset 0 0 0 1px
-		var(--angie-green);
-
-	color: var(--angie-green-dark) !important;
-
-	font-family:
-		"Noto Sans TC",
-		sans-serif;
-
-	font-weight: 500;
-
-	letter-spacing: 0.08em;
-
+  background: transparent;
+  box-shadow: inset 0 0 0 1px var(--angie-green);
+  color: var(--angie-green-dark) !important;
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.08em;
 }
-
 
 .button:hover,
 button:hover,
 input[type="submit"]:hover,
 input[type="reset"]:hover,
 input[type="button"]:hover {
-
-	background: var(--angie-accent);
-
-	box-shadow:
-		inset 0 0 0 1px
-		var(--angie-accent);
-
-	color: var(--angie-charcoal) !important;
-
+  background: var(--angie-accent);
+  box-shadow: inset 0 0 0 1px var(--angie-accent);
+  color: var(--angie-charcoal) !important;
 }
-
 
 .posts article {
-
-	border-color: var(--angie-line);
-
+  border-color: var(--angie-line);
 }
-
 
 /* ==========================================================
    13. Tablet
    ========================================================== */
-
 @media screen and (max-width: 1280px) {
-
-	.home-hero-grid {
-
-		gap: 4em;
-
-	}
-
-
-	.home-name .name-en {
-
-		font-size: 5rem;
-
-	}
-
-
-	.home-section-heading {
-
-		--chapter-width: 21em;
-
-		grid-template-columns:
-			5.5em
-			1fr;
-
-		min-height: 8em;
-
-	}
-
-
-	.section-number {
-
-		font-size: 4.5em;
-
-	}
-
-
-	.practice-editorial-grid {
-
-		gap: 1.5em;
-
-	}
-
-
-	.practice-editorial-item {
-
-		min-height: 20em;
-
-		padding-left: 1.25em;
-
-		padding-right: 1.25em;
-
-	}
-
-
-	.practice-title h3 {
-
-		font-size: 1.5em;
-
-	}
-
-
-	.explore-editorial-item {
-
-		padding-right: 2em;
-
-		padding-left: 1.6em;
-
-	}
-
+  .home-hero-grid { gap: 4em; }
+  .home-name .name-en { font-size: 5rem; }
+  .home-section-heading {
+    --chapter-width: 21em;
+    grid-template-columns: 5.5em 1fr;
+    min-height: 8em;
+  }
+  .section-number { font-size: 4.5em; }
+  .practice-editorial-grid { gap: 1.5em; }
+  .practice-editorial-item {
+    min-height: 20em;
+    padding-left: 1.25em;
+    padding-right: 1.25em;
+  }
+  .practice-title h3 { font-size: 1.5em; }
+  .explore-editorial-item {
+    padding-right: 2em;
+    padding-left: 1.6em;
+  }
 }
-
 
 /* ==========================================================
    14. Smaller Screens
    ========================================================== */
-
 @media screen and (max-width: 980px) {
-
-	.home-topline {
-
-		margin-bottom: 4em;
-
-	}
-
-
-	.home-hero-grid {
-
-		grid-template-columns: 1fr;
-
-		gap: 3.5em;
-
-	}
-
-
-	.home-intro {
-
-		padding-top: 0;
-
-		max-width: 100%;
-
-		justify-self: start;
-
-	}
-
-
-	.home-section-heading {
-
-		--chapter-width: 19em;
-
-		grid-template-columns:
-			5em
-			1fr;
-
-		min-height: 7.5em;
-
-	}
-
-
-	/* WHAT I DO becomes 2 × 2 */
-
-	.practice-editorial-grid {
-
-		grid-template-columns:
-			repeat(2, minmax(0, 1fr));
-
-		gap:
-			2em
-			2.5em;
-
-		align-items: stretch;
-
-	}
-
-
-	.practice-editorial-item {
-
-		min-height: 18em;
-
-		height: 100%;
-
-	}
-
-
-	.practice-illustration {
-
-		margin-top: 0;
-
-	}
-
-
-	/* WHO I AM becomes stacked */
-
-	.explore-editorial-grid {
-
-		grid-template-columns: 1fr;
-
-		gap: 0;
-
-	}
-
-
-	.explore-editorial-item,
-	.explore-editorial-item:first-child {
-
-		min-height: auto;
-
-		height: auto;
-
-		padding:
-			2em
-			2.5em
-			2em
-			0;
-
-		border-right: 0;
-
-		border-bottom:
-			solid 1px
-			var(--angie-line);
-
-	}
-
-
-	.explore-editorial-item:last-child {
-
-		border-bottom: 0;
-
-	}
-
-
-	.explore-offset {
-
-		margin-top: 0;
-
-	}
-
+  .home-topline { margin-bottom: 4em; }
+  .home-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 3.5em;
+  }
+  .home-intro {
+    padding-top: 0;
+    max-width: 100%;
+    justify-self: start;
+  }
+  .home-section-heading {
+    --chapter-width: 19em;
+    grid-template-columns: 5em 1fr;
+    min-height: 7.5em;
+  }
+  .practice-editorial-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2em 2.5em;
+    align-items: stretch;
+  }
+  .practice-editorial-item {
+    min-height: 18em;
+    height: 100%;
+  }
+  .practice-illustration { margin-top: 0; }
+  .explore-editorial-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .explore-editorial-item,
+  .explore-editorial-item:first-child {
+    min-height: auto;
+    height: auto;
+    padding: 2em 2.5em 2em 0;
+    border-right: 0;
+    border-bottom: solid 1px var(--angie-line);
+  }
+  .explore-editorial-item:last-child { border-bottom: 0; }
+  .explore-offset { margin-top: 0; }
 }
-
 
 /* ==========================================================
    15. Mobile
    ========================================================== */
-
 @media screen and (max-width: 736px) {
-
-	body {
-
-		font-size: 15px;
-
-		line-height: 1.8;
-
-	}
-
-
-	.home-hero {
-
-		padding: 2.5em 0 4em 0;
-
-	}
-
-
-	.home-topline {
-
-		margin-bottom: 3em;
-
-		font-size: 0.65em;
-
-	}
-
-
-	.home-name .name-en {
-
-		font-size: 4.2rem;
-
-	}
-
-
-	.home-name .name-zh {
-
-		font-size: 1.75rem;
-
-	}
-
-
-	.home-disciplines {
-
-		line-height: 2;
-
-	}
-
-
-	.home-intro p {
-
-		font-size: 1em;
-
-		line-height: 1.95;
-
-	}
-
-
-	.home-fields,
-	.home-explore {
-
-		padding: 4.5em 0;
-
-	}
-
-
-	/* Full green chapter heading on mobile */
-
-	.home-section-heading {
-
-		--chapter-width: 100%;
-
-		width: 100%;
-
-		min-height: auto;
-
-		grid-template-columns:
-			4.2em
-			1fr;
-
-		gap: 0.8em;
-
-		padding: 1.35em 1.25em;
-
-		margin-bottom: 3em;
-
-		background: var(--angie-green);
-
-		overflow: hidden;
-
-	}
-
-
-	.home-section-heading::before {
-
-		width: 100%;
-
-		clip-path: none;
-
-	}
-
-
-	.home-section-heading::after {
-
-		display: none;
-
-	}
-
-
-	.section-number {
-
-		font-size: 3.4em;
-
-	}
-
-
-	.home-section-heading h2 {
-
-		font-size: 1.6em;
-
-	}
-
-
-	/* WHAT I DO becomes one column */
-
-	.practice-editorial-grid {
-
-		grid-template-columns: 1fr;
-
-		gap: 2em;
-
-	}
-
-
-	.practice-editorial-item,
-	.practice-plain,
-	.practice-soft,
-	.practice-illustration {
-
-		min-height: auto;
-
-		height: auto;
-
-		margin-top: 0;
-
-		padding:
-			1.5em
-			1.2em
-			1.4em
-			1.2em;
-
-	}
-
-
-	.practice-title h3 {
-
-		font-size: 1.45em;
-
-	}
-
-
-	.practice-description {
-
-		margin:
-			1.2em
-			0
-			2em
-			0;
-
-		font-size: 0.88em;
-
-	}
-
-
-	/* WHO I AM */
-
-	.explore-editorial-item,
-	.explore-editorial-item:first-child {
-
-		padding:
-			1.8em
-			0
-			1.8em
-			0;
-
-	}
-
-
-	.explore-editorial-item h3 {
-
-		font-size: 1.25em;
-
-	}
+  body {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+  .home-hero { padding: 2.5em 0 4em; }
+  .home-topline {
+    margin-bottom: 3em;
+    font-size: 0.65em;
+  }
+  .home-name .name-en { font-size: 4.2rem; }
+  .home-name .name-zh { font-size: 1.75rem; }
+  .home-disciplines { line-height: 2; }
+  .home-intro p {
+    font-size: 1em;
+    line-height: 1.95;
+  }
+  .home-fields,
+  .home-explore { padding: 4.5em 0; }
+  .home-section-heading {
+    --chapter-width: 100%;
+    width: 100%;
+    min-height: auto;
+    grid-template-columns: 4.2em 1fr;
+    gap: 0.8em;
+    padding: 1.35em 1.25em;
+    margin-bottom: 3em;
+    background: var(--angie-green);
+    overflow: hidden;
+  }
+  .home-section-heading::before {
+    width: 100%;
+    clip-path: none;
+  }
+  .home-section-heading::after { display: none; }
+  .section-number { font-size: 3.4em; }
+  .home-section-heading h2 { font-size: 1.6em; }
+  .practice-editorial-grid {
+    grid-template-columns: 1fr;
+    gap: 2em;
+  }
+  .practice-editorial-item,
+  .practice-plain,
+  .practice-soft,
+  .practice-illustration {
+    min-height: auto;
+    height: auto;
+    margin-top: 0;
+    padding: 1.5em 1.2em 1.4em;
+  }
+  .practice-title h3 { font-size: 1.45em; }
+  .practice-description {
+    margin: 1.2em 0 2em;
+    font-size: 0.88em;
+  }
+  .explore-editorial-item,
+  .explore-editorial-item:first-child {
+    padding: 1.8em 0;
+  }
+  .explore-editorial-item h3 { font-size: 1.25em; }
+}
 
 /* ==========================================================
    16. Mobile Touch Interaction
    ========================================================== */
-
 @media (hover: none) and (pointer: coarse) {
-
-	/* Remove browser default tap flash */
-	.practice-editorial-item,
-	.explore-editorial-item {
-
-		-webkit-tap-highlight-color: transparent;
-
-	}
-
-
-	/* ------------------------------------------
-	   WHAT I DO — Touch
-	   ------------------------------------------ */
-
-	.practice-editorial-item:active {
-
-		background: var(--angie-accent);
-
-		color: var(--angie-charcoal) !important;
-
-		transform: translateY(-3px);
-
-	}
-
-
-	.practice-editorial-item:active .practice-number {
-
-		color: var(--angie-green-dark);
-
-	}
-
-
-	.practice-editorial-item:active .practice-title h3 {
-
-		color: var(--angie-charcoal);
-
-	}
-
-
-	.practice-editorial-item:active .practice-en {
-
-		color: var(--angie-green-dark);
-
-	}
-
-
-	.practice-editorial-item:active .practice-description {
-
-		color: var(--angie-charcoal);
-
-	}
-
-
-	.practice-editorial-item:active .practice-arrow {
-
-		color: var(--angie-green-dark);
-
-		transform: translate(0.12em, -0.08em);
-
-	}
-
-
-	.practice-editorial-item:active .practice-arrow::after {
-
-		width: 6em;
-
-		background: var(--angie-green-dark);
-
-	}
-
-
-	.practice-outline:active {
-
-		border-color: var(--angie-accent);
-
-	}
-
-
-
-	/* ------------------------------------------
-	   WHO I AM — Touch
-	   ------------------------------------------ */
-
-	.explore-editorial-item:active {
-
-		background: var(--angie-accent);
-
-		color: var(--angie-charcoal) !important;
-
-		transform: translateY(-3px);
-
-	}
-
-
-	.explore-editorial-item:active .explore-kicker {
-
-		color: var(--angie-green-dark);
-
-	}
-
-
-	.explore-editorial-item:active h3 {
-
-		color: var(--angie-charcoal);
-
-		border-bottom-color: var(--angie-green-dark);
-
-	}
-
-
-	.explore-editorial-item:active .explore-description {
-
-		color: var(--angie-charcoal);
-
-	}
-
-
-	.explore-editorial-item:active .explore-arrow {
-
-		color: var(--angie-green-dark);
-
-		transform: translate(0.14em, -0.1em);
-
-	}
-
-}
-	
+  .practice-editorial-item,
+  .explore-editorial-item {
+    -webkit-tap-highlight-color: transparent;
+  }
+  .practice-editorial-item:active {
+    background: var(--angie-accent);
+    color: var(--angie-charcoal) !important;
+    transform: translateY(-3px);
+  }
+  .practice-editorial-item:active .practice-number,
+  .practice-editorial-item:active .practice-en,
+  .practice-editorial-item:active .practice-arrow {
+    color: var(--angie-green-dark);
+  }
+  .practice-editorial-item:active .practice-title h3,
+  .practice-editorial-item:active .practice-description {
+    color: var(--angie-charcoal);
+  }
+  .practice-editorial-item:active .practice-arrow {
+    transform: translate(0.12em, -0.08em);
+  }
+  .practice-editorial-item:active .practice-arrow::after {
+    width: 6em;
+    background: var(--angie-green-dark);
+  }
+  .practice-outline:active { border-color: var(--angie-accent); }
+  .explore-editorial-item:active {
+    background: var(--angie-accent);
+    color: var(--angie-charcoal) !important;
+    transform: translateY(-3px);
+  }
+  .explore-editorial-item:active .explore-kicker,
+  .explore-editorial-item:active .explore-arrow {
+    color: var(--angie-green-dark);
+  }
+  .explore-editorial-item:active h3 {
+    color: var(--angie-charcoal);
+    border-bottom-color: var(--angie-green-dark);
+  }
+  .explore-editorial-item:active .explore-description {
+    color: var(--angie-charcoal);
+  }
+  .explore-editorial-item:active .explore-arrow {
+    transform: translate(0.14em, -0.1em);
+  }
 }
 
 /* ==========================================================
-   17. ABOUT PAGE
-   Editorial Margin Layout
+   17. ABOUT PAGE — Editorial Margin Layout
    ========================================================== */
-
-
-/* ----------------------------------------------------------
-   About Page Base
-   ---------------------------------------------------------- */
-
 .about-page {
-
-	padding:
-		4em
-		0
-		5em
-		0;
-
+  padding: 4em 0 5em;
 }
-
-
-/* ----------------------------------------------------------
-   Topline
-   ---------------------------------------------------------- */
 
 .about-topline {
-
-	display: flex;
-
-	justify-content: space-between;
-
-	align-items: center;
-
-	margin-bottom: 5.5em;
-
-	padding-bottom: 1em;
-
-	border-bottom:
-		solid 1px
-		var(--angie-line);
-
-	font-family:
-		"Noto Sans TC",
-		sans-serif;
-
-	font-size: 0.72em;
-
-	letter-spacing: 0.16em;
-
-	text-transform: uppercase;
-
-	color: var(--angie-grey);
-
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5.5em;
+  padding-bottom: 1em;
+  border-bottom: solid 1px var(--angie-line);
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 0.72em;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--angie-grey);
 }
-
 
 .about-topline span:first-child {
-
-	color: var(--angie-green-dark);
-
-	font-weight: 600;
-
+  color: var(--angie-green-dark);
+  font-weight: 600;
 }
-
-
-/* ----------------------------------------------------------
-   Main Editorial Grid
-   ---------------------------------------------------------- */
 
 .about-editorial-layout {
-
-	display: grid;
-
-	grid-template-columns:
-		4.2em
-		minmax(0, 1fr)
-		18em;
-
-	column-gap: 3.8em;
-
-	align-items: start;
-
+  display: grid;
+  grid-template-columns: 4.2em minmax(0, 1fr) 18em;
+  column-gap: 3.8em;
+  align-items: start;
 }
-
-
-/* ==========================================================
-   LEFT EDITORIAL RAIL
-   ========================================================== */
 
 .about-rail {
-
-	position: relative;
-
-	align-self: stretch;
-
-	min-height: 100%;
-
-	border-right:
-		solid 1px
-		var(--angie-green-soft);
-
+  position: relative;
+  align-self: stretch;
+  min-height: 100%;
+  border-right: solid 1px var(--angie-green-soft);
 }
-
 
 .about-rail-inner {
-
-	position: sticky;
-
-	top: 3em;
-
-	display: flex;
-
-	flex-direction: column;
-
-	align-items: center;
-
-	gap: 1.5em;
-
-	padding-top: 0.3em;
-
+  position: sticky;
+  top: 3em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5em;
+  padding-top: 0.3em;
 }
-
 
 .about-rail-en,
 .about-rail-zh {
-
-	font-family:
-		"Noto Sans TC",
-		sans-serif;
-
-	color: var(--angie-green-dark);
-
-	writing-mode: vertical-rl;
-
-	text-orientation: mixed;
-
+  font-family: "Noto Sans TC", sans-serif;
+  color: var(--angie-green-dark);
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
 }
-
 
 .about-rail-en {
-
-	font-size: 0.67em;
-
-	font-weight: 600;
-
-	letter-spacing: 0.26em;
-
+  font-size: 0.67em;
+  font-weight: 600;
+  letter-spacing: 0.26em;
 }
-
 
 .about-rail-zh {
-
-	font-family:
-		"Noto Serif TC",
-		serif;
-
-	font-size: 1.05em;
-
-	font-weight: 500;
-
-	letter-spacing: 0.22em;
-
+  font-family: "Noto Serif TC", serif;
+  font-size: 1.05em;
+  font-weight: 500;
+  letter-spacing: 0.22em;
 }
-
-
-/* Small dusty-pink marker */
 
 .about-rail::before {
-
-	content: "";
-
-	position: absolute;
-
-	top: 0;
-
-	right: -3px;
-
-	width: 5px;
-
-	height: 5px;
-
-	border-radius: 50%;
-
-	background: var(--angie-accent);
-
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -3px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--angie-accent);
 }
-
-
-/* ==========================================================
-   ESSAY
-   ========================================================== */
 
 .about-essay {
-
-	min-width: 0;
-
-	max-width: 48em;
-
+  min-width: 0;
+  max-width: 48em;
 }
-
-
-/* Essay header */
 
 .about-essay-header {
-
-	margin-bottom: 3.4em;
-
+  margin-bottom: 3.4em;
 }
-
 
 .about-essay-kicker {
-
-	margin:
-		0
-		0
-		1.1em
-		0;
-
-	color: var(--angie-accent-dark);
-
-	font-family:
-		"Noto Sans TC",
-		sans-serif;
-
-	font-size: 0.68em;
-
-	font-weight: 600;
-
-	letter-spacing: 0.24em;
-
+  margin: 0 0 1.1em;
+  color: var(--angie-accent-dark);
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 0.68em;
+  font-weight: 600;
+  letter-spacing: 0.24em;
 }
-
 
 .about-essay-header h1 {
-
-	margin: 0;
-
-	font-family:
-		"Noto Serif TC",
-		serif;
-
-	font-size: clamp(
-		2em,
-		3vw,
-		2.75em
-	);
-
-	font-weight: 500;
-
-	line-height: 1.35;
-
-	letter-spacing: 0.05em;
-
-	color: var(--angie-charcoal);
-
-	white-space: nowrap;
-
+  margin: 0;
+  font-family: "Noto Serif TC", serif;
+  font-size: clamp(2em, 3vw, 2.75em);
+  font-weight: 500;
+  line-height: 1.35;
+  letter-spacing: 0.05em;
+  color: var(--angie-charcoal);
+  white-space: nowrap;
 }
-
-
-/* Pink title detail + long green line */
 
 .about-title-line {
-
-	position: relative;
-
-	width: 100%;
-
-	height: 1px;
-
-	margin-top: 1.8em;
-
-	background: var(--angie-green-soft);
-
+  position: relative;
+  width: 100%;
+  height: 1px;
+  margin-top: 1.8em;
+  background: var(--angie-green-soft);
 }
-
 
 .about-title-line::before {
-
-	content: "";
-
-	position: absolute;
-
-	left: 0;
-
-	top: -1px;
-
-	width: 3.7em;
-
-	height: 3px;
-
-	background: var(--angie-accent);
-
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -1px;
+  width: 3.7em;
+  height: 3px;
+  background: var(--angie-accent);
 }
-
 
 .about-title-line::after {
-
-	content: "";
-
-	position: absolute;
-
-	right: 0;
-
-	top: -2px;
-
-	width: 5px;
-
-	height: 5px;
-
-	border-radius: 50%;
-
-	background: var(--angie-accent);
-
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -2px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--angie-accent);
 }
-
-
-/* Essay body */
 
 .about-essay-body {
-
-	max-width: 44em;
-
+  max-width: 44em;
 }
-
 
 .about-essay-body p {
-
-	margin:
-		0
-		0
-		2.2em
-		0;
-
-	color: var(--angie-charcoal);
-
-	font-family:
-		"Noto Serif TC",
-		serif;
-
-	font-size: 1.02em;
-
-	line-height: 2.15;
-
-	letter-spacing: 0.025em;
-
+  margin: 0 0 2.2em;
+  color: var(--angie-charcoal);
+  font-family: "Noto Serif TC", serif;
+  font-size: 1.02em;
+  line-height: 2.15;
+  letter-spacing: 0.025em;
 }
-
-
-/* Opening paragraph */
-
-
-/* Final paragraph gets breathing room */
 
 .about-essay-body p:last-child {
-
-	margin-bottom: 0;
-
-	padding-bottom: 1.5em;
-
+  margin-bottom: 0;
+  padding-bottom: 1.5em;
 }
-
-
-/* ==========================================================
-   EDITORIAL MARGIN
-   ========================================================== */
 
 .about-margin {
-
-	position: relative;
-
-	min-width: 0;
-
-	padding-left: 2.2em;
-
-	border-left:
-		solid 1px
-		var(--angie-green-soft);
-
+  position: relative;
+  min-width: 0;
+  padding-left: 2.2em;
+  border-left: solid 1px var(--angie-green-soft);
 }
-
-
-/* Timeline-like dots */
 
 .about-margin::before {
-
-	content: "";
-
-	position: absolute;
-
-	top: 0;
-
-	left: -3px;
-
-	width: 5px;
-
-	height: 5px;
-
-	border-radius: 50%;
-
-	background: var(--angie-green-dark);
-
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -3px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--angie-green-dark);
 }
-
-
-/* ==========================================================
-   PORTRAIT
-   ========================================================== */
 
 .about-margin-photo {
-
-	position: relative;
-
-	margin:
-		0
-		0
-		3.8em
-		0;
-
+  position: relative;
+  margin: 0 0 3.8em;
 }
-
 
 .about-photo-frame {
-
-	position: relative;
-
-	overflow: hidden;
-
-	background: var(--angie-paper-deep);
-
-	border:
-		solid 1px
-		rgba(40, 112, 82, 0.24);
-
+  position: relative;
+  overflow: hidden;
+  background: var(--angie-paper-deep);
+  border: solid 1px rgba(40, 112, 82, 0.24);
 }
-
-
-/* Editorial clipped corner */
 
 .about-photo-frame::after {
-
-	content: "";
-
-	position: absolute;
-
-	top: 0;
-
-	right: 0;
-
-	width: 1.4em;
-
-	height: 1.4em;
-
-	background: var(--angie-paper);
-
-	clip-path:
-		polygon(
-			100% 0,
-			100% 100%,
-			0 0
-		);
-
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1.4em;
+  height: 1.4em;
+  background: var(--angie-paper);
+  clip-path: polygon(100% 0, 100% 100%, 0 0);
 }
-
 
 .about-photo-frame img {
-
-	display: block;
-
-	width: 100%;
-
-	height: auto;
-
+  display: block;
+  width: 100%;
+  height: auto;
 }
-
-
-/* Dusty-pink tape-like accent */
 
 .about-photo-accent {
-
-	position: absolute;
-
-	z-index: 2;
-
-	top: -0.75em;
-
-	right: 1.1em;
-
-	width: 3.5em;
-
-	height: 1.15em;
-
-	background:
-		rgba(217, 139, 139, 0.78);
-
-	transform: rotate(-7deg);
-
+  position: absolute;
+  z-index: 2;
+  top: -0.75em;
+  right: 1.1em;
+  width: 3.5em;
+  height: 1.15em;
+  background: rgba(217, 139, 139, 0.78);
+  transform: rotate(-7deg);
 }
-
-
-/* ==========================================================
-   MARGIN SECTIONS
-   ========================================================== */
 
 .about-margin-section {
-
-	position: relative;
-
-	margin-bottom: 3.4em;
-
+  position: relative;
+  margin-bottom: 3.4em;
 }
-
 
 .about-margin-section::before {
-
-	content: "";
-
-	position: absolute;
-
-	top: 0.72em;
-
-	left: -2.38em;
-
-	width: 7px;
-
-	height: 7px;
-
-	background: var(--angie-green-dark);
-
-	transform: rotate(45deg);
-
+  content: "";
+  position: absolute;
+  top: 0.72em;
+  left: -2.38em;
+  width: 7px;
+  height: 7px;
+  background: var(--angie-green-dark);
+  transform: rotate(45deg);
 }
-
-
-/* English label */
 
 .about-margin-label {
-
-	margin:
-		0
-		0
-		0.55em
-		0;
-
-	color: var(--angie-accent-dark);
-
-	font-family:
-		"Noto Sans TC",
-		sans-serif;
-
-	font-size: 0.62em;
-
-	font-weight: 600;
-
-	letter-spacing: 0.2em;
-
+  margin: 0 0 0.55em;
+  color: var(--angie-accent-dark);
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 0.62em;
+  font-weight: 600;
+  letter-spacing: 0.2em;
 }
-
-
-/* Chinese heading */
 
 .about-margin-section h2 {
-
-	margin: 0;
-
-	color: var(--angie-green-dark);
-
-	font-family:
-		"Noto Serif TC",
-		serif;
-
-	font-size: 1.22em;
-
-	font-weight: 500;
-
-	letter-spacing: 0.08em;
-
+  margin: 0;
+  color: var(--angie-green-dark);
+  font-family: "Noto Serif TC", serif;
+  font-size: 1.22em;
+  font-weight: 500;
+  letter-spacing: 0.08em;
 }
-
-
-/* Rule */
 
 .about-margin-rule {
-
-	width: 100%;
-
-	height: 1px;
-
-	margin:
-		0.7em
-		0
-		1.2em
-		0;
-
-	background: var(--angie-green-soft);
-
+  width: 100%;
+  height: 1px;
+  margin: 0.7em 0 1.2em;
+  background: var(--angie-green-soft);
 }
-
-
-/* Location */
 
 .about-location {
-
-	margin: 0;
-
-	font-family:
-		"Noto Serif TC",
-		Georgia,
-		serif;
-
-	font-size: 0.96em;
-
-	letter-spacing: 0.04em;
-
+  margin: 0;
+  font-family: "Noto Serif TC", Georgia, serif;
+  font-size: 0.96em;
+  letter-spacing: 0.04em;
 }
-
-
-/* ==========================================================
-   LANGUAGES
-   ========================================================== */
 
 .about-language-list {
-
-	margin: 0;
-
+  margin: 0;
 }
-
 
 .about-language-list p {
-
-	display: grid;
-
-	grid-template-columns:
-		minmax(0, 1fr)
-		auto;
-
-	gap: 0.8em;
-
-	align-items: baseline;
-
-	margin:
-		0
-		0
-		0.65em
-		0;
-
-	font-size: 0.83em;
-
-	line-height: 1.65;
-
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.8em;
+  align-items: baseline;
+  margin: 0 0 0.65em;
+  font-size: 0.83em;
+  line-height: 1.65;
 }
-
 
 .language-name {
-
-	color: var(--angie-charcoal);
-
-	font-weight: 500;
-
+  color: var(--angie-charcoal);
+  font-weight: 500;
 }
-
 
 .language-level {
-
-	color: var(--angie-grey);
-
-	text-align: right;
-
-	font-size: 0.92em;
-
+  color: var(--angie-grey);
+  text-align: right;
+  font-size: 0.92em;
 }
-
-
-/* ==========================================================
-   PULL QUOTE
-   ========================================================== */
 
 .about-margin-quote {
-
-	position: relative;
-
-	margin:
-		4em
-		0
-		0
-		0;
-
-	padding:
-		2.2em
-		1.5em
-		1.7em
-		1.5em;
-
-	border:
-		solid 1px
-		rgba(217, 139, 139, 0.35);
-
-	background:
-		rgba(243, 226, 226, 0.26);
-
+  position: relative;
+  margin: 4em 0 0;
+  padding: 2.2em 1.5em 1.7em;
+  border: solid 1px rgba(217, 139, 139, 0.35);
+  background: rgba(243, 226, 226, 0.26);
 }
-
 
 .about-quote-mark {
-
-	position: absolute;
-
-	top: 0.12em;
-
-	left: 0.35em;
-
-	color:
-		var(--angie-accent);
-
-	font-family:
-		Georgia,
-		serif;
-
-	font-size: 3em;
-
-	line-height: 1;
-
+  position: absolute;
+  top: 0.12em;
+  left: 0.35em;
+  color: var(--angie-accent);
+  font-family: Georgia, serif;
+  font-size: 3em;
+  line-height: 1;
 }
-
 
 .about-margin-quote p {
-
-	margin: 0;
-
-	color: var(--angie-charcoal);
-
-	font-family:
-		"Noto Serif TC",
-		serif;
-
-	font-size: 0.9em;
-
-	line-height: 2;
-
+  margin: 0;
+  color: var(--angie-charcoal);
+  font-family: "Noto Serif TC", serif;
+  font-size: 0.9em;
+  line-height: 2;
 }
-
-
-/* ==========================================================
-   ABOUT CTA
-   ========================================================== */
 
 .about-cta {
-
-	display: grid;
-
-	grid-template-columns:
-		minmax(0, 1fr)
-		auto;
-
-	gap: 4em;
-
-	align-items: center;
-
-	margin-top: 6.5em;
-
-	padding:
-		2.8em
-		3em;
-
-	border:
-		solid 1px
-		rgba(40, 112, 82, 0.22);
-
-	background:
-		linear-gradient(
-			90deg,
-			rgba(226, 236, 229, 0.38),
-			rgba(247, 243, 236, 0.7)
-		);
-
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 4em;
+  align-items: center;
+  margin-top: 6.5em;
+  padding: 2.8em 3em;
+  border: solid 1px rgba(40, 112, 82, 0.22);
+  background: linear-gradient(90deg, rgba(226, 236, 229, 0.38), rgba(247, 243, 236, 0.7));
 }
-
-
-/* Small pink line */
-
-.about-cta {
-
-	position: relative;
-
-}
-
 
 .about-cta::before {
-
-	content: "";
-
-	position: absolute;
-
-	top: 0;
-
-	left: 0;
-
-	width: 3px;
-
-	height: 100%;
-
-	background: var(--angie-accent);
-
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: var(--angie-accent);
 }
-
-
-/* CTA copy */
 
 .about-cta-kicker {
-
-	margin:
-		0
-		0
-		0.7em
-		0;
-
-	color: var(--angie-accent-dark);
-
-	font-family:
-		"Noto Sans TC",
-		sans-serif;
-
-	font-size: 0.64em;
-
-	font-weight: 600;
-
-	letter-spacing: 0.22em;
-
+  margin: 0 0 0.7em;
+  color: var(--angie-accent-dark);
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 0.64em;
+  font-weight: 600;
+  letter-spacing: 0.22em;
 }
-
 
 .about-cta-copy h2 {
-
-	margin:
-		0
-		0
-		0.4em
-		0;
-
-	font-family:
-		"Noto Serif TC",
-		serif;
-
-	font-size: 1.65em;
-
-	font-weight: 500;
-
-	letter-spacing: 0.06em;
-
+  margin: 0 0 0.4em;
+  font-family: "Noto Serif TC", serif;
+  font-size: 1.65em;
+  font-weight: 500;
+  letter-spacing: 0.06em;
 }
-
 
 .about-cta-copy > p:last-child {
-
-	margin: 0;
-
-	color: var(--angie-grey);
-
-	font-size: 0.86em;
-
+  margin: 0;
+  color: var(--angie-grey);
+  font-size: 0.86em;
 }
-
-
-/* CTA actions */
 
 .about-cta-actions {
-
-	display: flex;
-
-	gap: 1em;
-
-	align-items: stretch;
-
+  display: flex;
+  gap: 1em;
+  align-items: stretch;
 }
-
-
-/* CTA links */
 
 .about-cta-link {
-
-	display: inline-flex;
-
-	justify-content: center;
-
-	align-items: center;
-
-	gap: 1.2em;
-
-	min-width: 10.5em;
-
-	box-sizing: border-box;
-
-	padding:
-		0.9em
-		1.5em;
-
-	border: solid 1px;
-
-	font-family:
-		"Noto Sans TC",
-		sans-serif;
-
-	font-size: 0.86em;
-
-	font-weight: 500;
-
-	letter-spacing: 0.08em;
-
-	text-decoration: none;
-
-	transition:
-		background-color 0.2s ease,
-		color 0.2s ease,
-		border-color 0.2s ease,
-		transform 0.2s ease;
-
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2em;
+  min-width: 10.5em;
+  box-sizing: border-box;
+  padding: 0.9em 1.5em;
+  border: solid 1px;
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 0.86em;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
 }
-
 
 .about-cta-link span {
-
-	transition:
-		transform 0.2s ease;
-
+  transition: transform 0.2s ease;
 }
-
-
-/* Green button */
 
 .about-cta-primary {
-
-	border-color: var(--angie-green);
-
-	color: var(--angie-green-dark);
-
-	background: transparent;
-
+  border-color: var(--angie-green);
+  color: var(--angie-green-dark);
+  background: transparent;
 }
-
 
 .about-cta-primary:hover {
-
-	background: var(--angie-green);
-
-	border-color: var(--angie-green);
-
-	color: var(--angie-paper) !important;
-
+  background: var(--angie-green);
+  border-color: var(--angie-green);
+  color: var(--angie-paper) !important;
 }
-
-
-/* Pink button */
 
 .about-cta-secondary {
-
-	border-color: var(--angie-accent);
-
-	color: var(--angie-accent-dark);
-
-	background: transparent;
-
+  border-color: var(--angie-accent);
+  color: var(--angie-accent-dark);
+  background: transparent;
 }
-
 
 .about-cta-secondary:hover {
-
-	background: var(--angie-accent);
-
-	border-color: var(--angie-accent);
-
-	color: var(--angie-charcoal) !important;
-
+  background: var(--angie-accent);
+  border-color: var(--angie-accent);
+  color: var(--angie-charcoal) !important;
 }
-
 
 .about-cta-link:hover {
-
-	transform: translateY(-2px);
-
+  transform: translateY(-2px);
 }
-
 
 .about-cta-link:hover span {
-
-	transform: translate(0.18em, -0.12em);
-
+  transform: translate(0.18em, -0.12em);
 }
-
 
 /* ==========================================================
    18. ABOUT — TABLET
    ========================================================== */
-
 @media screen and (max-width: 1280px) {
-
-	.about-editorial-layout {
-
-		grid-template-columns:
-			3.2em
-			minmax(0, 1fr)
-			15.5em;
-
-		column-gap: 2.5em;
-
-	}
-
-
-	.about-margin {
-
-		padding-left: 1.7em;
-
-	}
-
-
-	.about-margin-section::before {
-
-		left: -1.88em;
-
-	}
-
-
-	.about-essay-header h1 {
-
-		font-size: 2.7em;
-
-	}
-
-
-	.about-essay-body p {
-
-		font-size: 0.96em;
-
-	}
-
-
-	.about-language-list p {
-
-		grid-template-columns: 1fr;
-
-		gap: 0.1em;
-
-	}
-
-
-	.language-level {
-
-		text-align: left;
-
-	}
-
+  .about-editorial-layout {
+    grid-template-columns: 3.2em minmax(0, 1fr) 15.5em;
+    column-gap: 2.5em;
+  }
+  .about-margin { padding-left: 1.7em; }
+  .about-margin-section::before { left: -1.88em; }
+  .about-essay-header h1 { font-size: 2.7em; }
+  .about-essay-body p { font-size: 0.96em; }
+  .about-language-list p {
+    grid-template-columns: 1fr;
+    gap: 0.1em;
+  }
+  .language-level { text-align: left; }
 }
-
 
 /* ==========================================================
    19. ABOUT — SMALLER SCREENS
    ========================================================== */
-
 @media screen and (max-width: 980px) {
-
-	.about-page {
-
-		padding-top: 3em;
-
-	}
-
-
-	.about-topline {
-
-		margin-bottom: 4em;
-
-	}
-
-
-	.about-editorial-layout {
-
-		grid-template-columns:
-			3em
-			minmax(0, 1fr);
-
-		column-gap: 2em;
-
-	}
-
-
-	.about-essay {
-
-		max-width: none;
-
-	}
-
-
-	/* Margin moves below essay */
-
-	.about-margin {
-
-		grid-column: 2;
-
-		display: grid;
-
-		grid-template-columns:
-			minmax(12em, 0.8fr)
-			minmax(0, 1.2fr);
-
-		gap:
-			3em
-			2.5em;
-
-		margin-top: 4.5em;
-
-		padding:
-			2.5em
-			0
-			0
-			0;
-
-		border-left: 0;
-
-		border-top:
-			solid 1px
-			var(--angie-green-soft);
-
-	}
-
-
-	.about-margin::before {
-
-		top: -3px;
-
-		left: 0;
-
-	}
-
-
-	.about-margin-photo {
-
-		grid-row:
-			1 / span 2;
-
-		margin: 0;
-
-	}
-
-
-	.about-margin-section {
-
-		margin-bottom: 0;
-
-	}
-
-
-	.about-margin-section::before {
-
-		display: none;
-
-	}
-
-
-	.about-margin-quote {
-
-		grid-column:
-			1 / -1;
-
-		margin-top: 0;
-
-	}
-
-
-	/* CTA */
-
-	.about-cta {
-
-		grid-template-columns: 1fr;
-
-		gap: 2em;
-
-		padding:
-			2.5em
-			2.2em;
-
-	}
-
-
-	.about-cta-actions {
-
-		justify-content: flex-start;
-
-	}
-
+  .about-page { padding-top: 3em; }
+  .about-topline { margin-bottom: 4em; }
+  .about-editorial-layout {
+    grid-template-columns: 3em minmax(0, 1fr);
+    column-gap: 2em;
+  }
+  .about-essay { max-width: none; }
+  .about-margin {
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: minmax(12em, 0.8fr) minmax(0, 1.2fr);
+    gap: 3em 2.5em;
+    margin-top: 4.5em;
+    padding: 2.5em 0 0;
+    border-left: 0;
+    border-top: solid 1px var(--angie-green-soft);
+  }
+  .about-margin::before {
+    top: -3px;
+    left: 0;
+  }
+  .about-margin-photo {
+    grid-row: 1 / span 2;
+    margin: 0;
+  }
+  .about-margin-section { margin-bottom: 0; }
+  .about-margin-section::before { display: none; }
+  .about-margin-quote {
+    grid-column: 1 / -1;
+    margin-top: 0;
+  }
+  .about-cta {
+    grid-template-columns: 1fr;
+    gap: 2em;
+    padding: 2.5em 2.2em;
+  }
+  .about-cta-actions { justify-content: flex-start; }
 }
-
 
 /* ==========================================================
    20. ABOUT — MOBILE
    ========================================================== */
-
 @media screen and (max-width: 736px) {
-
-	.about-page {
-
-		padding:
-			2.5em
-			0
-			4em
-			0;
-
-	}
-
-
-	.about-topline {
-
-		margin-bottom: 3em;
-
-		font-size: 0.65em;
-
-	}
-
-
-	/* Rail becomes horizontal page marker */
-
-	.about-editorial-layout {
-
-		display: block;
-
-	}
-
-
-	.about-rail {
-
-		min-height: auto;
-
-		margin-bottom: 2.5em;
-
-		padding-bottom: 1em;
-
-		border-right: 0;
-
-		border-bottom:
-			solid 1px
-			var(--angie-green-soft);
-
-	}
-
-
-	.about-rail::before {
-
-		top: auto;
-
-		right: 0;
-
-		bottom: -3px;
-
-	}
-
-
-	.about-rail-inner {
-
-		position: static;
-
-		display: flex;
-
-		flex-direction: row;
-
-		align-items: baseline;
-
-		gap: 1em;
-
-		padding: 0;
-
-	}
-
-
-	.about-rail-en,
-	.about-rail-zh {
-
-		writing-mode: horizontal-tb;
-
-	}
-
-
-	.about-rail-en {
-
-		font-size: 0.65em;
-
-	}
-
-
-	.about-rail-zh {
-
-		font-size: 1.05em;
-
-		letter-spacing: 0.12em;
-
-	}
-
-
-	/* Essay */
-
-	.about-essay-header {
-
-		margin-bottom: 2.5em;
-
-	}
-
-
-	.about-essay-header h1 {
-
-	font-size: 1.55em;
-
-	line-height: 1.4;
-
-	letter-spacing: 0.03em;
-
-	white-space: nowrap;
-
-}
-
-
-	.about-title-line {
-
-		margin-top: 1.4em;
-
-	}
-
-
-	.about-essay-body p,
-	.about-essay-body p:first-child {
-
-		font-size: 0.98em;
-
-		line-height: 2;
-
-		margin-bottom: 1.9em;
-
-	}
-
-
-	/* Editorial margin becomes normal vertical flow */
-
-	.about-margin {
-
-		display: block;
-
-		margin-top: 4em;
-
-		padding-top: 2em;
-
-	}
-
-
-	.about-margin-photo {
-
-		max-width: 22em;
-
-		margin:
-			0
-			auto
-			3.2em
-			auto;
-
-	}
-
-
-	.about-margin-section {
-
-		margin-bottom: 3em;
-
-	}
-
-
-	.about-language-list p {
-
-		display: grid;
-
-		grid-template-columns:
-			minmax(0, 1fr)
-			auto;
-
-		gap: 1em;
-
-	}
-
-
-	.language-level {
-
-		text-align: right;
-
-	}
-
-
-	.about-margin-quote {
-
-		margin-top: 3em;
-
-	}
-
-
-	/* CTA */
-
-	.about-cta {
-
-		margin-top: 4.5em;
-
-		padding:
-			2.2em
-			1.4em;
-
-	}
-
-
-	.about-cta-copy h2 {
-
-		font-size: 1.4em;
-
-		line-height: 1.5;
-
-	}
-
-
-	.about-cta-actions {
-
-		display: grid;
-
-		grid-template-columns: 1fr;
-
-		gap: 0.9em;
-
-	}
-
-
-	.about-cta-link {
-
-		width: 100%;
-
-		min-width: 0;
-
-	}
-
+  .about-page { padding: 2.5em 0 4em; }
+  .about-topline {
+    margin-bottom: 3em;
+    font-size: 0.65em;
+  }
+  .about-editorial-layout { display: block; }
+  .about-rail {
+    min-height: auto;
+    margin-bottom: 2.5em;
+    padding-bottom: 1em;
+    border-right: 0;
+    border-bottom: solid 1px var(--angie-green-soft);
+  }
+  .about-rail::before {
+    top: auto;
+    right: 0;
+    bottom: -3px;
+  }
+  .about-rail-inner {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 1em;
+    padding: 0;
+  }
+  .about-rail-en,
+  .about-rail-zh { writing-mode: horizontal-tb; }
+  .about-rail-en { font-size: 0.65em; }
+  .about-rail-zh {
+    font-size: 1.05em;
+    letter-spacing: 0.12em;
+  }
+  .about-essay-header { margin-bottom: 2.5em; }
+  .about-essay-header h1 {
+    font-size: 1.55em;
+    line-height: 1.4;
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+  }
+  .about-title-line { margin-top: 1.4em; }
+  .about-essay-body p,
+  .about-essay-body p:first-child {
+    font-size: 0.98em;
+    line-height: 2;
+    margin-bottom: 1.9em;
+  }
+  .about-margin {
+    display: block;
+    margin-top: 4em;
+    padding-top: 2em;
+  }
+  .about-margin-photo {
+    max-width: 22em;
+    margin: 0 auto 3.2em;
+  }
+  .about-margin-section { margin-bottom: 3em; }
+  .about-language-list p {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 1em;
+  }
+  .language-level { text-align: right; }
+  .about-margin-quote { margin-top: 3em; }
+  .about-cta {
+    margin-top: 4.5em;
+    padding: 2.2em 1.4em;
+  }
+  .about-cta-copy h2 {
+    font-size: 1.4em;
+    line-height: 1.5;
+  }
+  .about-cta-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.9em;
+  }
+  .about-cta-link {
+    width: 100%;
+    min-width: 0;
+  }
 }
 
 /* ==========================================================
-   21. EXPERIENCE — CIRCULAR SKILL MAP
+   21. EXPERIENCE PAGE — Shared page styling
    ========================================================== */
-
-
-/* ----------------------------------------------------------
-   Skill Map Section
-   ---------------------------------------------------------- */
-
-.skill-map-section {
-	margin: 4.5em 0 0 0;
+.experience-page {
+  padding: 4em 0 5em;
 }
 
+.experience-topline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5em;
+  padding-bottom: 1em;
+  border-bottom: solid 1px var(--angie-line);
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 0.72em;
+  letter-spacing: 0.16em;
+  color: var(--angie-grey);
+  text-transform: uppercase;
+}
 
-/*
-   Compact canvas.
+.experience-topline span:first-child {
+  color: var(--angie-green-dark);
+  font-weight: 600;
+}
 
-   The circles are deliberately kept smaller than the full
-   content width. This makes the map read as an infographic,
-   rather than four oversized content containers.
-*/
+.experience-header {
+  max-width: 52em;
+  margin-bottom: 4.6em;
+}
+
+.experience-kicker,
+.experience-section-heading > p {
+  margin: 0 0 0.8em;
+  color: var(--angie-accent-dark);
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 0.67em;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+}
+
+.experience-header h1 {
+  margin: 0;
+  font-family: "Noto Serif TC", serif;
+  font-size: clamp(2.35em, 4vw, 3.35em);
+  font-weight: 500;
+  line-height: 1.35;
+  letter-spacing: 0.06em;
+  color: var(--angie-charcoal);
+}
+
+.experience-subtitle {
+  margin: 1.25em 0 0;
+  font-family: "Noto Serif TC", serif;
+  font-size: 0.96em;
+  line-height: 1.9;
+  letter-spacing: 0.06em;
+  color: var(--angie-green-dark);
+}
+
+.experience-title-line {
+  position: relative;
+  width: 100%;
+  height: 1px;
+  margin-top: 2em;
+  background: var(--angie-green-soft);
+}
+
+.experience-title-line::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 4em;
+  height: 3px;
+  background: var(--angie-accent);
+}
+
+.experience-title-line::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  right: 0;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--angie-accent);
+}
+
+/* ==========================================================
+   22. EXPERIENCE — CIRCULAR SKILL MAP
+   ========================================================== */
+.skill-map-section {
+  margin: 4.5em 0 0;
+}
 
 .skill-map {
-	position: relative;
-
-	width: min(100%, 58em);
-	aspect-ratio: 1.18 / 1;
-
-	margin: 0 auto;
-
-	isolation: isolate;
+  position: relative;
+  width: min(100%, 58em);
+  aspect-ratio: 1.18 / 1;
+  margin: 0 auto;
+  isolation: isolate;
 }
-
-
-/* ==========================================================
-   FOUR CIRCLES
-   ========================================================== */
 
 .skill-circle {
-	position: absolute;
-	z-index: 1;
-
-	width: 47%;
-	aspect-ratio: 1 / 1;
-
-	box-sizing: border-box;
-
-	border-radius: 50%;
-
-	border: 1px solid rgba(40, 112, 82, 0.18);
-
-	font-family: "Noto Serif TC", serif;
-
-	overflow: hidden;
+  position: absolute;
+  z-index: 1;
+  width: 47%;
+  aspect-ratio: 1 / 1;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border: 1px solid rgba(40, 112, 82, 0.18);
+  overflow: hidden;
 }
 
-
-/* 01 — Literature */
-
 .skill-circle-literature {
-	top: 1%;
-	left: 10%;
-
-	background: rgba(226, 236, 229, 0.72);
+  top: 1%;
+  left: 10%;
+  background: rgba(226, 236, 229, 0.72);
 }
 
 .skill-circle-content {
-	top: 1%;
-	right: 10%;
-
-	background: rgba(243, 226, 226, 0.72);
-
-	border-color: rgba(217, 139, 139, 0.22);
+  top: 1%;
+  right: 10%;
+  background: rgba(243, 226, 226, 0.72);
+  border-color: rgba(217, 139, 139, 0.22);
 }
 
 .skill-circle-teaching {
-	left: 10%;
-	bottom: 4%;
-
-	background: rgba(226, 236, 229, 0.66);
+  left: 10%;
+  bottom: 4%;
+  background: rgba(226, 236, 229, 0.66);
 }
 
 .skill-circle-governance {
-	right: 10%;
-	bottom: 4%;
-
-	background: rgba(243, 226, 226, 0.66);
-
-	border-color: rgba(217, 139, 139, 0.22);
+  right: 10%;
+  bottom: 4%;
+  background: rgba(243, 226, 226, 0.66);
+  border-color: rgba(217, 139, 139, 0.22);
 }
 
-
-/* ==========================================================
-   CONTENT POSITIONING INSIDE CIRCLES
-
-   Each domain stays toward the OUTER side of its circle.
-   The centre is intentionally left free for overlap labels
-   and Core Capabilities.
-   ========================================================== */
-
+/*
+   IMPORTANT:
+   The four domain text groups use the same geometry.
+   Left groups sit slightly outward; right groups mirror them.
+   All children share identical width/margins so 01–04,
+   titles, English labels and keywords stay vertically aligned.
+*/
 .skill-circle-literature > *,
 .skill-circle-teaching > * {
-	position: relative;
-
-	width: 53%;
-	margin-left: 10%;
-	margin-right: auto;
-
-	text-align: center;
+  position: relative;
+  width: 62%;
+  margin-left: 8%;
+  margin-right: auto;
+  text-align: center;
 }
-
 
 .skill-circle-content > *,
 .skill-circle-governance > * {
-	position: relative;
-
-	width: 53%;
-	margin-left: auto;
-	margin-right: 10%;
-
-	text-align: center;
+  position: relative;
+  width: 62%;
+  margin-left: auto;
+  margin-right: 8%;
+  text-align: center;
 }
 
-
-/* Upper circles */
-
+/* Upper pair: identical vertical start */
 .skill-circle-literature,
 .skill-circle-content {
-	padding-top: 8%;
+  padding-top: 8.5%;
 }
 
-
-/* Lower circles */
-
+/* Lower pair: identical vertical start */
 .skill-circle-teaching,
 .skill-circle-governance {
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-end;
-
-	padding-bottom: 8%;
+  padding-top: 52%;
 }
-
-
-/* ==========================================================
-   DOMAIN NUMBER
-   ========================================================== */
 
 .skill-circle-number {
-	display: block;
-
-	margin-bottom: 0.35em !important;
-
-	font-family: "Noto Sans TC", sans-serif;
-	font-size: 0.68em;
-	font-weight: 600;
-	letter-spacing: 0.14em;
-
-	color: var(--angie-accent-dark);
+  display: block;
+  margin-top: 0 !important;
+  margin-bottom: 0.55em !important;
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 0.68em;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.14em;
+  color: var(--angie-accent-dark);
 }
-
-
-/* ==========================================================
-   DOMAIN TITLE
-   ========================================================== */
 
 .skill-circle h2 {
-	margin: 0 0 0.28em 0;
-
-	font-family: "Noto Serif TC", serif;
-	font-size: 1.12em;
-	font-weight: 500;
-	line-height: 1.45;
-	letter-spacing: 0.035em;
-
-	color: var(--angie-green-dark);
+  margin: 0 0 0.32em;
+  font-family: "Noto Serif TC", serif;
+  font-size: 1.12em;
+  font-weight: 500;
+  line-height: 1.42;
+  letter-spacing: 0.035em;
+  color: var(--angie-green-dark);
 }
 
-
-/* English subtitle */
-
+/* Same typographic role as homepage English subtitles */
 .skill-circle-en {
-	margin-top: 0 !important;
-	margin-bottom: 0.9em !important;
-
-	font-family: "Noto Sans TC", sans-serif;
-	font-size: 0.6em;
-	font-weight: 400;
-	line-height: 1.55;
-	letter-spacing: 0.04em;
-
-	color: var(--angie-grey);
+  margin-top: 0 !important;
+  margin-bottom: 0.9em !important;
+  font-family: "Noto Serif TC", Georgia, serif;
+  font-size: 0.62em;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.55;
+  letter-spacing: 0.02em;
+  color: var(--angie-grey);
 }
-
-
-/* ==========================================================
-   HARD SKILL KEYWORDS
-   ========================================================== */
 
 .skill-circle-keywords {
-	display: grid;
-
-	grid-template-columns:
-		repeat(2, minmax(0, 1fr));
-
-	gap:
-		0.38em
-		0.55em;
-
-	margin-top: 0 !important;
-	margin-bottom: 0 !important;
-
-	padding: 0 !important;
-
-	list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.42em 0.65em;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding: 0 !important;
+  list-style: none;
 }
-
 
 .skill-circle-keywords li {
-	margin: 0;
-	padding: 0;
-
-	font-family: "Noto Sans TC", sans-serif;
-	font-size: 0.7em;
-	font-weight: 400;
-	line-height: 1.45;
-
-	color: var(--angie-charcoal);
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 0.7em;
+  font-weight: 400;
+  line-height: 1.45;
+  color: var(--angie-charcoal);
 }
 
-/* ==========================================================
-   SHARED SKILLS
-   These sit in the actual overlap zones.
-   ========================================================== */
-
+/* Shared / transferable skills */
 .shared-skill {
-	position: absolute;
-	z-index: 5;
-
-	padding: 0.32em 0.5em;
-
-	background: rgba(247, 243, 236, 0.86);
-
-	font-family: "Noto Sans TC", sans-serif;
-	font-size: 0.68em;
-	font-weight: 500;
-	line-height: 1.35;
-	letter-spacing: 0.04em;
-
-	color: var(--angie-accent-dark);
-
-	text-align: center;
-
-	white-space: nowrap;
+  position: absolute;
+  z-index: 5;
+  padding: 0.32em 0.5em;
+  background: rgba(247, 243, 236, 0.88);
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 0.68em;
+  font-weight: 500;
+  line-height: 1.35;
+  letter-spacing: 0.04em;
+  color: var(--angie-accent-dark);
+  text-align: center;
+  white-space: nowrap;
 }
-
-
-/* Literature × Content */
 
 .shared-skill-top {
-	top: 20%;
-	left: 50%;
-
-	transform: translateX(-50%);
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
 }
-
-
-/* Literature × Teaching */
 
 .shared-skill-left {
-	top: 49%;
-	left: 21%;
-
-	transform: translateY(-50%);
+  top: 49%;
+  left: 21%;
+  transform: translateY(-50%);
 }
-
-
-/* Content × Governance */
 
 .shared-skill-right {
-	top: 49%;
-	right: 21%;
-
-	transform: translateY(-50%);
+  top: 49%;
+  right: 21%;
+  transform: translateY(-50%);
 }
-
-
-/* Teaching × Governance */
 
 .shared-skill-bottom {
-	left: 50%;
-	bottom: 20%;
-
-	transform: translateX(-50%);
+  left: 50%;
+  bottom: 20%;
+  transform: translateX(-50%);
 }
 
-
-/* ==========================================================
-   CORE CAPABILITIES
-   ========================================================== */
-
+/* Core capabilities */
 .skill-core {
-	position: absolute;
-	z-index: 8;
-
-	top: 50%;
-	left: 50%;
-
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-
-	width: 22%;
-	aspect-ratio: 1 / 1;
-
-	box-sizing: border-box;
-
-	padding: 1.2em;
-
-	transform: translate(-50%, -50%);
-
-	border-radius: 50%;
-
-	border: 1px solid rgba(217, 139, 139, 0.58);
-
-	background: rgba(247, 243, 236, 0.95);
-
-	box-shadow:
-		0 0 0 0.32em
-		rgba(247, 243, 236, 0.48);
-
-	text-align: center;
+  position: absolute;
+  z-index: 8;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 22.5%;
+  aspect-ratio: 1 / 1;
+  box-sizing: border-box;
+  padding: 1.2em;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 1px solid rgba(217, 139, 139, 0.58);
+  background: rgba(247, 243, 236, 0.96);
+  box-shadow: 0 0 0 0.32em rgba(247, 243, 236, 0.48);
+  text-align: center;
 }
-
-
-/* CORE CAPABILITIES */
 
 .skill-core-en {
-	margin: 0 0 0.35em 0;
-
-	font-family: "Noto Sans TC", sans-serif;
-	font-size: 0.5em;
-	font-weight: 600;
-	line-height: 1.3;
-	letter-spacing: 0.12em;
-
-	color: var(--angie-accent-dark);
+  margin: 0 0 0.35em;
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 0.5em;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0.12em;
+  color: var(--angie-accent-dark);
 }
 
 .skill-core h2 {
-	margin: 0 0 0.6em 0;
+  margin: 0 0 0.6em;
+  font-family: "Noto Serif TC", serif;
+  font-size: 1.02em;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: 0.06em;
+  color: var(--angie-green-dark);
+}
 
-	font-family: "Noto Serif TC", serif;
-	font-size: 1.02em;
-	font-weight: 500;
-	line-height: 1.3;
-	letter-spacing: 0.06em;
-
-	color: var(--angie-green-dark);
+.skill-core ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .skill-core li {
-	margin: 0 0 0.28em 0;
-
-	font-family: "Noto Sans TC", sans-serif;
-	font-size: 0.61em;
-	font-weight: 400;
-	line-height: 1.4;
-
-	color: var(--angie-charcoal);
+  margin: 0 0 0.28em;
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 0.61em;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--angie-charcoal);
 }
-
 
 .skill-core li:last-child {
-	margin-bottom: 0;
+  margin-bottom: 0;
 }
 
-
-/* ==========================================================
-   LEGEND
-   ========================================================== */
-
+/* Bilingual legend */
 .skill-map-legend {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: center;
-
-	gap: 1em 2.2em;
-
-	width: min(100%, 52em);
-
-	margin:
-		1.8em
-		auto
-		0
-		auto;
-
-	padding-top: 1.4em;
-
-	border-top: 1px solid var(--angie-line);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1em 2.2em;
+  width: min(100%, 58em);
+  margin: 1.8em auto 0;
+  padding-top: 1.4em;
+  border-top: 1px solid var(--angie-line);
 }
-
 
 .skill-legend-item {
-	display: flex;
-	align-items: center;
-
-	gap: 0.5em;
-
-	font-family: "Noto Sans TC", sans-serif;
-	font-size: 0.72em;
-	letter-spacing: 0.03em;
-
-	color: var(--angie-grey);
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 0.72em;
+  letter-spacing: 0.03em;
+  color: var(--angie-grey);
 }
-
 
 .legend-dot {
-	display: inline-block;
-
-	width: 0.7em;
-	height: 0.7em;
-
-	border-radius: 50%;
-
-	flex: 0 0 auto;
+  display: inline-block;
+  width: 0.7em;
+  height: 0.7em;
+  border-radius: 50%;
+  flex: 0 0 auto;
 }
 
-
-.legend-domain {
-	background: var(--angie-green-soft);
-}
-
-
-.legend-shared {
-	background: var(--angie-accent);
-}
-
-
+.legend-domain { background: var(--angie-green-soft); }
+.legend-shared { background: var(--angie-accent); }
 .legend-core {
-	box-sizing: border-box;
-
-	background: var(--angie-paper);
-
-	border: 1px solid var(--angie-accent);
+  box-sizing: border-box;
+  background: var(--angie-paper);
+  border: 1px solid var(--angie-accent);
 }
-
 
 /* ==========================================================
-   TABLET — keep the same four-circle structure
+   23. EXPERIENCE — Skill Index + Education + Navigation
    ========================================================== */
+.experience-skills,
+.experience-education {
+  margin-top: 7em;
+  padding-top: 4em;
+  border-top: solid 1px var(--angie-line);
+}
 
+.experience-section-heading {
+  margin-bottom: 2.8em;
+}
+
+.experience-section-heading h2 {
+  margin: 0;
+  font-family: "Noto Serif TC", serif;
+  font-size: 1.75em;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--angie-green-dark);
+}
+
+.experience-skill-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0;
+  border-top: solid 1px var(--angie-line);
+  border-bottom: solid 1px var(--angie-line);
+}
+
+.experience-skill-card {
+  position: relative;
+  min-width: 0;
+  padding: 2em 1.6em 2.2em;
+  border-right: solid 1px var(--angie-line);
+}
+
+.experience-skill-card:first-child { padding-left: 0.6em; }
+.experience-skill-card:last-child { border-right: 0; }
+
+.experience-skill-number {
+  display: block;
+  margin-bottom: 1.2em;
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 0.68em;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  color: var(--angie-accent-dark);
+}
+
+.experience-skill-card h3 {
+  margin: 0 0 1.3em;
+  font-family: "Noto Serif TC", serif;
+  font-size: 1.18em;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--angie-green-dark);
+}
+
+.experience-skill-card ul {
+  margin: 0 0 2em;
+  padding-left: 1.1em;
+}
+
+.experience-skill-card li {
+  margin-bottom: 0.45em;
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 0.82em;
+  line-height: 1.6;
+  color: var(--angie-charcoal);
+}
+
+.experience-skill-card a {
+  border: 0;
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 0.78em;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+/* Vertical education timeline */
+.education-timeline {
+  position: relative;
+  max-width: 46em;
+  margin-top: 1em;
+  padding-left: 2.8em;
+}
+
+.education-timeline::before {
+  content: "";
+  position: absolute;
+  top: 0.55em;
+  bottom: 0.55em;
+  left: 0.45em;
+  width: 1px;
+  background: var(--angie-green-soft);
+}
+
+.education-timeline-item {
+  position: relative;
+  padding: 0 0 3.2em 0;
+}
+
+.education-timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.education-timeline-marker {
+  position: absolute;
+  top: 0.45em;
+  left: -2.75em;
+  width: 0.65em;
+  height: 0.65em;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background: var(--angie-paper);
+  border: 2px solid var(--angie-accent);
+}
+
+.education-year {
+  margin: 0 0 0.35em;
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 0.75em;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--angie-accent-dark);
+}
+
+.education-timeline-content h3 {
+  margin: 0 0 0.25em;
+  font-family: "Noto Serif TC", serif;
+  font-size: 1.15em;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--angie-charcoal);
+}
+
+.education-timeline-content > p:last-child {
+  margin: 0;
+  font-size: 0.9em;
+  line-height: 1.7;
+  color: var(--angie-grey);
+}
+
+.experience-related {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-top: 5.5em;
+  border-top: 1px solid var(--angie-line);
+  border-bottom: 1px solid var(--angie-line);
+}
+
+.experience-related a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.35em 1.25em;
+  border: 0;
+  border-right: 1px solid var(--angie-line);
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 0.82em;
+  letter-spacing: 0.05em;
+  color: var(--angie-charcoal);
+}
+
+.experience-related a:last-child { border-right: 0; }
+.experience-related a span {
+  color: var(--angie-green);
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.experience-related a:hover {
+  background: var(--angie-accent);
+  color: var(--angie-charcoal) !important;
+}
+
+.experience-related a:hover span {
+  color: var(--angie-green-dark);
+  transform: translate(0.12em, -0.08em);
+}
+
+/* ==========================================================
+   24. EXPERIENCE — Responsive
+   ========================================================== */
 @media screen and (max-width: 980px) {
+  .experience-page { padding-top: 3em; }
+  .experience-topline { margin-bottom: 4em; }
+  .experience-header { margin-bottom: 3.8em; }
 
-	.skill-map-section {
-		margin-top: 3.5em;
-	}
+  /* Keep the four-circle structure */
+  .skill-map {
+    width: min(100%, 46em);
+  }
+  .skill-circle-literature > *,
+  .skill-circle-teaching > * {
+    width: 64%;
+    margin-left: 6%;
+  }
+  .skill-circle-content > *,
+  .skill-circle-governance > * {
+    width: 64%;
+    margin-right: 6%;
+  }
+  .skill-circle h2 { font-size: 0.96em; }
+  .skill-circle-en { font-size: 0.55em; }
+  .skill-circle-keywords li { font-size: 0.61em; }
+  .shared-skill { font-size: 0.6em; }
+  .skill-core h2 { font-size: 0.88em; }
+  .skill-core li { font-size: 0.52em; }
 
+  .experience-skill-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .experience-skill-card:nth-child(2) { border-right: 0; }
+  .experience-skill-card:nth-child(-n+2) { border-bottom: 1px solid var(--angie-line); }
+  .experience-skill-card:first-child { padding-left: 1.6em; }
 
-	.skill-map {
-		width: min(100%, 46em);
-	}
+  .experience-related {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .experience-related a:nth-child(2) { border-right: 0; }
+  .experience-related a:nth-child(-n+2) { border-bottom: 1px solid var(--angie-line); }
+}
 
+@media screen and (max-width: 736px) {
+  .experience-page { padding: 2.5em 0 4em; }
+  .experience-topline {
+    margin-bottom: 3em;
+    font-size: 0.65em;
+  }
+  .experience-header h1 { font-size: 2em; }
+  .experience-subtitle {
+    font-size: 0.84em;
+    line-height: 1.8;
+  }
 
-	.skill-circle h2 {
-		font-size: 0.94em;
-	}
+  /* Mobile still shows four overlapping circles */
+  .skill-map-section { margin-top: 3em; }
+  .skill-map {
+    width: 100%;
+    max-width: 30em;
+    aspect-ratio: 1 / 1.08;
+  }
+  .skill-circle {
+    width: 56%;
+  }
+  .skill-circle-literature {
+    top: 1%;
+    left: 0;
+  }
+  .skill-circle-content {
+    top: 1%;
+    right: 0;
+  }
+  .skill-circle-teaching {
+    left: 0;
+    bottom: 1%;
+  }
+  .skill-circle-governance {
+    right: 0;
+    bottom: 1%;
+  }
+  .skill-circle-literature,
+  .skill-circle-content {
+    padding-top: 9%;
+  }
+  .skill-circle-teaching,
+  .skill-circle-governance {
+    padding-top: 51%;
+  }
+  .skill-circle-literature > *,
+  .skill-circle-teaching > * {
+    width: 68%;
+    margin-left: 3%;
+  }
+  .skill-circle-content > *,
+  .skill-circle-governance > * {
+    width: 68%;
+    margin-right: 3%;
+  }
+  .skill-circle-number {
+    margin-bottom: 0.35em !important;
+    font-size: 0.46em;
+  }
+  .skill-circle h2 {
+    margin-bottom: 0.18em;
+    font-size: 0.69em;
+    line-height: 1.35;
+  }
+  .skill-circle-en {
+    margin-bottom: 0.45em !important;
+    font-size: 0.39em;
+    line-height: 1.35;
+  }
+  .skill-circle-keywords {
+    gap: 0.2em 0.35em;
+  }
+  .skill-circle-keywords li {
+    font-size: 0.43em;
+    line-height: 1.25;
+  }
+  .shared-skill {
+    padding: 0.22em 0.35em;
+    font-size: 0.39em;
+  }
+  .shared-skill-top { top: 18%; }
+  .shared-skill-left { left: 8%; }
+  .shared-skill-right { right: 8%; }
+  .shared-skill-bottom { bottom: 17%; }
+  .skill-core {
+    width: 28%;
+    padding: 0.7em;
+  }
+  .skill-core-en {
+    margin-bottom: 0.15em;
+    font-size: 0.31em;
+    letter-spacing: 0.06em;
+  }
+  .skill-core h2 {
+    margin-bottom: 0.32em;
+    font-size: 0.63em;
+  }
+  .skill-core li {
+    margin-bottom: 0.1em;
+    font-size: 0.36em;
+    line-height: 1.25;
+  }
+  .skill-map-legend {
+    justify-content: flex-start;
+    gap: 0.8em;
+    margin-top: 1.5em;
+  }
+  .skill-legend-item {
+    width: 100%;
+    font-size: 0.66em;
+  }
 
-
-	.skill-circle-en {
-		font-size: 0.52em;
-	}
-
-
-	.skill-circle-keywords li {
-		font-size: 0.61em;
-	}
-
-
-	.shared-skill {
-		font-size: 0.6em;
-	}
-
-
-	.skill-core h2 {
-		font-size: 0.85em;
-	}
-
-
-	.skill-core li {
-		font-size: 0.52em;
-	}
-
+  .experience-skills,
+  .experience-education {
+    margin-top: 4.5em;
+    padding-top: 3em;
+  }
+  .experience-skill-grid {
+    grid-template-columns: 1fr;
+  }
+  .experience-skill-card,
+  .experience-skill-card:first-child {
+    padding: 1.7em 0;
+    border-right: 0;
+    border-bottom: 1px solid var(--angie-line);
+  }
+  .experience-skill-card:last-child { border-bottom: 0; }
+  .education-timeline {
+    padding-left: 2.4em;
+  }
+  .education-timeline-marker {
+    left: -2.35em;
+  }
+  .experience-related {
+    grid-template-columns: 1fr;
+  }
+  .experience-related a {
+    border-right: 0;
+    border-bottom: 1px solid var(--angie-line);
+  }
+  .experience-related a:last-child { border-bottom: 0; }
 }
