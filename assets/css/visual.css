@@ -2218,3 +2218,59 @@ input[type="button"]:hover {
   margin-right: auto !important;
   text-align: center;
 }
+
+/* ==========================================================
+   EXPERIENCE — Desktop Circle Alignment
+   Equal circles + aligned lower domains
+   ========================================================== */
+
+@media screen and (min-width: 981px) {
+
+	/* Keep all four circles exactly the same size */
+
+	.skill-circle-literature,
+	.skill-circle-content,
+	.skill-circle-teaching,
+	.skill-circle-governance {
+		width: 47% !important;
+		aspect-ratio: 1 / 1;
+	}
+
+
+	/* Perfect vertical symmetry */
+
+	.skill-circle-literature,
+	.skill-circle-content {
+		top: 1%;
+	}
+
+	.skill-circle-teaching,
+	.skill-circle-governance {
+		bottom: 1%;
+	}
+
+
+	/* 03 + 04 start from exactly the same height */
+
+	.skill-circle-teaching,
+	.skill-circle-governance {
+		display: flex !important;
+		flex-direction: column !important;
+		justify-content: flex-start !important;
+
+		padding-top: 52% !important;
+		padding-bottom: 0 !important;
+	}
+
+
+	/* Keep their content horizontally centred */
+
+	.skill-circle-teaching > *,
+	.skill-circle-governance > * {
+		width: 62%;
+		margin-left: auto !important;
+		margin-right: auto !important;
+		text-align: center;
+	}
+
+}
