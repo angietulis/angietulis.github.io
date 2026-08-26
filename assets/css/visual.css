@@ -1,6 +1,6 @@
 /* ==========================================================
    Angie 劉泀嗪
-   Visual Identity V4.5
+   Visual Identity V4.6
 
    Forest Green × Dusty Pink
    Editorial / Literary / Contemporary
@@ -1579,289 +1579,32 @@ input[type="button"]:hover {
 }
 
 /* ==========================================================
-   22. EXPERIENCE — CIRCULAR SKILL MAP
+   22. EXPERIENCE — Skill Map Image
    ========================================================== */
 .skill-map-section {
   margin: 4.5em 0 0;
 }
 
-.skill-map {
+.experience-skill-map-image {
   position: relative;
-  width: min(100%, 58em);
-  aspect-ratio: 1.18 / 1;
+  left: -3em;
+  width: min(100%, 32em);
   margin: 0 auto;
-  isolation: isolate;
+  padding: 0;
+  line-height: 0;
 }
 
-.skill-circle {
-  position: absolute;
-  z-index: 1;
-  width: 47%;
-  aspect-ratio: 1 / 1;
-  box-sizing: border-box;
-  border-radius: 50%;
-  border: 1px solid rgba(40, 112, 82, 0.18);
-  overflow: hidden;
-}
-
-.skill-circle-literature {
-  top: 1%;
-  left: 10%;
-  background: rgba(226, 236, 229, 0.72);
-}
-
-.skill-circle-content {
-  top: 1%;
-  right: 10%;
-  background: rgba(243, 226, 226, 0.72);
-  border-color: rgba(217, 139, 139, 0.22);
-}
-
-.skill-circle-teaching {
-  left: 10%;
-  bottom: 4%;
-  background: rgba(226, 236, 229, 0.66);
-}
-
-.skill-circle-governance {
-  right: 10%;
-  bottom: 4%;
-  background: rgba(243, 226, 226, 0.66);
-  border-color: rgba(217, 139, 139, 0.22);
-}
-
-/*
-   IMPORTANT:
-   The four domain text groups use the same geometry.
-   Left groups sit slightly outward; right groups mirror them.
-   All children share identical width/margins so 01–04,
-   titles, English labels and keywords stay vertically aligned.
-*/
-.skill-circle-literature > *,
-.skill-circle-content > *,
-.skill-circle-teaching > *,
-.skill-circle-governance > * {
-  position: relative;
-  width: 58%;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-
-/* Upper pair: identical vertical start */
-.skill-circle-literature,
-.skill-circle-content {
-  padding-top: 8.5%;
-}
-
-/* Lower pair: anchor content safely inside the lower circles.
-   Using flex-end avoids pushing the text outside the circle when its size changes. */
-.skill-circle-teaching,
-.skill-circle-governance {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding-top: 0;
-  padding-bottom: 10%;
-}
-
-.skill-circle-number {
+.experience-skill-map-image img {
   display: block;
-  margin-top: 0 !important;
-  margin-bottom: 0.55em !important;
-  font-family: "Noto Sans TC", sans-serif;
-  font-size: 0.68em;
-  font-weight: 600;
-  line-height: 1;
-  letter-spacing: 0.14em;
-  color: var(--angie-accent-dark);
-}
-
-.skill-circle h2 {
-  margin: 0 0 0.32em;
-  font-family: "Noto Serif TC", serif;
-  font-size: 1.12em;
-  font-weight: 500;
-  line-height: 1.42;
-  letter-spacing: 0.035em;
-  color: var(--angie-green-dark);
-}
-
-/* Same typographic role as homepage English subtitles */
-.skill-circle-en {
-  margin-top: 0 !important;
-  margin-bottom: 0.9em !important;
-  font-family: "Noto Serif TC", Georgia, serif;
-  font-size: 0.62em;
-  font-style: italic;
-  font-weight: 400;
-  line-height: 1.55;
-  letter-spacing: 0.02em;
-  color: var(--angie-grey);
-}
-
-.skill-circle-keywords {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.42em 0.65em;
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
-  padding: 0 !important;
-  list-style: none;
-}
-
-.skill-circle-keywords li {
+  width: 100%;
+  height: auto;
   margin: 0;
   padding: 0;
-  font-family: "Noto Sans TC", sans-serif;
-  font-size: 0.7em;
-  font-weight: 400;
-  line-height: 1.45;
-  color: var(--angie-charcoal);
-}
-
-/* Shared / transferable skills */
-.shared-skill {
-  position: absolute;
-  z-index: 5;
-  padding: 0.32em 0.5em;
-  background: rgba(247, 243, 236, 0.88);
-  font-family: "Noto Sans TC", sans-serif;
-  font-size: 0.68em;
-  font-weight: 500;
-  line-height: 1.35;
-  letter-spacing: 0.04em;
-  color: var(--angie-accent-dark);
-  text-align: center;
-  white-space: nowrap;
-}
-
-.shared-skill-top {
-  top: 20%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.shared-skill-left {
-  top: 49%;
-  left: 21%;
-  transform: translateY(-50%);
-}
-
-.shared-skill-right {
-  top: 49%;
-  right: 21%;
-  transform: translateY(-50%);
-}
-
-.shared-skill-bottom {
-  left: 50%;
-  bottom: 20%;
-  transform: translateX(-50%);
-}
-
-/* Core capabilities */
-.skill-core {
-  position: absolute;
-  z-index: 8;
-  top: 50%;
-  left: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 22.5%;
-  aspect-ratio: 1 / 1;
-  box-sizing: border-box;
-  padding: 1.2em;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  border: 1px solid rgba(217, 139, 139, 0.58);
-  background: rgba(247, 243, 236, 0.96);
-  box-shadow: 0 0 0 0.32em rgba(247, 243, 236, 0.48);
-  text-align: center;
-}
-
-.skill-core-en {
-  margin: 0 0 0.35em;
-  font-family: "Noto Sans TC", sans-serif;
-  font-size: 0.5em;
-  font-weight: 600;
-  line-height: 1.3;
-  letter-spacing: 0.12em;
-  color: var(--angie-accent-dark);
-}
-
-.skill-core h2 {
-  margin: 0 0 0.6em;
-  font-family: "Noto Serif TC", serif;
-  font-size: 1.02em;
-  font-weight: 500;
-  line-height: 1.3;
-  letter-spacing: 0.06em;
-  color: var(--angie-green-dark);
-}
-
-.skill-core ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.skill-core li {
-  margin: 0 0 0.28em;
-  font-family: "Noto Sans TC", sans-serif;
-  font-size: 0.61em;
-  font-weight: 400;
-  line-height: 1.4;
-  color: var(--angie-charcoal);
-}
-
-.skill-core li:last-child {
-  margin-bottom: 0;
-}
-
-/* Bilingual legend */
-.skill-map-legend {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 1em 2.2em;
-  width: min(100%, 58em);
-  margin: 1.8em auto 0;
-  padding-top: 1.4em;
-  border-top: 1px solid var(--angie-line);
-}
-
-.skill-legend-item {
-  display: flex;
-  align-items: center;
-  gap: 0.5em;
-  font-family: "Noto Sans TC", sans-serif;
-  font-size: 0.72em;
-  letter-spacing: 0.03em;
-  color: var(--angie-grey);
-}
-
-.legend-dot {
-  display: inline-block;
-  width: 0.7em;
-  height: 0.7em;
-  border-radius: 50%;
-  flex: 0 0 auto;
-}
-
-.legend-domain { background: var(--angie-green-soft); }
-.legend-shared { background: var(--angie-accent); }
-.legend-core {
-  box-sizing: border-box;
-  background: var(--angie-paper);
-  border: 1px solid var(--angie-accent);
+  border: 0;
 }
 
 /* ==========================================================
-   23. EXPERIENCE — Skill Index + Education + Navigation
+   23. EXPERIENCE — Skill Index + Education
    ========================================================== */
 .experience-skills,
 .experience-education {
@@ -1911,22 +1654,6 @@ input[type="button"]:hover {
   color: var(--angie-accent-dark);
 }
 
-.experience-skill-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.55em;
-  margin: 0 0 0.75em;
-  border: 0;
-  font-family: "Noto Sans TC", sans-serif;
-  font-size: 0.68em;
-  font-weight: 500;
-  letter-spacing: 0.05em;
-  color: var(--angie-green-dark);
-}
-
-.experience-skill-link:hover {
-  color: var(--angie-accent-dark) !important;
-}
 
 .experience-skill-card h3 {
   margin: 0 0 1.3em;
@@ -1941,6 +1668,8 @@ input[type="button"]:hover {
   color: inherit;
   border: 0;
   text-decoration: none;
+  font: inherit;
+  letter-spacing: inherit;
 }
 
 .experience-skill-card h3 a:hover {
@@ -1961,13 +1690,6 @@ input[type="button"]:hover {
   color: var(--angie-charcoal);
 }
 
-.experience-skill-card a {
-  border: 0;
-  font-family: "Noto Sans TC", sans-serif;
-  font-size: 0.78em;
-  font-weight: 500;
-  letter-spacing: 0.05em;
-}
 
 /* Vertical education timeline */
 .education-timeline {
@@ -2037,152 +1759,71 @@ input[type="button"]:hover {
    24. EXPERIENCE — Responsive
    ========================================================== */
 @media screen and (max-width: 980px) {
-  .experience-page { padding-top: 3em; }
-  .experience-topline { margin-bottom: 4em; }
-  .experience-header { margin-bottom: 3.8em; }
+  .experience-page {
+    padding-top: 3em;
+  }
 
-  /* Keep the four-circle structure */
-  .skill-map {
-    width: min(100%, 46em);
+  .experience-topline {
+    margin-bottom: 4em;
   }
-  .skill-circle-literature > *,
-  .skill-circle-teaching > * {
-    width: 64%;
-    margin-left: 6%;
+
+  .experience-header {
+    margin-bottom: 3.8em;
   }
-  .skill-circle-content > *,
-  .skill-circle-governance > * {
-    width: 64%;
-    margin-right: 6%;
+
+  .experience-skill-map-image {
+    left: 0;
+    width: min(78%, 28em);
+    margin-left: auto;
+    margin-right: auto;
   }
-  .skill-circle h2 { font-size: 0.96em; }
-  .skill-circle-en { font-size: 0.55em; }
-  .skill-circle-keywords li { font-size: 0.61em; }
-  .shared-skill { font-size: 0.6em; }
-  .skill-core h2 { font-size: 0.88em; }
-  .skill-core li { font-size: 0.52em; }
 
   .experience-skill-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-  .experience-skill-card:nth-child(2) { border-right: 0; }
-  .experience-skill-card:nth-child(-n+2) { border-bottom: 1px solid var(--angie-line); }
-  .experience-skill-card:first-child { padding-left: 1.6em; }
 
+  .experience-skill-card:nth-child(2) {
+    border-right: 0;
+  }
+
+  .experience-skill-card:nth-child(-n+2) {
+    border-bottom: 1px solid var(--angie-line);
+  }
+
+  .experience-skill-card:first-child {
+    padding-left: 1.6em;
+  }
 }
 
 @media screen and (max-width: 736px) {
-  .experience-page { padding: 2.5em 0 4em; }
+  .experience-page {
+    padding: 2.5em 0 4em;
+  }
+
   .experience-topline {
     margin-bottom: 3em;
     font-size: 0.65em;
   }
-  .experience-header h1 { font-size: 2em; }
+
+  .experience-header h1 {
+    font-size: 2em;
+  }
+
   .experience-subtitle {
     font-size: 0.84em;
     line-height: 1.8;
   }
 
-  /* Mobile still shows four overlapping circles */
-  .skill-map-section { margin-top: 3em; }
-  .skill-map {
-    width: 100%;
-    max-width: 30em;
-    aspect-ratio: 1 / 1.08;
+  .skill-map-section {
+    margin-top: 3em;
   }
-  .skill-circle {
-    width: 56%;
-  }
-  .skill-circle-literature {
-    top: 1%;
+
+  .experience-skill-map-image {
     left: 0;
-  }
-  .skill-circle-content {
-    top: 1%;
-    right: 0;
-  }
-  .skill-circle-teaching {
-    left: 0;
-    bottom: 1%;
-  }
-  .skill-circle-governance {
-    right: 0;
-    bottom: 1%;
-  }
-  .skill-circle-literature,
-  .skill-circle-content {
-    padding-top: 9%;
-  }
-  .skill-circle-teaching,
-  .skill-circle-governance {
-    padding-top: 0;
-    padding-bottom: 8%;
-  }
-  .skill-circle-literature > *,
-  .skill-circle-teaching > * {
-    width: 68%;
-    margin-left: 3%;
-  }
-  .skill-circle-content > *,
-  .skill-circle-governance > * {
-    width: 68%;
-    margin-right: 3%;
-  }
-  .skill-circle-number {
-    margin-bottom: 0.35em !important;
-    font-size: 0.46em;
-  }
-  .skill-circle h2 {
-    margin-bottom: 0.18em;
-    font-size: 0.69em;
-    line-height: 1.35;
-  }
-  .skill-circle-en {
-    margin-bottom: 0.45em !important;
-    font-size: 0.39em;
-    line-height: 1.35;
-  }
-  .skill-circle-keywords {
-    gap: 0.2em 0.35em;
-  }
-  .skill-circle-keywords li {
-    font-size: 0.43em;
-    line-height: 1.25;
-  }
-  .shared-skill {
-    padding: 0.22em 0.35em;
-    font-size: 0.39em;
-  }
-  .shared-skill-top { top: 18%; }
-  .shared-skill-left { left: 8%; }
-  .shared-skill-right { right: 8%; }
-  .shared-skill-bottom { bottom: 17%; }
-  .skill-core {
-    width: 28%;
-    padding: 0.7em;
-  }
-  .skill-core-en {
-    margin-bottom: 0.15em;
-    font-size: 0.31em;
-    letter-spacing: 0.06em;
-  }
-  .skill-core h2 {
-    margin-bottom: 0.32em;
-    font-size: 0.63em;
-  }
-  .skill-core li {
-    margin-bottom: 0.1em;
-    font-size: 0.36em;
-    line-height: 1.25;
-  }
-  .skill-map-legend {
-    justify-content: flex-start;
-    gap: 0.8em;
-    margin-top: 1.5em;
-  }
-  .skill-legend-item {
     width: 100%;
-    font-size: 0.66em;
+    max-width: 26em;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .experience-skills,
@@ -2190,143 +1831,27 @@ input[type="button"]:hover {
     margin-top: 4.5em;
     padding-top: 3em;
   }
+
   .experience-skill-grid {
     grid-template-columns: 1fr;
   }
+
   .experience-skill-card,
   .experience-skill-card:first-child {
     padding: 1.7em 0;
     border-right: 0;
     border-bottom: 1px solid var(--angie-line);
   }
-  .experience-skill-card:last-child { border-bottom: 0; }
+
+  .experience-skill-card:last-child {
+    border-bottom: 0;
+  }
+
   .education-timeline {
     padding-left: 2.4em;
   }
+
   .education-timeline-marker {
     left: -2.35em;
   }
-}
-
-/* ==========================================================
-   EXPERIENCE — Force circle content to true center
-   ========================================================== */
-
-.skill-circle > * {
-  width: 62%;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  text-align: center;
-}
-
-/* ==========================================================
-   EXPERIENCE — Lower Circle Alignment Fix
-   ========================================================== */
-
-@media screen and (min-width: 981px) {
-
-  /* 03 / 04 must remain true circles */
-  .skill-circle-teaching,
-  .skill-circle-governance {
-    display: block !important;
-
-    width: 47% !important;
-    height: auto !important;
-    min-height: 0 !important;
-
-    aspect-ratio: 1 / 1 !important;
-
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
-  }
-
-
-  /* Perfect vertical symmetry with 01 / 02 */
-  .skill-circle-teaching,
-  .skill-circle-governance {
-    bottom: 1% !important;
-  }
-
-
-  /*
-     Move the LOWER content group down
-     WITHOUT changing the size of the circle.
-
-     The margin is applied only to the first element (03 / 04),
-     so the rest of the content naturally follows it.
-  */
-  .skill-circle-teaching .skill-circle-number,
-  .skill-circle-governance .skill-circle-number {
-    margin-top: 48% !important;
-  }
-
-
-  /*
-     03 English title has two lines,
-     04 English title has one line.
-     Reserve the same vertical space so their skill rows align.
-  */
-  .skill-circle-teaching .skill-circle-en,
-  .skill-circle-governance .skill-circle-en {
-    min-height: 3.1em;
-  }
-
-}
-
-
-/* ==========================================================
-   EXPERIENCE — Skill Map Image
-   ========================================================== */
-
-.experience-skill-map-image {
-	width: min(100%, 32em);
-	margin: 0 auto;
-	padding: 0;
-	line-height: 0;
-}
-
-.experience-skill-map-image img {
-	display: block;
-	width: 100%;
-	height: auto;
-	margin: 0;
-	padding: 0;
-	border: 0;
-}
-
-
-/* Tablet */
-
-@media screen and (max-width: 980px) {
-
-	.experience-skill-map-image {
-		width: min(78%, 28em);
-		margin-left: auto;
-		margin-right: auto;
-	}
-
-}
-
-
-/* Mobile */
-
-@media screen and (max-width: 736px) {
-
-	.experience-skill-map-image {
-		width: 100%;
-		max-width: 26em;
-		margin-left: auto;
-		margin-right: auto;
-	}
-
-}
-
-}
-/* EXPERIENCE — Slightly shift skill map left on desktop */
-@media screen and (min-width: 981px) {
-
-	.experience-skill-map-image {
-		transform: translateX(-3.5em);
-	}
-
 }
