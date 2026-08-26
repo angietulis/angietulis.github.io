@@ -1591,7 +1591,7 @@ input[type="button"]:hover {
    ========================================================== */
 
 .experience-skill-map-image {
-	width: min(100%, 40em);
+	width: min(100%, 44em);
 	margin: 0 auto;
 	padding: 0;
 	line-height: 0;
@@ -1630,7 +1630,7 @@ input[type="button"]:hover {
 @media screen and (max-width: 980px) {
 
 	.experience-skill-map-image {
-		width: min(86%, 34em);
+		width: min(90%, 38em);
 		margin-left: auto;
 		margin-right: auto;
 	}
