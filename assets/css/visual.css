@@ -2611,3 +2611,25 @@ input[type="button"]:hover {
 	}
 
 }
+
+/* ==========================================================
+   CONTACT — Unified Sans Typography
+   Same visual language as homepage name
+   ========================================================== */
+
+.contact-page,
+.contact-page h1,
+.contact-page h2,
+.contact-page h3,
+.contact-page h4,
+.contact-page p,
+.contact-page span,
+.contact-page a {
+	font-family:
+		"Microsoft JhengHei",
+		"Microsoft JhengHei UI",
+		"PingFang TC",
+		"Heiti TC",
+		"Noto Sans TC",
+		sans-serif !important;
+}
