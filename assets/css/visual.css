@@ -1516,8 +1516,15 @@ input[type="button"]:hover {
 }
 
 .experience-header {
-  max-width: 52em;
+  width: 100%;
+  max-width: none;
   margin-bottom: 4.6em;
+}
+
+.experience-kicker,
+.experience-header h1,
+.experience-subtitle {
+  max-width: 52em;
 }
 
 .experience-kicker,
