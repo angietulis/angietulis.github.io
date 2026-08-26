@@ -1,6 +1,6 @@
 /* ==========================================================
    Angie 劉泀嗪
-   Visual Identity V4.6
+   Visual Identity V4.7
 
    Forest Green × Dusty Pink
    Editorial / Literary / Contemporary
@@ -26,6 +26,15 @@
   --angie-accent: #d98b8b;
   --angie-accent-dark: #c97878;
   --angie-accent-pale: #f3e2e2;
+
+  /* Global Chinese typeface */
+  --angie-font-zh:
+    "Microsoft JhengHei",
+    "Microsoft JhengHei UI",
+    "PingFang TC",
+    "Heiti TC",
+    "Noto Sans TC",
+    sans-serif;
 }
 
 /* ==========================================================
@@ -39,7 +48,7 @@ body,
 
 body {
   color: var(--angie-charcoal);
-  font-family: "Noto Serif TC", serif;
+  font-family: var(--angie-font-zh);
   font-size: 16px;
   line-height: 1.9;
   letter-spacing: 0.02em;
@@ -69,10 +78,12 @@ p {
 
 /* ==========================================================
    04. Typography
+   Chinese: Microsoft JhengHei / PingFang TC / Noto Sans TC
+   English editorial labels retain their dedicated styles.
    ========================================================== */
 h1,
 h2 {
-  font-family: "Noto Serif TC", serif;
+  font-family: var(--angie-font-zh);
   color: var(--angie-charcoal);
   font-weight: 500;
   letter-spacing: 0.03em;
@@ -82,13 +93,13 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Noto Serif TC", serif;
+  font-family: var(--angie-font-zh);
   color: var(--angie-charcoal);
 }
 
 .name-zh,
 .sidebar-name-zh {
-  font-family: "Microsoft JhengHei", "Microsoft JhengHei UI", "PingFang TC", "Heiti TC", "Noto Sans TC", sans-serif !important;
+  font-family: var(--angie-font-zh) !important;
   font-weight: 500;
 }
 
@@ -168,7 +179,7 @@ select:focus-visible {
 #menu ul a {
   border: 0;
   color: var(--angie-charcoal);
-  font-family: "Noto Sans TC", sans-serif;
+  font-family: var(--angie-font-zh);
   font-size: 0.92em;
   font-weight: 400;
   letter-spacing: 0.09em;
@@ -203,13 +214,13 @@ select:focus-visible {
 }
 
 .sidebar-location {
-  font-family: "Noto Sans TC", sans-serif;
+  font-family: var(--angie-font-zh);
   color: var(--angie-green-dark);
   letter-spacing: 0.06em;
 }
 
 .sidebar-contact-link {
-  font-family: "Noto Sans TC", sans-serif;
+  font-family: var(--angie-font-zh);
   font-size: 0.92em;
   border: 0;
 }
@@ -258,7 +269,7 @@ select:focus-visible {
 .home-eyebrow {
   margin: 0 0 1.2em;
   color: var(--angie-green);
-  font-family: "Noto Serif TC", serif;
+  font-family: var(--angie-font-zh);
   font-size: 1.02em;
   letter-spacing: 0.12em;
 }
@@ -284,7 +295,7 @@ select:focus-visible {
 .home-name .name-zh {
   display: block;
   margin-top: 0.4em;
-  font-family: "Microsoft JhengHei", "Microsoft JhengHei UI", "PingFang TC", "Heiti TC", "Noto Sans TC", sans-serif !important;
+  font-family: var(--angie-font-zh) !important;
   font-size: 2.3rem;
   font-weight: 500;
   color: var(--angie-charcoal);
@@ -296,7 +307,7 @@ select:focus-visible {
   flex-wrap: wrap;
   gap: 0.55em;
   margin: 2.4em 0 0;
-  font-family: "Noto Sans TC", sans-serif;
+  font-family: var(--angie-font-zh);
   font-size: 0.9em;
   letter-spacing: 0.08em;
 }
@@ -335,7 +346,7 @@ select:focus-visible {
   align-items: center;
   gap: 1.1em;
   border: 0;
-  font-family: "Noto Sans TC", sans-serif;
+  font-family: var(--angie-font-zh);
   font-size: 0.9em;
   font-weight: 500;
   letter-spacing: 0.08em;
@@ -443,7 +454,7 @@ select:focus-visible {
 .home-section-heading h2 {
   margin: 0;
   color: var(--angie-paper);
-  font-family: "Noto Serif TC", serif;
+  font-family: var(--angie-font-zh);
   font-size: 1.85em;
   font-weight: 500;
   line-height: 1.4;
@@ -515,7 +526,7 @@ select:focus-visible {
 
 .practice-title h3 {
   margin: 0 0 0.28em;
-  font-family: "Noto Serif TC", serif;
+  font-family: var(--angie-font-zh);
   font-size: 1.7em;
   font-weight: 500;
   line-height: 1.35;
@@ -646,7 +657,7 @@ select:focus-visible {
   margin: 0;
   padding-bottom: 0.55em;
   border-bottom: solid 1px var(--angie-green-soft);
-  font-family: "Noto Serif TC", serif;
+  font-family: var(--angie-font-zh);
   font-size: 1.35em;
   font-weight: 500;
   line-height: 1.5;
@@ -716,7 +727,7 @@ input[type="button"] {
   background: transparent;
   box-shadow: inset 0 0 0 1px var(--angie-green);
   color: var(--angie-green-dark) !important;
-  font-family: "Noto Sans TC", sans-serif;
+  font-family: var(--angie-font-zh);
   font-weight: 500;
   letter-spacing: 0.08em;
 }
@@ -986,7 +997,7 @@ input[type="button"]:hover {
 }
 
 .about-rail-zh {
-  font-family: "Noto Serif TC", serif;
+  font-family: var(--angie-font-zh);
   font-size: 1.05em;
   font-weight: 500;
   letter-spacing: 0.22em;
@@ -1015,7 +1026,7 @@ input[type="button"]:hover {
 .about-essay-kicker {
   margin: 0 0 1.1em;
   color: var(--angie-accent-dark);
-  font-family: "Noto Sans TC", sans-serif;
+  font-family: var(--angie-font-zh);
   font-size: 0.68em;
   font-weight: 600;
   letter-spacing: 0.24em;
@@ -1023,7 +1034,7 @@ input[type="button"]:hover {
 
 .about-essay-header h1 {
   margin: 0;
-  font-family: "Noto Serif TC", serif;
+  font-family: var(--angie-font-zh);
   font-size: clamp(2em, 3vw, 2.75em);
   font-weight: 500;
   line-height: 1.35;
@@ -1068,7 +1079,7 @@ input[type="button"]:hover {
 .about-essay-body p {
   margin: 0 0 2.2em;
   color: var(--angie-charcoal);
-  font-family: "Noto Serif TC", serif;
+  font-family: var(--angie-font-zh);
   font-size: 1.02em;
   line-height: 2.15;
   letter-spacing: 0.025em;
@@ -1156,7 +1167,7 @@ input[type="button"]:hover {
 .about-margin-label {
   margin: 0 0 0.55em;
   color: var(--angie-accent-dark);
-  font-family: "Noto Sans TC", sans-serif;
+  font-family: var(--angie-font-zh);
   font-size: 0.62em;
   font-weight: 600;
   letter-spacing: 0.2em;
@@ -1165,7 +1176,7 @@ input[type="button"]:hover {
 .about-margin-section h2 {
   margin: 0;
   color: var(--angie-green-dark);
-  font-family: "Noto Serif TC", serif;
+  font-family: var(--angie-font-zh);
   font-size: 1.22em;
   font-weight: 500;
   letter-spacing: 0.08em;
@@ -1180,7 +1191,7 @@ input[type="button"]:hover {
 
 .about-location {
   margin: 0;
-  font-family: "Noto Serif TC", Georgia, serif;
+  font-family: var(--angie-font-zh);
   font-size: 0.96em;
   letter-spacing: 0.04em;
 }
@@ -1231,7 +1242,7 @@ input[type="button"]:hover {
 .about-margin-quote p {
   margin: 0;
   color: var(--angie-charcoal);
-  font-family: "Noto Serif TC", serif;
+  font-family: var(--angie-font-zh);
   font-size: 0.9em;
   line-height: 2;
 }
@@ -1269,7 +1280,7 @@ input[type="button"]:hover {
 
 .about-cta-copy h2 {
   margin: 0 0 0.4em;
-  font-family: "Noto Serif TC", serif;
+  font-family: var(--angie-font-zh);
   font-size: 1.65em;
   font-weight: 500;
   letter-spacing: 0.06em;
@@ -1296,7 +1307,7 @@ input[type="button"]:hover {
   box-sizing: border-box;
   padding: 0.9em 1.5em;
   border: solid 1px;
-  font-family: "Noto Sans TC", sans-serif;
+  font-family: var(--angie-font-zh);
   font-size: 0.86em;
   font-weight: 500;
   letter-spacing: 0.08em;
@@ -1539,7 +1550,7 @@ input[type="button"]:hover {
 
 .experience-header h1 {
   margin: 0;
-  font-family: "Noto Serif TC", serif;
+  font-family: var(--angie-font-zh);
   font-size: clamp(2.35em, 4vw, 3.35em);
   font-weight: 500;
   line-height: 1.35;
@@ -1549,7 +1560,7 @@ input[type="button"]:hover {
 
 .experience-subtitle {
   margin: 1.25em 0 0;
-  font-family: "Noto Serif TC", serif;
+  font-family: var(--angie-font-zh);
   font-size: 0.96em;
   line-height: 1.9;
   letter-spacing: 0.06em;
@@ -1637,8 +1648,6 @@ input[type="button"]:hover {
 
 }
 
-}
-
 
 /* Mobile */
 
@@ -1669,7 +1678,7 @@ input[type="button"]:hover {
 
 .experience-section-heading h2 {
   margin: 0;
-  font-family: "Noto Serif TC", serif;
+  font-family: var(--angie-font-zh);
   font-size: 1.75em;
   font-weight: 500;
   letter-spacing: 0.06em;
@@ -1707,7 +1716,7 @@ input[type="button"]:hover {
 
 .experience-skill-card h3 {
   margin: 0 0 1.3em;
-  font-family: "Noto Serif TC", serif;
+  font-family: var(--angie-font-zh);
   font-size: 1.18em;
   font-weight: 500;
   line-height: 1.5;
@@ -1734,7 +1743,7 @@ input[type="button"]:hover {
 
 .experience-skill-card li {
   margin-bottom: 0.45em;
-  font-family: "Noto Sans TC", sans-serif;
+  font-family: var(--angie-font-zh);
   font-size: 0.82em;
   line-height: 1.6;
   color: var(--angie-charcoal);
@@ -1791,7 +1800,7 @@ input[type="button"]:hover {
 
 .education-timeline-content h3 {
   margin: 0 0 0.25em;
-  font-family: "Noto Serif TC", serif;
+  font-family: var(--angie-font-zh);
   font-size: 1.15em;
   font-weight: 500;
   line-height: 1.5;
@@ -1821,12 +1830,6 @@ input[type="button"]:hover {
     margin-bottom: 3.8em;
   }
 
-  .experience-skill-map-image {
-    left: 0;
-    width: min(78%, 28em);
-    margin-left: auto;
-    margin-right: auto;
-  }
 
   .experience-skill-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1868,13 +1871,6 @@ input[type="button"]:hover {
     margin-top: 3em;
   }
 
-  .experience-skill-map-image {
-    left: 0;
-    width: 100%;
-    max-width: 26em;
-    margin-left: auto;
-    margin-right: auto;
-  }
 
   .experience-skills,
   .experience-education {
@@ -1967,7 +1963,7 @@ input[type="button"]:hover {
 .contact-header h1 {
 	margin: 0;
 
-	font-family: "Noto Serif TC", serif;
+	font-family: var(--angie-font-zh);
 	font-size: clamp(2.35em, 4vw, 3.35em);
 	font-weight: 500;
 	line-height: 1.35;
@@ -1981,7 +1977,7 @@ input[type="button"]:hover {
 
 	margin: 1.3em 0 0;
 
-	font-family: "Noto Serif TC", serif;
+	font-family: var(--angie-font-zh);
 	font-size: 1.2em;
 	font-weight: 500;
 	line-height: 1.8;
@@ -2076,7 +2072,7 @@ input[type="button"]:hover {
 
 	margin: 0 0 1.5em;
 
-	font-family: "Noto Serif TC", serif;
+	font-family: var(--angie-font-zh);
 	font-size: 1.7em;
 	font-weight: 500;
 	line-height: 1.55;
@@ -2138,7 +2134,7 @@ input[type="button"]:hover {
 .contact-meta-item a {
 	border: 0;
 
-	font-family: "Noto Sans TC", sans-serif;
+	font-family: var(--angie-font-zh);
 	font-size: 0.9em;
 	font-weight: 500;
 
@@ -2176,7 +2172,7 @@ input[type="button"]:hover {
 .contact-section-heading h2 {
 	margin: 0;
 
-	font-family: "Noto Serif TC", serif;
+	font-family: var(--angie-font-zh);
 	font-size: 1.75em;
 	font-weight: 500;
 	letter-spacing: 0.06em;
@@ -2236,7 +2232,7 @@ input[type="button"]:hover {
 .contact-collaboration-item h3 {
 	margin: 0 0 1em;
 
-	font-family: "Noto Serif TC", serif;
+	font-family: var(--angie-font-zh);
 	font-size: 1.08em;
 	font-weight: 500;
 	line-height: 1.5;
@@ -2251,195 +2247,6 @@ input[type="button"]:hover {
 	line-height: 1.8;
 
 	color: var(--angie-grey);
-}
-
-
-/* ==========================================================
-   RESUME
-   ========================================================== */
-
-.contact-resume {
-	position: relative;
-
-	display: grid;
-	grid-template-columns: minmax(0, 1fr) auto;
-
-	gap: 4em;
-
-	align-items: center;
-
-	margin: 5.5em 0;
-
-	padding: 2.8em 3em;
-
-	border: solid 1px rgba(40, 112, 82, 0.22);
-
-	background:
-		linear-gradient(
-			90deg,
-			rgba(226, 236, 229, 0.42),
-			rgba(247, 243, 236, 0.68)
-		);
-}
-
-.contact-resume::before {
-	content: "";
-
-	position: absolute;
-	top: 0;
-	left: 0;
-
-	width: 3px;
-	height: 100%;
-
-	background: var(--angie-accent);
-}
-
-.contact-resume-copy h2 {
-	margin: 0 0 0.7em;
-
-	font-family: "Noto Serif TC", serif;
-	font-size: 1.55em;
-	font-weight: 500;
-	letter-spacing: 0.05em;
-
-	color: var(--angie-charcoal);
-}
-
-.contact-resume-copy > p:last-child {
-	max-width: 46em;
-
-	margin: 0;
-
-	font-size: 0.86em;
-	line-height: 1.9;
-
-	color: var(--angie-grey);
-}
-
-.contact-resume-link {
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-
-	gap: 1.1em;
-
-	min-width: 11em;
-
-	box-sizing: border-box;
-
-	padding: 0.95em 1.4em;
-
-	border: solid 1px var(--angie-green);
-
-	font-family: "Noto Sans TC", sans-serif;
-	font-size: 0.82em;
-	font-weight: 500;
-	letter-spacing: 0.07em;
-
-	color: var(--angie-green-dark);
-
-	transition:
-		background-color 0.2s ease,
-		color 0.2s ease,
-		transform 0.2s ease;
-}
-
-.contact-resume-link:hover {
-	background: var(--angie-accent);
-
-	border-color: var(--angie-accent);
-
-	color: var(--angie-charcoal) !important;
-
-	transform: translateY(-2px);
-}
-
-
-/* ==========================================================
-   OTHER PLATFORMS
-   ========================================================== */
-
-.contact-platforms {
-	padding-top: 0;
-}
-
-.contact-platform-grid {
-	border-top: solid 1px var(--angie-line);
-}
-
-.contact-platform-item {
-	display: grid;
-
-	grid-template-columns:
-		3.5em
-		minmax(0, 1fr)
-		auto;
-
-	gap: 1.5em;
-
-	align-items: center;
-
-	padding: 1.8em 1em;
-
-	border: 0;
-	border-bottom: solid 1px var(--angie-line);
-
-	color: var(--angie-charcoal);
-
-	transition:
-		background-color 0.2s ease,
-		transform 0.2s ease;
-}
-
-.contact-platform-number {
-	font-family: "Noto Sans TC", sans-serif;
-	font-size: 0.66em;
-	font-weight: 600;
-	letter-spacing: 0.14em;
-
-	color: var(--angie-accent-dark);
-}
-
-.contact-platform-item h3 {
-	margin: 0 0 0.25em;
-
-	font-family: "Noto Serif TC", serif;
-	font-size: 1.05em;
-	font-weight: 500;
-
-	color: var(--angie-green-dark);
-}
-
-.contact-platform-item p {
-	margin: 0;
-
-	font-size: 0.78em;
-
-	color: var(--angie-grey);
-}
-
-.contact-platform-arrow {
-	font-family: "Noto Sans TC", sans-serif;
-	font-size: 1.05em;
-
-	color: var(--angie-green);
-
-	transition: transform 0.2s ease;
-}
-
-.contact-platform-item:hover {
-	background: var(--angie-accent-pale);
-
-	transform: translateX(0.25em);
-}
-
-.contact-platform-item:hover h3 {
-	color: var(--angie-charcoal);
-}
-
-.contact-platform-item:hover .contact-platform-arrow {
-	transform: translate(0.15em, -0.12em);
 }
 
 
@@ -2503,17 +2310,6 @@ input[type="button"]:hover {
 		border-bottom: 0;
 	}
 
-	.contact-resume {
-		grid-template-columns: 1fr;
-
-		gap: 2em;
-
-		padding: 2.5em 2.2em;
-	}
-
-	.contact-resume-link {
-		justify-self: start;
-	}
 
 }
 
@@ -2586,50 +2382,7 @@ input[type="button"]:hover {
 		border-bottom: 0;
 	}
 
-	.contact-resume {
-		margin: 4em 0;
 
-		padding: 2.2em 1.4em;
-	}
-
-	.contact-resume-link {
-		width: 100%;
-
-		min-width: 0;
-	}
-
-	.contact-platform-item {
-		grid-template-columns:
-			2.5em
-			minmax(0, 1fr)
-			auto;
-
-		gap: 1em;
-
-		padding-left: 0;
-		padding-right: 0;
-	}
 
 }
 
-/* ==========================================================
-   CONTACT — Unified Sans Typography
-   Same visual language as homepage name
-   ========================================================== */
-
-.contact-page,
-.contact-page h1,
-.contact-page h2,
-.contact-page h3,
-.contact-page h4,
-.contact-page p,
-.contact-page span,
-.contact-page a {
-	font-family:
-		"Microsoft JhengHei",
-		"Microsoft JhengHei UI",
-		"PingFang TC",
-		"Heiti TC",
-		"Noto Sans TC",
-		sans-serif !important;
-}
