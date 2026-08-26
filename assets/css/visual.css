@@ -1638,20 +1638,13 @@ input[type="button"]:hover {
    titles, English labels and keywords stay vertically aligned.
 */
 .skill-circle-literature > *,
-.skill-circle-teaching > * {
-  position: relative;
-  width: 62%;
-  margin-left: 8%;
-  margin-right: auto;
-  text-align: center;
-}
-
 .skill-circle-content > *,
+.skill-circle-teaching > *,
 .skill-circle-governance > * {
   position: relative;
-  width: 62%;
+  width: 58%;
   margin-left: auto;
-  margin-right: 8%;
+  margin-right: auto;
   text-align: center;
 }
 
