@@ -2326,7 +2326,7 @@ input[type="button"]:hover {
 @media screen and (min-width: 981px) {
 
 	.experience-skill-map-image {
-		transform: translateX(-2.5em);
+		transform: translateX(-3.5em);
 	}
 
 }
