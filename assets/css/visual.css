@@ -2277,8 +2277,12 @@ input[type="button"]:hover {
    EXPERIENCE — Skill Map Image
    ========================================================== */
 
+/* ==========================================================
+   EXPERIENCE — Skill Map Image
+   ========================================================== */
+
 .experience-skill-map-image {
-	width: min(100%, 58em);
+	width: min(100%, 40em);
 	margin: 0 auto;
 	padding: 0;
 	line-height: 0;
@@ -2299,7 +2303,9 @@ input[type="button"]:hover {
 @media screen and (max-width: 980px) {
 
 	.experience-skill-map-image {
-		width: 100%;
+		width: min(88%, 34em);
+		margin-left: auto;
+		margin-right: auto;
 	}
 
 }
@@ -2311,13 +2317,10 @@ input[type="button"]:hover {
 
 	.experience-skill-map-image {
 		width: 100%;
-		margin: 0 auto;
+		max-width: 30em;
+		margin-left: auto;
+		margin-right: auto;
 	}
 
-	.experience-skill-map-image img {
-		display: block;
-		width: 100%;
-		height: auto;
-	}
-
+}
 }
