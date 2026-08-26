@@ -1595,7 +1595,7 @@ input[type="button"]:hover {
 .experience-skill-map-image {
   position: relative;
   left: -3em;
-  width: min(100%, 32em);
+  width: min(100%, 36em);
   margin: 0 auto;
   padding: 0;
   line-height: 0;
