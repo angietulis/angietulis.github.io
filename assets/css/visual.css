@@ -2456,7 +2456,7 @@ input[type="button"]:hover {
 	width: 100%;
 	max-width: 54em;
 
-	margin-bottom: 5.5em;
+	margin-bottom: 3.8em;
 }
 
 .literary-work-type {
@@ -2561,17 +2561,14 @@ input[type="button"]:hover {
 	margin: 0;
 
 	font-size: 1.02em;
-	line-height: 2.25;
-	letter-spacing: 0.05em;
+	line-height: 1.85;
+	letter-spacing: 0.035em;
 
 	white-space: pre-line;
 }
 
-
-/* Optional stanza spacing */
-
 .literary-work-body .poem-stanza {
-	margin-bottom: 2.6em;
+	margin-bottom: 1.8em;
 }
 
 .literary-work-body .poem-stanza:last-child {
@@ -2590,7 +2587,7 @@ input[type="button"]:hover {
 
 	gap: 3em;
 
-	margin-top: 7em;
+	margin-top: 5em;
 	padding-top: 1.8em;
 
 	border-top: solid 1px var(--angie-line);
