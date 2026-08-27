@@ -2769,17 +2769,17 @@ input[type="button"]:hover {
 	content: "";
 
 	position: absolute;
-	z-index: 2;
+	z-index: 3;
 
-	top: -0.65em;
-	left: 1.4em;
+	top: -0.45em;
+	right: -0.55em;
 
 	width: 3.2em;
 	height: 1em;
 
 	background: rgba(217, 139, 139, 0.78);
 
-	transform: rotate(-6deg);
+	transform: rotate(7deg);
 }
 
 
