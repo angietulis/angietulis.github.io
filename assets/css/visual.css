@@ -2771,15 +2771,16 @@ input[type="button"]:hover {
 	position: absolute;
 	z-index: 3;
 
-	top: -0.45em;
+	top: -0.15em;
 	right: -0.55em;
 
-	width: 3.2em;
-	height: 1em;
+	width: 2.8em;
+	height: 0.85em;
 
 	background: rgba(217, 139, 139, 0.78);
 
-	transform: rotate(7deg);
+	transform: rotate(45deg);
+	transform-origin: center;
 }
 
 
