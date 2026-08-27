@@ -2748,13 +2748,44 @@ input[type="button"]:hover {
 /* Image area */
 
 .literary-work-image {
+	position: relative;
+
 	width: 100%;
-	max-width: 42em;
+	max-width: 32em;
 
 	margin: 4em auto 0;
 
-	padding: 0;
+	padding: 0.8em;
+
+	box-sizing: border-box;
+
+	border: solid 1px rgba(40, 112, 82, 0.24);
+
+	background: var(--angie-paper-deep);
 }
+
+
+/* folded corner */
+
+.literary-work-image::after {
+	content: "";
+
+	position: absolute;
+	top: -1px;
+	right: -1px;
+
+	width: 1.6em;
+	height: 1.6em;
+
+	background: var(--angie-paper);
+
+	clip-path: polygon(
+		100% 0,
+		100% 100%,
+		0 0
+	);
+}
+
 
 .literary-work-image img {
 	display: block;
