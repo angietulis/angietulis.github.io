@@ -2706,3 +2706,92 @@ input[type="button"]:hover {
 	}
 
 }
+
+/* ==========================================================
+   LITERARY WORK — ESSAY
+   Long-form prose reading
+   ========================================================== */
+
+.literary-work-essay {
+	max-width: 42em;
+}
+
+.literary-work-essay p {
+	margin: 0 0 1.7em;
+
+	font-size: 1em;
+	line-height: 1.95;
+	letter-spacing: 0.025em;
+
+	color: var(--angie-charcoal);
+}
+
+
+/* Quoted passages */
+
+.literary-work-essay .literary-work-quote {
+	margin: 2.2em 0;
+
+	padding: 1.3em 1.5em;
+
+	border-left: solid 2px var(--angie-accent);
+
+	background: rgba(243, 226, 226, 0.22);
+
+	font-size: 0.95em;
+	line-height: 1.9;
+
+	color: var(--angie-green-dark);
+}
+
+
+/* Image area */
+
+.literary-work-image {
+	width: 100%;
+	max-width: 42em;
+
+	margin: 4em auto 0;
+
+	padding: 0;
+}
+
+.literary-work-image img {
+	display: block;
+
+	width: 100%;
+	height: auto;
+
+	margin: 0;
+
+	border: 0;
+}
+
+
+/* Mobile */
+
+@media screen and (max-width: 736px) {
+
+	.literary-work-essay {
+		max-width: 100%;
+	}
+
+	.literary-work-essay p {
+		font-size: 0.96em;
+		line-height: 1.85;
+		margin-bottom: 1.5em;
+	}
+
+	.literary-work-essay .literary-work-quote {
+		margin: 1.8em 0;
+		padding: 1.1em 1.2em;
+
+		font-size: 0.93em;
+		line-height: 1.8;
+	}
+
+	.literary-work-image {
+		margin-top: 3em;
+	}
+
+}
