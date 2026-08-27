@@ -2561,14 +2561,14 @@ input[type="button"]:hover {
 	margin: 0;
 
 	font-size: 1.02em;
-	line-height: 1.85;
+	line-height: 1.6;
 	letter-spacing: 0.035em;
 
-	white-space: pre-line;
+	white-space: normal;
 }
 
 .literary-work-body .poem-stanza {
-	margin-bottom: 1.8em;
+	margin-bottom: 1.5em;
 }
 
 .literary-work-body .poem-stanza:last-child {
@@ -2689,7 +2689,7 @@ input[type="button"]:hover {
 
 	.literary-work-body .poem {
 		font-size: 0.98em;
-		line-height: 2.2;
+		line-height: 1.65;
 	}
 
 	.literary-work-navigation {
