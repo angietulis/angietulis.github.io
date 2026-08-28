@@ -2845,3 +2845,34 @@ input[type="button"]:hover {
 	}
 
 }
+
+
+/* ==========================================================
+   LITERARY WORK — REFERENCES
+   ========================================================== */
+
+.literary-work-references {
+	margin-top: 4em;
+	padding-top: 2em;
+
+	border-top: solid 1px var(--angie-line);
+}
+
+.literary-work-references-label {
+	margin-bottom: 1.5em !important;
+
+	font-size: 0.72em !important;
+	font-weight: 600;
+	letter-spacing: 0.14em !important;
+
+	color: var(--angie-accent-dark) !important;
+}
+
+.literary-work-references p:not(.literary-work-references-label) {
+	margin-bottom: 1em;
+
+	font-size: 0.82em;
+	line-height: 1.8;
+
+	color: var(--angie-grey);
+}
