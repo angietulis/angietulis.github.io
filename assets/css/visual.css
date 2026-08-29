@@ -4746,3 +4746,157 @@ input[type="button"]:hover {
 	}
 
 }
+
+/* ==========================================================
+   CONTENT PHILOSOPHY
+   ========================================================== */
+
+.content-philosophy-section {
+	padding: 0;
+	margin: 0 0 6em 0;
+	border: 0;
+}
+
+.content-philosophy-grid {
+	display: grid;
+	grid-template-columns: 260px minmax(0, 1fr);
+	column-gap: 4.5em;
+	row-gap: 2em;
+	align-items: start;
+}
+
+.content-philosophy-heading {
+	padding-top: 0.2em;
+}
+
+.content-philosophy-kicker {
+	margin: 0 0 0.7em 0;
+	font-size: 0.8rem;
+	letter-spacing: 0.24em;
+	text-transform: uppercase;
+	color: var(--angie-accent);
+}
+
+.content-philosophy-heading h2 {
+	margin: 0;
+	color: var(--angie-green-dark);
+	font-family: "Noto Serif TC", serif;
+	font-size: 2.1rem;
+	font-weight: 500;
+	line-height: 1.3;
+}
+
+.content-philosophy-main {
+	max-width: 760px;
+}
+
+.content-philosophy-quote {
+	position: relative;
+	margin: 0 0 2.5em 0;
+	padding: 2.4em 2.8em 2em;
+	text-align: center;
+	border: 0;
+}
+
+.content-philosophy-quote::before,
+.content-philosophy-quote::after {
+	position: absolute;
+	font-family: Georgia, "Times New Roman", serif;
+	font-size: 5.5rem;
+	line-height: 1;
+	color: rgba(217, 139, 139, 0.22);
+	pointer-events: none;
+}
+
+.content-philosophy-quote::before {
+	content: "“";
+	top: -0.02em;
+	left: 0.05em;
+}
+
+.content-philosophy-quote::after {
+	content: "”";
+	right: 0.05em;
+	bottom: -0.28em;
+}
+
+.content-philosophy-quote-zh {
+	margin: 0 0 0.45em 0;
+	font-family: "Noto Serif TC", serif;
+	font-size: 2rem;
+	font-weight: 500;
+	line-height: 1.5;
+	color: var(--angie-green-dark);
+}
+
+.content-philosophy-quote-en {
+	margin: 0;
+	font-family: "Cormorant Garamond", "Times New Roman", serif;
+	font-size: 1.45rem;
+	font-style: italic;
+	font-weight: 500;
+	line-height: 1.5;
+	color: var(--angie-accent);
+}
+
+.content-philosophy-text p {
+	margin: 0 0 1.35em 0;
+	font-size: 1.06rem;
+	line-height: 2;
+	color: var(--angie-charcoal);
+}
+
+.content-philosophy-text p:last-child {
+	margin-bottom: 0;
+}
+
+
+/* Mobile */
+@media screen and (max-width: 980px) {
+
+	.content-philosophy-grid {
+		grid-template-columns: 1fr;
+		row-gap: 1.8em;
+	}
+
+	.content-philosophy-main {
+		max-width: 100%;
+	}
+
+	.content-philosophy-quote {
+		padding: 2em 1.8em 1.6em;
+	}
+
+	.content-philosophy-quote-zh {
+		font-size: 1.7rem;
+	}
+
+	.content-philosophy-quote-en {
+		font-size: 1.25rem;
+	}
+}
+
+@media screen and (max-width: 736px) {
+
+	.content-philosophy-quote::before,
+	.content-philosophy-quote::after {
+		font-size: 4.4rem;
+	}
+
+	.content-philosophy-quote {
+		padding: 1.8em 1.2em 1.5em;
+	}
+
+	.content-philosophy-quote-zh {
+		font-size: 1.45rem;
+	}
+
+	.content-philosophy-quote-en {
+		font-size: 1.12rem;
+	}
+
+	.content-philosophy-text p {
+		font-size: 1rem;
+		line-height: 1.9;
+	}
+}
