@@ -1139,13 +1139,18 @@ input[type="button"]:hover {
 
 .about-photo-accent {
   position: absolute;
-  z-index: 2;
-  top: -0.75em;
-  right: 1.1em;
-  width: 3.5em;
-  height: 1.15em;
+  z-index: 3;
+
+  top: -0.15em;
+  right: -0.45em;
+
+  width: 2.8em;
+  height: 0.85em;
+
   background: rgba(217, 139, 139, 0.78);
-  transform: rotate(-7deg);
+
+  transform: rotate(45deg);
+  transform-origin: center;
 }
 
 .about-margin-section {
