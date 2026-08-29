@@ -4900,3 +4900,46 @@ input[type="button"]:hover {
 		line-height: 1.9;
 	}
 }
+
+
+/* Content philosophy — body copy spans left */
+
+.content-philosophy-text {
+	grid-column: 1 / -1;
+
+	max-width: 64em;
+
+	margin-top: 0.6em;
+	padding-left: 0;
+}
+
+.content-philosophy-text p {
+	max-width: 50em;
+
+	margin: 0 0 1.35em;
+
+	font-family: var(--angie-font-zh);
+	font-size: 1.02em;
+	line-height: 2;
+	letter-spacing: 0.025em;
+
+	color: var(--angie-charcoal);
+}
+
+.content-philosophy-text p:last-child {
+	margin-bottom: 0;
+}
+
+@media screen and (max-width: 736px) {
+
+	.content-philosophy-text {
+		grid-column: 1;
+		margin-top: 0.3em;
+	}
+
+	.content-philosophy-text p {
+		font-size: 0.95em;
+		line-height: 1.95;
+	}
+
+}
