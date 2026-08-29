@@ -4614,24 +4614,6 @@ input[type="button"]:hover {
 }
 
 
-/* Decorative quotation mark */
-
-.content-philosophy-quote-mark {
-	position: absolute;
-	top: -0.35em;
-	left: -0.05em;
-
-	font-family: Georgia, "Times New Roman", serif;
-	font-size: 5em;
-	font-weight: 400;
-	line-height: 1;
-
-	color: rgba(217, 139, 139, 0.22);
-
-	pointer-events: none;
-}
-
-
 /* Chinese statement */
 
 .content-philosophy-quote-zh {
