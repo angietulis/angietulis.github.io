@@ -1117,7 +1117,7 @@ input[type="button"]:hover {
   position: relative;
   overflow: hidden;
   background: var(--angie-paper-deep);
-  border: solid 1px rgba(40, 112, 82, 0.24);
+  border: 0;
 }
 
 .about-photo-frame::after {
