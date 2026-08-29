@@ -4715,3 +4715,52 @@ input[type="button"]:hover {
 	}
 
 }
+
+
+/* ==========================================================
+   GLOBAL EDITORIAL QUOTE MARKS
+   ========================================================== */
+
+.editorial-quote {
+	position: relative;
+}
+
+.editorial-quote::before,
+.editorial-quote::after {
+	position: absolute;
+
+	font-family: Georgia, "Times New Roman", serif;
+	font-size: 5em;
+	font-weight: 400;
+	line-height: 1;
+
+	color: rgba(217, 139, 139, 0.22);
+
+	pointer-events: none;
+}
+
+.editorial-quote::before {
+	content: "“";
+
+	top: -0.35em;
+	left: -0.05em;
+}
+
+.editorial-quote::after {
+	content: "”";
+
+	right: 0.05em;
+	bottom: -0.38em;
+}
+
+
+/* Mobile */
+
+@media screen and (max-width: 736px) {
+
+	.editorial-quote::before,
+	.editorial-quote::after {
+		font-size: 4.2em;
+	}
+
+}
