@@ -4592,3 +4592,126 @@ input[type="button"]:hover {
 	}
 
 }
+
+/* ==========================================================
+   CONTENT PHILOSOPHY — FEATURED QUOTE
+   ========================================================== */
+
+.content-philosophy-body {
+	position: relative;
+	padding-left: 2.4em;
+	border-left: solid 2px var(--angie-accent);
+}
+
+
+/* Main philosophy quote */
+
+.content-philosophy-quote {
+	position: relative;
+	margin-bottom: 2.4em;
+	padding: 0.15em 0 2em;
+	border-bottom: solid 1px var(--angie-line);
+}
+
+
+/* Decorative quotation mark */
+
+.content-philosophy-quote-mark {
+	position: absolute;
+	top: -0.35em;
+	left: -0.05em;
+
+	font-family: Georgia, "Times New Roman", serif;
+	font-size: 5em;
+	font-weight: 400;
+	line-height: 1;
+
+	color: rgba(217, 139, 139, 0.22);
+
+	pointer-events: none;
+}
+
+
+/* Chinese statement */
+
+.content-philosophy-quote-zh {
+	position: relative;
+	z-index: 1;
+
+	margin: 0 !important;
+
+	font-family: var(--angie-font-zh) !important;
+	font-size: 1.38em !important;
+	font-weight: 500;
+	line-height: 1.65 !important;
+	letter-spacing: 0.045em !important;
+
+	color: var(--angie-green-dark) !important;
+}
+
+
+/* English statement */
+
+.content-philosophy-quote-en {
+	position: relative;
+	z-index: 1;
+
+	margin: 0.45em 0 0 !important;
+
+	font-family: Georgia, "Times New Roman", serif !important;
+	font-size: 0.88em !important;
+	font-style: italic;
+	font-weight: 400;
+	line-height: 1.6 !important;
+	letter-spacing: 0.025em !important;
+
+	color: var(--angie-accent-dark) !important;
+}
+
+
+/* Philosophy paragraphs */
+
+.content-philosophy-copy p {
+	max-width: 38em;
+
+	margin: 0 0 1.35em;
+
+	font-family: var(--angie-font-zh);
+	font-size: 0.92em;
+	line-height: 2;
+	letter-spacing: 0.025em;
+
+	color: var(--angie-charcoal);
+}
+
+.content-philosophy-copy p:last-child {
+	margin-bottom: 0;
+}
+
+
+/* Mobile */
+
+@media screen and (max-width: 736px) {
+
+	.content-philosophy-body {
+		padding-left: 1.3em;
+	}
+
+	.content-philosophy-quote {
+		margin-bottom: 2em;
+		padding-bottom: 1.6em;
+	}
+
+	.content-philosophy-quote-mark {
+		font-size: 4.2em;
+	}
+
+	.content-philosophy-quote-zh {
+		font-size: 1.15em !important;
+	}
+
+	.content-philosophy-quote-en {
+		font-size: 0.8em !important;
+	}
+
+}
