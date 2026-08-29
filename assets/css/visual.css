@@ -4449,3 +4449,146 @@ input[type="button"]:hover {
 	}
 
 }
+
+/* ==========================================================
+   CONTENT PAGE — PHILOSOPHY & MANIFESTO
+   ========================================================== */
+
+.content-manifesto {
+	margin-top: 1.6em;
+}
+
+.content-manifesto-zh {
+	margin: 0;
+
+	font-family: var(--angie-font-zh);
+	font-size: 1.28em;
+	font-weight: 500;
+	line-height: 1.65;
+	letter-spacing: 0.04em;
+
+	color: var(--angie-green-dark);
+}
+
+.content-manifesto-en {
+	margin: 0.3em 0 0;
+
+	font-family: Georgia, "Times New Roman", serif;
+	font-size: 0.85em;
+	font-style: italic;
+	letter-spacing: 0.025em;
+
+	color: var(--angie-accent-dark);
+}
+
+
+/* Content philosophy */
+
+.content-philosophy {
+	display: grid;
+
+	grid-template-columns: minmax(9em, 0.32fr) minmax(0, 0.68fr);
+	gap: 4em;
+
+	margin: 0 0 7em;
+	padding: 2.8em 0;
+
+	border-top: solid 1px var(--angie-line);
+	border-bottom: solid 1px var(--angie-line);
+}
+
+.content-philosophy-heading p {
+	margin: 0 0 0.6em;
+
+	font-family: "Noto Sans TC", sans-serif;
+	font-size: 0.64em;
+	font-weight: 600;
+	letter-spacing: 0.18em;
+
+	color: var(--angie-accent-dark);
+}
+
+.content-philosophy-heading h2 {
+	margin: 0;
+
+	font-family: var(--angie-font-zh);
+	font-size: 1.5em;
+	font-weight: 500;
+	letter-spacing: 0.05em;
+
+	color: var(--angie-green-dark);
+}
+
+.content-philosophy-body {
+	position: relative;
+
+	padding-left: 2em;
+
+	border-left: solid 2px var(--angie-accent);
+}
+
+.content-philosophy-body p {
+	max-width: 38em;
+
+	margin: 0 0 1.35em;
+
+	font-family: var(--angie-font-zh);
+	font-size: 0.92em;
+	line-height: 2;
+	letter-spacing: 0.025em;
+
+	color: var(--angie-charcoal);
+}
+
+.content-philosophy-body p:last-child {
+	margin-bottom: 0;
+}
+
+
+/* CTA supporting sentence */
+
+.content-cta-note {
+	margin: 0.5em 0 0;
+
+	font-family: var(--angie-font-zh);
+	font-size: 0.82em;
+	line-height: 1.7;
+
+	color: var(--angie-grey);
+}
+
+
+/* Mobile */
+
+@media screen and (max-width: 736px) {
+
+	.content-manifesto-zh {
+		font-size: 1.08em;
+	}
+
+	.content-manifesto-en {
+		font-size: 0.78em;
+		line-height: 1.6;
+	}
+
+	.content-philosophy {
+		display: block;
+
+		margin-bottom: 4.5em;
+		padding: 2.2em 0;
+	}
+
+	.content-philosophy-heading {
+		margin-bottom: 2em;
+	}
+
+	.content-philosophy-body {
+		padding-left: 1.3em;
+	}
+
+	.content-philosophy-body p {
+		font-size: 0.88em;
+		line-height: 1.95;
+	}
+
+}
