@@ -1,6 +1,6 @@
 /* ==========================================================
    Angie 劉泀嗪
-   Visual Identity V4.7
+   Visual Identity V4.8
 
    Forest Green × Dusty Pink
    Editorial / Literary / Contemporary
@@ -2385,6 +2385,622 @@ input[type="button"]:hover {
 
 
 }
+
+
+/* ==========================================================
+   26. WRITING PAGE
+   Literary Index
+   ========================================================== */
+
+.writing-page {
+	padding: 4em 0 5em;
+}
+
+
+/* ----------------------------------------------------------
+   Topline
+   ---------------------------------------------------------- */
+
+.writing-topline {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	margin-bottom: 5em;
+	padding-bottom: 1em;
+
+	border-bottom: solid 1px var(--angie-line);
+
+	font-family: "Noto Sans TC", sans-serif;
+	font-size: 0.72em;
+	letter-spacing: 0.16em;
+	text-transform: uppercase;
+
+	color: var(--angie-grey);
+}
+
+.writing-topline span:first-child {
+	color: var(--angie-green-dark);
+	font-weight: 600;
+}
+
+
+/* ----------------------------------------------------------
+   Header
+   ---------------------------------------------------------- */
+
+.writing-header {
+	width: 100%;
+	margin-bottom: 6.5em;
+}
+
+.writing-kicker {
+	margin: 0 0 0.8em;
+
+	font-family: "Noto Sans TC", sans-serif;
+	font-size: 0.67em;
+	font-weight: 600;
+	letter-spacing: 0.22em;
+
+	color: var(--angie-accent-dark);
+}
+
+.writing-header h1 {
+	margin: 0;
+
+	font-family: var(--angie-font-zh);
+	font-size: clamp(2.35em, 4vw, 3.35em);
+	font-weight: 500;
+	line-height: 1.35;
+	letter-spacing: 0.06em;
+
+	color: var(--angie-charcoal);
+}
+
+.writing-intro {
+	max-width: 46em;
+
+	margin: 1.5em 0 0;
+
+	font-size: 0.96em;
+	line-height: 2.05;
+	letter-spacing: 0.025em;
+
+	color: var(--angie-grey);
+}
+
+.writing-title-line {
+	position: relative;
+
+	width: 100%;
+	height: 1px;
+
+	margin-top: 2.2em;
+
+	background: var(--angie-green-soft);
+}
+
+.writing-title-line::before {
+	content: "";
+
+	position: absolute;
+	top: -1px;
+	left: 0;
+
+	width: 4em;
+	height: 3px;
+
+	background: var(--angie-accent);
+}
+
+.writing-title-line::after {
+	content: "";
+
+	position: absolute;
+	top: -2px;
+	right: 0;
+
+	width: 5px;
+	height: 5px;
+
+	border-radius: 50%;
+
+	background: var(--angie-accent);
+}
+
+
+/* ==========================================================
+   Section Heading
+   ========================================================== */
+
+.writing-section {
+	margin-top: 7em;
+}
+
+.writing-section-heading {
+	display: grid;
+
+	grid-template-columns: 3.2em minmax(0, 1fr);
+	gap: 1.5em;
+
+	align-items: start;
+
+	margin-bottom: 2.8em;
+}
+
+.writing-section-number {
+	padding-top: 0.15em;
+
+	font-family: "Noto Sans TC", sans-serif;
+	font-size: 0.68em;
+	font-weight: 600;
+	letter-spacing: 0.14em;
+
+	color: var(--angie-accent-dark);
+}
+
+.writing-section-heading p {
+	margin: 0 0 0.45em;
+
+	font-family: "Noto Sans TC", sans-serif;
+	font-size: 0.64em;
+	font-weight: 600;
+	letter-spacing: 0.2em;
+
+	color: var(--angie-accent-dark);
+}
+
+.writing-section-heading h2 {
+	margin: 0;
+
+	font-family: var(--angie-font-zh);
+	font-size: 1.75em;
+	font-weight: 500;
+	line-height: 1.45;
+	letter-spacing: 0.05em;
+
+	color: var(--angie-green-dark);
+}
+
+
+/* ==========================================================
+   Selected Works
+   ========================================================== */
+
+.writing-work-list {
+	border-top: solid 1px var(--angie-line);
+}
+
+.writing-work-item {
+	display: grid;
+
+	grid-template-columns: 3.2em minmax(0, 1fr) auto;
+	gap: 1.5em;
+
+	align-items: center;
+
+	padding: 2.1em 1em;
+
+	border-bottom: solid 1px var(--angie-line);
+
+	transition:
+		background-color 0.2s ease,
+		transform 0.2s ease;
+}
+
+.writing-work-item:hover {
+	background: rgba(243, 226, 226, 0.55);
+}
+
+.writing-work-number {
+	font-family: "Noto Sans TC", sans-serif;
+	font-size: 0.66em;
+	font-weight: 600;
+	letter-spacing: 0.14em;
+
+	color: var(--angie-accent-dark);
+}
+
+.writing-work-main h3 {
+	margin: 0 0 0.45em;
+
+	font-family: var(--angie-font-zh);
+	font-size: 1.18em;
+	font-weight: 500;
+	line-height: 1.55;
+
+	color: var(--angie-charcoal);
+}
+
+.writing-work-meta {
+	display: flex;
+	flex-wrap: wrap;
+
+	margin: 0;
+
+	font-family: var(--angie-font-zh);
+	font-size: 0.76em;
+	line-height: 1.7;
+
+	color: var(--angie-grey);
+}
+
+.writing-meta-divider {
+	padding: 0 0.35em;
+
+	color: var(--angie-green-soft);
+}
+
+.writing-work-link,
+.writing-research-link {
+	border: 0;
+
+	font-family: var(--angie-font-zh);
+	font-size: 0.75em;
+	font-weight: 500;
+	letter-spacing: 0.05em;
+
+	color: var(--angie-green-dark);
+
+	white-space: nowrap;
+}
+
+
+/* ==========================================================
+   Awards
+   ========================================================== */
+
+.writing-award-list {
+	max-width: 56em;
+
+	border-top: solid 1px var(--angie-line);
+}
+
+.writing-award-item {
+	display: grid;
+
+	grid-template-columns: 6em minmax(0, 1fr);
+	gap: 2em;
+
+	align-items: baseline;
+
+	padding: 1.2em 0;
+
+	border-bottom: solid 1px var(--angie-line);
+}
+
+.writing-award-year {
+	font-family: "Noto Sans TC", sans-serif;
+	font-size: 0.76em;
+	font-weight: 500;
+	letter-spacing: 0.08em;
+
+	color: var(--angie-accent-dark);
+}
+
+.writing-award-name {
+	font-size: 0.95em;
+	line-height: 1.65;
+
+	color: var(--angie-charcoal);
+}
+
+
+/* ==========================================================
+   Research & Publication
+   ========================================================== */
+
+.writing-research-list {
+	border-top: solid 1px var(--angie-line);
+}
+
+.writing-research-item {
+	display: grid;
+
+	grid-template-columns: 3.2em minmax(0, 1fr) auto;
+	gap: 1.5em;
+
+	align-items: center;
+
+	padding: 2em 1em;
+
+	border-bottom: solid 1px var(--angie-line);
+
+	transition: background-color 0.2s ease;
+}
+
+.writing-research-item:hover {
+	background: rgba(226, 236, 229, 0.45);
+}
+
+.writing-research-number {
+	font-family: "Noto Sans TC", sans-serif;
+	font-size: 0.66em;
+	font-weight: 600;
+	letter-spacing: 0.14em;
+
+	color: var(--angie-accent-dark);
+}
+
+.writing-research-main h3 {
+	margin: 0 0 0.45em;
+
+	font-family: var(--angie-font-zh);
+	font-size: 1.08em;
+	font-weight: 500;
+	line-height: 1.65;
+
+	color: var(--angie-charcoal);
+}
+
+.writing-research-meta {
+	display: flex;
+	flex-wrap: wrap;
+
+	margin: 0;
+
+	font-family: var(--angie-font-zh);
+	font-size: 0.75em;
+	line-height: 1.75;
+
+	color: var(--angie-grey);
+}
+
+
+/* ==========================================================
+   Themes
+   ========================================================== */
+
+.writing-theme-list {
+	display: flex;
+	flex-wrap: wrap;
+
+	gap: 0.85em;
+}
+
+.writing-theme-list span {
+	display: inline-flex;
+	align-items: center;
+
+	min-height: 2.8em;
+
+	padding: 0.55em 1.15em;
+
+	box-sizing: border-box;
+
+	border: solid 1px rgba(40, 112, 82, 0.28);
+
+	font-family: var(--angie-font-zh);
+	font-size: 0.78em;
+	letter-spacing: 0.04em;
+
+	color: var(--angie-green-dark);
+
+	background: rgba(226, 236, 229, 0.28);
+}
+
+
+/* ==========================================================
+   CTA
+   ========================================================== */
+
+.writing-cta {
+	margin-top: 7em;
+	padding: 2.8em 0;
+
+	border-top: solid 1px var(--angie-line);
+	border-bottom: solid 1px var(--angie-line);
+}
+
+.writing-cta-kicker {
+	margin: 0 0 0.8em;
+
+	font-family: "Noto Sans TC", sans-serif;
+	font-size: 0.64em;
+	font-weight: 600;
+	letter-spacing: 0.2em;
+
+	color: var(--angie-accent-dark);
+}
+
+.writing-cta-row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	gap: 3em;
+}
+
+.writing-cta-row h2 {
+	margin: 0;
+
+	font-family: var(--angie-font-zh);
+	font-size: 1.35em;
+	font-weight: 500;
+	line-height: 1.6;
+
+	color: var(--angie-charcoal);
+}
+
+.writing-cta-row a {
+	border: 0;
+
+	font-family: var(--angie-font-zh);
+	font-size: 0.82em;
+	font-weight: 500;
+
+	white-space: nowrap;
+
+	color: var(--angie-green-dark);
+}
+
+
+/* ==========================================================
+   WRITING — TABLET
+   ========================================================== */
+
+@media screen and (max-width: 980px) {
+
+	.writing-page {
+		padding-top: 3em;
+	}
+
+	.writing-topline {
+		margin-bottom: 4em;
+	}
+
+	.writing-header {
+		margin-bottom: 5em;
+	}
+
+	.writing-section {
+		margin-top: 5.5em;
+	}
+
+}
+
+
+/* ==========================================================
+   WRITING — MOBILE
+   ========================================================== */
+
+@media screen and (max-width: 736px) {
+
+	.writing-page {
+		padding: 2.5em 0 4em;
+	}
+
+	.writing-topline {
+		margin-bottom: 3em;
+		font-size: 0.65em;
+	}
+
+	.writing-topline span:last-child {
+		display: none;
+	}
+
+	.writing-header h1 {
+		font-size: 2em;
+	}
+
+	.writing-intro {
+		font-size: 0.9em;
+		line-height: 1.95;
+	}
+
+	.writing-section {
+		margin-top: 4.5em;
+	}
+
+	.writing-section-heading {
+		grid-template-columns: 2.3em minmax(0, 1fr);
+		gap: 1em;
+
+		margin-bottom: 2.2em;
+	}
+
+	.writing-section-heading h2 {
+		font-size: 1.4em;
+	}
+
+
+	/* Selected works */
+
+	.writing-work-item {
+		grid-template-columns: 2.3em minmax(0, 1fr);
+		gap: 0.5em 1em;
+
+		align-items: start;
+
+		padding: 1.6em 0;
+	}
+
+	.writing-work-link {
+		grid-column: 2;
+
+		margin-top: 0.5em;
+	}
+
+	.writing-work-main h3 {
+		font-size: 1.05em;
+	}
+
+	.writing-work-meta {
+		display: block;
+	}
+
+	.writing-meta-divider {
+		padding: 0 0.2em;
+	}
+
+
+	/* Awards */
+
+	.writing-award-item {
+		grid-template-columns: 4.5em minmax(0, 1fr);
+		gap: 1em;
+
+		padding: 1em 0;
+	}
+
+
+	/* Research */
+
+	.writing-research-item {
+		grid-template-columns: 2.3em minmax(0, 1fr);
+		gap: 0.5em 1em;
+
+		align-items: start;
+
+		padding: 1.6em 0;
+	}
+
+	.writing-research-link {
+		grid-column: 2;
+
+		margin-top: 0.5em;
+	}
+
+	.writing-research-main h3 {
+		font-size: 1em;
+	}
+
+	.writing-research-meta {
+		display: block;
+	}
+
+
+	/* Themes */
+
+	.writing-theme-list {
+		gap: 0.65em;
+	}
+
+	.writing-theme-list span {
+		padding: 0.5em 0.9em;
+
+		font-size: 0.72em;
+	}
+
+
+	/* CTA */
+
+	.writing-cta {
+		margin-top: 5em;
+	}
+
+	.writing-cta-row {
+		display: block;
+	}
+
+	.writing-cta-row h2 {
+		margin-bottom: 1.2em;
+
+		font-size: 1.2em;
+	}
+
+}
+
 
 /* ==========================================================
    27. LITERARY WORK PAGE
