@@ -4943,3 +4943,1076 @@ input[type="button"]:hover {
 	}
 
 }
+
+
+/* ==========================================================
+   29. MANDARIN TEACHING PAGE
+   Editorial Teaching Portfolio
+   ========================================================== */
+
+.teaching-page {
+	padding: 4em 0 5em;
+}
+
+
+/* ==========================================================
+   TOPLINE
+   ========================================================== */
+
+.teaching-topline {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	margin-bottom: 5em;
+	padding-bottom: 1em;
+
+	border-bottom: solid 1px var(--angie-line);
+
+	font-family: "Noto Sans TC", sans-serif;
+	font-size: 0.72em;
+	letter-spacing: 0.16em;
+	text-transform: uppercase;
+
+	color: var(--angie-grey);
+}
+
+.teaching-topline span:first-child {
+	color: var(--angie-green-dark);
+	font-weight: 600;
+}
+
+
+/* ==========================================================
+   PAGE HEADER
+   ========================================================== */
+
+.teaching-header {
+	width: 100%;
+	margin-bottom: 6.5em;
+}
+
+.teaching-kicker {
+	margin: 0 0 0.8em;
+
+	font-family: "Noto Sans TC", sans-serif;
+	font-size: 0.67em;
+	font-weight: 600;
+	letter-spacing: 0.22em;
+
+	color: var(--angie-accent-dark);
+}
+
+.teaching-header h1 {
+	margin: 0;
+
+	font-family: var(--angie-font-zh);
+	font-size: clamp(2.35em, 4vw, 3.35em);
+	font-weight: 500;
+	line-height: 1.35;
+	letter-spacing: 0.06em;
+
+	color: var(--angie-charcoal);
+}
+
+.teaching-intro {
+	max-width: 48em;
+
+	margin: 1.6em 0 0;
+
+	font-family: var(--angie-font-zh);
+	font-size: 0.96em;
+	line-height: 2.05;
+	letter-spacing: 0.025em;
+
+	color: var(--angie-grey);
+}
+
+.teaching-title-line {
+	position: relative;
+
+	width: 100%;
+	height: 1px;
+
+	margin-top: 2.3em;
+
+	background: var(--angie-green-soft);
+}
+
+.teaching-title-line::before {
+	content: "";
+
+	position: absolute;
+	top: -1px;
+	left: 0;
+
+	width: 4em;
+	height: 3px;
+
+	background: var(--angie-accent);
+}
+
+.teaching-title-line::after {
+	content: "";
+
+	position: absolute;
+	top: -2px;
+	right: 0;
+
+	width: 5px;
+	height: 5px;
+
+	border-radius: 50%;
+
+	background: var(--angie-accent);
+}
+
+
+/* ==========================================================
+   GENERAL SECTION
+   ========================================================== */
+
+.teaching-section {
+	margin-top: 7em;
+}
+
+.teaching-section-heading {
+	display: grid;
+
+	grid-template-columns: 5em minmax(0, 1fr);
+	gap: 1.5em;
+
+	align-items: center;
+
+	margin-bottom: 3em;
+}
+
+.teaching-section-number {
+	margin: 0;
+	padding: 0;
+
+	font-family: "Noto Serif TC", Georgia, serif;
+	font-size: 3.2em;
+	font-weight: 400;
+	line-height: 0.9;
+	letter-spacing: -0.03em;
+
+	color: var(--angie-green-dark);
+}
+
+.teaching-section-heading p {
+	margin: 0 0 0.45em;
+
+	font-family: "Noto Sans TC", sans-serif;
+	font-size: 0.64em;
+	font-weight: 600;
+	letter-spacing: 0.2em;
+
+	color: var(--angie-accent-dark);
+}
+
+.teaching-section-heading h2 {
+	margin: 0;
+
+	font-family: var(--angie-font-zh);
+	font-size: 1.75em;
+	font-weight: 500;
+	line-height: 1.45;
+	letter-spacing: 0.05em;
+
+	color: var(--angie-green-dark);
+}
+
+
+/* ==========================================================
+   01 TEACHING APPROACH
+   ========================================================== */
+
+.teaching-approach-grid {
+	display: grid;
+
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+
+	border-top: solid 1px var(--angie-line);
+	border-bottom: solid 1px var(--angie-line);
+}
+
+.teaching-approach-item {
+	position: relative;
+
+	min-width: 0;
+
+	padding: 2.3em 2em 2.5em;
+
+	box-sizing: border-box;
+
+	border-right: solid 1px var(--angie-line);
+}
+
+.teaching-approach-item:last-child {
+	border-right: 0;
+}
+
+.teaching-approach-number {
+	display: block;
+
+	margin-bottom: 1.4em;
+
+	font-family: "Noto Sans TC", sans-serif;
+	font-size: 0.64em;
+	font-weight: 600;
+	letter-spacing: 0.14em;
+
+	color: var(--angie-accent-dark);
+}
+
+.teaching-approach-item h3 {
+	margin: 0 0 1em;
+
+	font-family: var(--angie-font-zh);
+	font-size: 1.12em;
+	font-weight: 500;
+	line-height: 1.6;
+	letter-spacing: 0.035em;
+
+	color: var(--angie-green-dark);
+}
+
+.teaching-approach-item h3::after {
+	content: "";
+
+	display: block;
+
+	width: 2.2em;
+	height: 2px;
+
+	margin-top: 0.8em;
+
+	background: var(--angie-accent);
+}
+
+.teaching-approach-item p {
+	margin: 0;
+
+	font-family: var(--angie-font-zh);
+	font-size: 0.84em;
+	line-height: 1.95;
+	letter-spacing: 0.02em;
+
+	color: var(--angie-grey);
+}
+
+
+/* ==========================================================
+   02 WHO I TEACH
+   ========================================================== */
+
+.teaching-learner-grid {
+	display: grid;
+
+	grid-template-columns: repeat(5, minmax(0, 1fr));
+
+	border-top: solid 1px var(--angie-line);
+	border-bottom: solid 1px var(--angie-line);
+}
+
+.teaching-learner-item {
+	min-width: 0;
+
+	padding: 2em 1em;
+
+	box-sizing: border-box;
+
+	border-right: solid 1px var(--angie-line);
+
+	text-align: center;
+}
+
+.teaching-learner-item:last-child {
+	border-right: 0;
+}
+
+.teaching-learner-number {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 2.6em;
+	height: 2.6em;
+
+	margin-bottom: 1.2em;
+
+	border-radius: 50%;
+
+	font-family: "Noto Sans TC", sans-serif;
+	font-size: 0.66em;
+	font-weight: 600;
+	letter-spacing: 0.05em;
+
+	color: var(--angie-green-dark);
+
+	background: rgba(226, 236, 229, 0.65);
+}
+
+.teaching-learner-item:nth-child(even)
+.teaching-learner-number {
+	background: rgba(243, 226, 226, 0.58);
+}
+
+.teaching-learner-item h3 {
+	margin: 0 0 0.45em;
+
+	font-family: var(--angie-font-zh);
+	font-size: 0.95em;
+	font-weight: 500;
+	line-height: 1.5;
+
+	color: var(--angie-green-dark);
+}
+
+.teaching-learner-item p {
+	margin: 0;
+
+	font-family: "Noto Sans TC", sans-serif;
+	font-size: 0.63em;
+	line-height: 1.6;
+
+	color: var(--angie-grey);
+}
+
+
+/* ==========================================================
+   03 TEACHING EXPERIENCE
+   ========================================================== */
+
+.teaching-experience-list {
+	border-top: solid 1px var(--angie-line);
+}
+
+.teaching-experience-item {
+	display: grid;
+
+	grid-template-columns: 4.5em minmax(0, 1fr);
+
+	gap: 2em;
+
+	align-items: start;
+
+	padding: 2.2em 0;
+
+	border-bottom: solid 1px var(--angie-line);
+}
+
+.teaching-experience-number {
+	padding-top: 0.2em;
+
+	font-family: "Noto Serif TC", Georgia, serif;
+	font-size: 1.5em;
+	font-weight: 400;
+	line-height: 1;
+
+	color: var(--angie-accent-dark);
+}
+
+.teaching-experience-main {
+	min-width: 0;
+}
+
+.teaching-experience-main h3 {
+	margin: 0 0 0.4em;
+
+	font-family: var(--angie-font-zh);
+	font-size: 1.12em;
+	font-weight: 500;
+	line-height: 1.55;
+	letter-spacing: 0.025em;
+
+	color: var(--angie-green-dark);
+}
+
+.teaching-experience-meta {
+	margin: 0 0 1em;
+
+	font-family: var(--angie-font-zh);
+	font-size: 0.76em;
+	font-weight: 500;
+	line-height: 1.6;
+
+	color: var(--angie-accent-dark);
+}
+
+.teaching-experience-description {
+	max-width: 47em;
+
+	margin: 0;
+
+	font-family: var(--angie-font-zh);
+	font-size: 0.86em;
+	line-height: 1.95;
+	letter-spacing: 0.02em;
+
+	color: var(--angie-grey);
+}
+
+
+/* subtle hover */
+
+.teaching-experience-item {
+	transition:
+		padding-left 0.22s ease,
+		background-color 0.22s ease;
+}
+
+.teaching-experience-item:hover {
+	padding-left: 1em;
+
+	background: rgba(226, 236, 229, 0.16);
+}
+
+
+/* ==========================================================
+   04 QUALIFICATION
+   ========================================================== */
+
+.teaching-qualification-card {
+	position: relative;
+
+	display: grid;
+
+	grid-template-columns: 7em minmax(0, 1fr);
+
+	gap: 2.2em;
+
+	align-items: center;
+
+	max-width: 47em;
+
+	padding: 2.5em 2.7em;
+
+	box-sizing: border-box;
+
+	border: solid 1px rgba(40, 112, 82, 0.22);
+
+	background:
+		linear-gradient(
+			135deg,
+			rgba(226, 236, 229, 0.38),
+			rgba(251, 247, 239, 0.72)
+		);
+}
+
+
+/* cut paper corner */
+
+.teaching-qualification-card::after {
+	content: "";
+
+	position: absolute;
+	top: -1px;
+	right: -1px;
+
+	width: 1.6em;
+	height: 1.6em;
+
+	background: var(--angie-paper);
+
+	clip-path: polygon(
+		100% 0,
+		100% 100%,
+		0 0
+	);
+}
+
+
+.teaching-qualification-mark {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 4.7em;
+	height: 4.7em;
+
+	box-sizing: border-box;
+
+	border: solid 1px rgba(40, 112, 82, 0.45);
+	border-radius: 50%;
+
+	font-family: var(--angie-font-zh);
+	font-size: 1.05em;
+	font-weight: 500;
+	letter-spacing: 0.08em;
+
+	color: var(--angie-green-dark);
+
+	background: rgba(247, 243, 236, 0.65);
+}
+
+.teaching-qualification-label {
+	margin: 0 0 0.7em;
+
+	font-family: "Noto Sans TC", sans-serif;
+	font-size: 0.62em;
+	font-weight: 600;
+	letter-spacing: 0.18em;
+
+	color: var(--angie-accent-dark);
+}
+
+.teaching-qualification-copy h3 {
+	margin: 0 0 0.65em;
+
+	font-family: var(--angie-font-zh);
+	font-size: 1.2em;
+	font-weight: 500;
+	line-height: 1.55;
+	letter-spacing: 0.025em;
+
+	color: var(--angie-green-dark);
+}
+
+.teaching-qualification-copy > p:last-child {
+	margin: 0;
+
+	font-family: var(--angie-font-zh);
+	font-size: 0.82em;
+	line-height: 1.7;
+
+	color: var(--angie-grey);
+}
+
+
+/* ==========================================================
+   05 DIGITAL LEARNING
+   ========================================================== */
+
+.teaching-digital-panel {
+	position: relative;
+
+	display: grid;
+
+	grid-template-columns:
+		minmax(0, 1.4fr)
+		minmax(16em, 0.6fr);
+
+	gap: 3em;
+
+	align-items: center;
+
+	padding: 2.7em 3em;
+
+	box-sizing: border-box;
+
+	border: solid 1px rgba(217, 139, 139, 0.32);
+
+	background:
+		linear-gradient(
+			110deg,
+			rgba(243, 226, 226, 0.22),
+			rgba(226, 236, 229, 0.24)
+		);
+}
+
+
+/* subtle corner decoration */
+
+.teaching-digital-panel::before {
+	content: "";
+
+	position: absolute;
+	top: -1px;
+	left: -1px;
+
+	width: 3em;
+	height: 3px;
+
+	background: var(--angie-accent);
+}
+
+.teaching-digital-status {
+	margin: 0 0 0.75em;
+
+	font-family: "Noto Sans TC", sans-serif;
+	font-size: 0.62em;
+	font-weight: 600;
+	letter-spacing: 0.18em;
+
+	color: var(--angie-accent-dark);
+}
+
+.teaching-digital-copy h3 {
+	margin: 0 0 1em;
+
+	font-family: var(--angie-font-zh);
+	font-size: 1.2em;
+	font-weight: 500;
+	line-height: 1.55;
+	letter-spacing: 0.03em;
+
+	color: var(--angie-green-dark);
+}
+
+.teaching-digital-copy > p:last-child {
+	max-width: 43em;
+
+	margin: 0;
+
+	font-family: var(--angie-font-zh);
+	font-size: 0.84em;
+	line-height: 1.95;
+	letter-spacing: 0.02em;
+
+	color: var(--angie-grey);
+}
+
+
+/* Future topic tags */
+
+.teaching-digital-topics {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+
+	gap: 0.75em;
+}
+
+.teaching-digital-topics span {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+
+	min-width: 5.5em;
+	min-height: 2.5em;
+
+	padding: 0.35em 0.9em;
+
+	box-sizing: border-box;
+
+	border: solid 1px rgba(40, 112, 82, 0.25);
+	border-radius: 999px;
+
+	font-family: var(--angie-font-zh);
+	font-size: 0.72em;
+	font-weight: 500;
+
+	color: var(--angie-green-dark);
+
+	background: rgba(251, 247, 239, 0.72);
+}
+
+
+/* ==========================================================
+   CONTACT CTA
+   ========================================================== */
+
+.teaching-cta {
+	position: relative;
+
+	margin-top: 7em;
+	padding: 2.5em 2.7em;
+
+	border: solid 1px rgba(40, 112, 82, 0.22);
+
+	background:
+		linear-gradient(
+			90deg,
+			rgba(243, 226, 226, 0.28),
+			rgba(247, 243, 236, 0.8)
+		);
+}
+
+.teaching-cta::before {
+	content: "";
+
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	width: 3px;
+	height: 100%;
+
+	background: var(--angie-accent);
+}
+
+.teaching-cta-kicker {
+	margin: 0 0 0.7em;
+
+	font-family: "Noto Sans TC", sans-serif;
+	font-size: 0.64em;
+	font-weight: 600;
+	letter-spacing: 0.2em;
+
+	color: var(--angie-accent-dark);
+}
+
+.teaching-cta-row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	gap: 3em;
+}
+
+.teaching-cta-row h2 {
+	margin: 0;
+
+	font-family: var(--angie-font-zh);
+	font-size: 1.35em;
+	font-weight: 500;
+	line-height: 1.6;
+
+	color: var(--angie-charcoal);
+}
+
+.teaching-cta-note {
+	margin: 0.5em 0 0;
+
+	font-family: var(--angie-font-zh);
+	font-size: 0.82em;
+	line-height: 1.7;
+
+	color: var(--angie-grey);
+}
+
+.teaching-cta-row a {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+
+	flex-shrink: 0;
+
+	min-width: 8.5em;
+
+	padding: 0.75em 1.2em;
+
+	box-sizing: border-box;
+
+	border: solid 1px var(--angie-accent);
+
+	font-family: var(--angie-font-zh);
+	font-size: 0.8em;
+	font-weight: 500;
+
+	color: var(--angie-accent-dark);
+
+	background: transparent;
+}
+
+.teaching-cta-row a:hover {
+	background: var(--angie-accent);
+
+	color: var(--angie-charcoal) !important;
+}
+
+
+/* ==========================================================
+   TEACHING PAGE — TABLET
+   ========================================================== */
+
+@media screen and (max-width: 1280px) {
+
+	/* Learner groups: 3 + 2 */
+
+	.teaching-learner-grid {
+		grid-template-columns:
+			repeat(3, minmax(0, 1fr));
+	}
+
+	.teaching-learner-item {
+		border-bottom: solid 1px var(--angie-line);
+	}
+
+	.teaching-learner-item:nth-child(3n) {
+		border-right: 0;
+	}
+
+	.teaching-learner-item:nth-child(4),
+	.teaching-learner-item:nth-child(5) {
+		border-bottom: 0;
+	}
+
+	.teaching-learner-item:nth-child(5) {
+		border-right: 0;
+	}
+
+}
+
+
+@media screen and (max-width: 980px) {
+
+	.teaching-page {
+		padding-top: 3em;
+	}
+
+	.teaching-topline {
+		margin-bottom: 4em;
+	}
+
+	.teaching-header {
+		margin-bottom: 5em;
+	}
+
+	.teaching-section {
+		margin-top: 5.5em;
+	}
+
+
+	/* Approach */
+
+	.teaching-approach-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.teaching-approach-item {
+		border-right: 0;
+		border-bottom: solid 1px var(--angie-line);
+	}
+
+	.teaching-approach-item:last-child {
+		border-bottom: 0;
+	}
+
+
+	/* Qualification */
+
+	.teaching-qualification-card {
+		max-width: 100%;
+	}
+
+
+	/* Digital */
+
+	.teaching-digital-panel {
+		grid-template-columns: 1fr;
+
+		gap: 2em;
+	}
+
+
+	/* CTA */
+
+	.teaching-cta-row {
+		gap: 2em;
+	}
+
+}
+
+
+/* ==========================================================
+   TEACHING PAGE — MOBILE
+   ========================================================== */
+
+@media screen and (max-width: 736px) {
+
+	.teaching-page {
+		padding: 2.5em 0 4em;
+	}
+
+
+	/* Topline */
+
+	.teaching-topline {
+		margin-bottom: 3em;
+
+		font-size: 0.65em;
+	}
+
+	.teaching-topline span:last-child {
+		display: none;
+	}
+
+
+	/* Header */
+
+	.teaching-header h1 {
+		font-size: 2em;
+	}
+
+	.teaching-intro {
+		font-size: 0.9em;
+		line-height: 1.95;
+	}
+
+
+	/* Section heading */
+
+	.teaching-section {
+		margin-top: 4.5em;
+	}
+
+	.teaching-section-heading {
+		grid-template-columns:
+			3.7em
+			minmax(0, 1fr);
+
+		gap: 1em;
+
+		margin-bottom: 2.2em;
+	}
+
+	.teaching-section-number {
+		font-size: 2.4em;
+	}
+
+	.teaching-section-heading h2 {
+		font-size: 1.4em;
+	}
+
+
+	/* Teaching approach */
+
+	.teaching-approach-item {
+		padding:
+			1.8em
+			1.2em
+			2em;
+	}
+
+	.teaching-approach-item h3 {
+		font-size: 1.03em;
+	}
+
+	.teaching-approach-item p {
+		font-size: 0.82em;
+		line-height: 1.9;
+	}
+
+
+	/* Learners */
+
+	.teaching-learner-grid {
+		grid-template-columns:
+			repeat(2, minmax(0, 1fr));
+	}
+
+	.teaching-learner-item {
+		padding: 1.7em 0.8em;
+
+		border-right: solid 1px var(--angie-line);
+		border-bottom: solid 1px var(--angie-line);
+	}
+
+	.teaching-learner-item:nth-child(2n) {
+		border-right: 0;
+	}
+
+	.teaching-learner-item:nth-child(3n) {
+		border-right: solid 1px var(--angie-line);
+	}
+
+	.teaching-learner-item:nth-child(4) {
+		border-right: 0;
+	}
+
+	.teaching-learner-item:nth-child(5) {
+		grid-column: 1 / -1;
+
+		border-right: 0;
+		border-bottom: 0;
+	}
+
+
+	/* Experience */
+
+	.teaching-experience-item {
+		grid-template-columns: 2.8em minmax(0, 1fr);
+
+		gap: 1em;
+
+		padding: 1.8em 0;
+	}
+
+	.teaching-experience-item:hover {
+		padding-left: 0;
+	}
+
+	.teaching-experience-number {
+		font-size: 1.25em;
+	}
+
+	.teaching-experience-main h3 {
+		font-size: 1.03em;
+	}
+
+	.teaching-experience-description {
+		font-size: 0.82em;
+		line-height: 1.9;
+	}
+
+
+	/* Qualification */
+
+	.teaching-qualification-card {
+		display: block;
+
+		padding: 2em 1.4em;
+	}
+
+	.teaching-qualification-mark {
+		width: 4em;
+		height: 4em;
+
+		margin-bottom: 1.5em;
+	}
+
+	.teaching-qualification-copy h3 {
+		font-size: 1.08em;
+	}
+
+
+	/* Digital learning */
+
+	.teaching-digital-panel {
+		padding: 2em 1.4em;
+
+		gap: 1.8em;
+	}
+
+	.teaching-digital-copy h3 {
+		font-size: 1.08em;
+	}
+
+	.teaching-digital-copy > p:last-child {
+		font-size: 0.82em;
+		line-height: 1.9;
+	}
+
+	.teaching-digital-topics {
+		gap: 0.55em;
+	}
+
+	.teaching-digital-topics span {
+		min-width: 0;
+
+		font-size: 0.68em;
+	}
+
+
+	/* CTA */
+
+	.teaching-cta {
+		margin-top: 5em;
+
+		padding:
+			2.1em
+			1.4em;
+	}
+
+	.teaching-cta-row {
+		display: block;
+	}
+
+	.teaching-cta-row h2 {
+		margin-bottom: 0;
+
+		font-size: 1.15em;
+	}
+
+	.teaching-cta-note {
+		margin-bottom: 1.5em;
+	}
+
+	.teaching-cta-row a {
+		min-width: 0;
+	}
+
+}
