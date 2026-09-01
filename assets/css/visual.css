@@ -13,19 +13,17 @@
    01. Color System
    ========================================================== */
 :root {
-  /* Paper / text */
-  --angie-paper: #f7f3ec;
-  --angie-paper-deep: #eeeae4;
-  --angie-card: #fbf8f3;
+  --angie-paper: #f2eee7;
+  --angie-paper-deep: #e9e4dc;
+  --angie-card: #f8f5ef;
 
   --angie-charcoal: #292b29;
   --angie-grey: #74736f;
 
-  /* New palette */
   --angie-line: #cac6bd;
 
   --angie-green: #979d6e;
-	--angie-chapter: rgba(151, 157, 110, 0.82);
+  --angie-chapter: rgba(151, 157, 110, 0.82);
   --angie-green-dark: #687047;
   --angie-green-soft: #cac6bd;
   --angie-green-pale: #eeede8;
