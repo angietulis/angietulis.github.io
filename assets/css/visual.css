@@ -25,6 +25,7 @@
   --angie-line: #cac6bd;
 
   --angie-green: #979d6e;
+	--angie-chapter: rgba(151, 157, 110, 0.82);
   --angie-green-dark: #687047;
   --angie-green-soft: #cac6bd;
   --angie-green-pale: #eeede8;
@@ -411,7 +412,7 @@ select:focus-visible {
   left: 0;
   width: var(--chapter-width);
   height: 100%;
-  background: var(--angie-green);
+  background: var(--angie-chapter);
   clip-path: polygon(0 0, calc(100% - 0.8em) 0, 100% 0.8em, 100% 100%, 0 100%);
 }
 
@@ -847,17 +848,17 @@ input[type="button"]:hover {
   }
   .home-fields,
   .home-explore { padding: 4.5em 0; }
-  .home-section-heading {
-    --chapter-width: 100%;
-    width: 100%;
-    min-height: auto;
-    grid-template-columns: 4.2em 1fr;
-    gap: 0.8em;
-    padding: 1.35em 1.25em;
-    margin-bottom: 3em;
-    background: var(--angie-green);
-    overflow: hidden;
-  }
+ .home-section-heading {
+  --chapter-width: 100%;
+  width: 100%;
+  min-height: auto;
+  grid-template-columns: 4.2em 1fr;
+  gap: 0.8em;
+  padding: 1.35em 1.25em;
+  margin-bottom: 3em;
+  background: var(--angie-chapter);
+  overflow: hidden;
+}
   .home-section-heading::before {
     width: 100%;
     clip-path: none;
