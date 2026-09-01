@@ -6936,11 +6936,11 @@ li {
 .explore-editorial-item::after {
   content: "";
   position: absolute;
-  inset: -1px;
+  inset: -2px;
   z-index: 10;
 
   /* 邊框厚度 */
-  padding: 1px;
+  padding: 2px;
 
   pointer-events: none;
   opacity: 0;
@@ -6996,7 +6996,7 @@ li {
 .practice-editorial-item:focus-visible::after,
 .explore-editorial-item:hover::after,
 .explore-editorial-item:focus-visible::after {
-  opacity: 0.55;
+  opacity: 0.88;
 
   background-position:
     5px 3px,
@@ -7007,9 +7007,6 @@ li {
 /* 點擊瞬間稍微亮一點 */
 .practice-editorial-item:active::after,
 .explore-editorial-item:active::after {
-  opacity: 0.78;
+  opacity: 1;
 
-  background-position:
-    9px 6px,
-    35% 65%;
 }
