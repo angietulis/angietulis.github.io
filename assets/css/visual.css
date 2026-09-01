@@ -37,15 +37,14 @@
 
   --angie-muted: #b5a8a0;
 
-
-  /* Global Chinese typeface */
-  --angie-font-zh:
-    "Microsoft JhengHei",
-    "Microsoft JhengHei UI",
-    "PingFang TC",
-    "Heiti TC",
-    "Noto Sans TC",
-    sans-serif;
+/* Global Chinese typeface */
+--angie-font-zh:
+  "Microsoft JhengHei",
+  "Microsoft JhengHei UI",
+  "PingFang TC",
+  "Heiti TC",
+  "Noto Sans TC",
+  sans-serif;
 
 }
 
@@ -6757,4 +6756,160 @@ body.illustration-lightbox-open {
 	line-height: 0 !important;
 
 	border: 0 !important;
+}
+
+
+/* ==========================================================
+   GLOBAL CHINESE TYPE — SAME AS 劉泀嗪
+   ========================================================== */
+
+/* Base Chinese typography */
+body {
+	font-family: var(--angie-font-zh);
+}
+
+/* Chinese headings and body copy */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li {
+	font-family: var(--angie-font-zh);
+}
+
+
+/* Preserve the handwritten Angie logo */
+.name-en,
+.sidebar-name-en {
+	font-family: "Allura", cursive !important;
+}
+
+
+/* Content Philosophy — Chinese only */
+.content-philosophy-heading h2,
+.content-philosophy-quote-zh,
+.content-philosophy-text p,
+.content-philosophy-copy p {
+	font-family: var(--angie-font-zh) !important;
+}
+
+
+/* Homepage Chinese */
+.home-name .name-zh,
+.home-eyebrow,
+.home-disciplines,
+.home-intro p,
+.home-section-heading h2,
+.practice-title h3,
+.practice-description,
+.explore-editorial-item h3,
+.explore-description {
+	font-family: var(--angie-font-zh) !important;
+}
+
+
+/* About Chinese */
+.about-rail-zh,
+.about-essay-header h1,
+.about-essay-body p,
+.about-margin-section h2,
+.about-location,
+.about-language-list,
+.about-margin-quote p,
+.about-cta-copy h2 {
+	font-family: var(--angie-font-zh) !important;
+}
+
+
+/* Experience Chinese */
+.experience-header h1,
+.experience-subtitle,
+.experience-section-heading h2,
+.experience-skill-card h3,
+.experience-skill-card li,
+.education-timeline-content h3,
+.education-timeline-content p {
+	font-family: var(--angie-font-zh) !important;
+}
+
+
+/* Writing / Literature Chinese */
+.writing-header h1,
+.writing-intro,
+.writing-section-heading h2,
+.writing-work-main h3,
+.writing-work-meta,
+.writing-award-name,
+.writing-research-main h3,
+.writing-research-meta,
+.writing-theme-list span,
+.literary-work-header h1,
+.literary-work-source,
+.literary-work-body {
+	font-family: var(--angie-font-zh) !important;
+}
+
+
+/* Content Strategy Chinese */
+.content-header h1,
+.content-intro,
+.content-section-heading h2,
+.content-project-card h3,
+.content-project-skills,
+.content-project-description,
+.content-project-tags span,
+.content-independent-copy h3,
+.content-independent-copy > p,
+.content-capability-item h3,
+.content-cta-row h2,
+.content-cta-note {
+	font-family: var(--angie-font-zh) !important;
+}
+
+
+/* Teaching Chinese */
+.teaching-header h1,
+.teaching-intro,
+.teaching-section-heading h2,
+.teaching-approach-item h3,
+.teaching-approach-item p,
+.teaching-learner-item h3,
+.teaching-experience-main h3,
+.teaching-experience-meta,
+.teaching-experience-description,
+.teaching-qualification-mark,
+.teaching-qualification-copy h3,
+.teaching-qualification-copy p,
+.teaching-digital-copy h3,
+.teaching-digital-copy p,
+.teaching-digital-topics span,
+.teaching-cta-row h2,
+.teaching-cta-note {
+	font-family: var(--angie-font-zh) !important;
+}
+
+
+/* Illustration Chinese */
+.illustration-header h1,
+.illustration-copyright p,
+.illustration-cta h2,
+.illustration-cta p {
+	font-family: var(--angie-font-zh) !important;
+}
+
+
+/* Contact Chinese */
+.contact-header h1,
+.contact-lead,
+.contact-intro,
+.contact-primary-main h2,
+.contact-email-note,
+.contact-meta-item,
+.contact-section-heading h2,
+.contact-collaboration-item h3,
+.contact-collaboration-item p {
+	font-family: var(--angie-font-zh) !important;
 }
