@@ -7013,13 +7013,12 @@ li {
 
 
 /* =========================================================
-   ANGIE — FOUNTAIN PEN NIB CURSOR
-   簡約鋼筆筆尖游標
+   ANGIE — FOUNTAIN PEN CURSOR
+   鋼筆筆尖 + 短筆桿
    ========================================================= */
 
 @media (hover: hover) and (pointer: fine) {
 
-  /* 隱藏原本的系統鼠標 */
   html.angie-pen-cursor,
   html.angie-pen-cursor body,
   html.angie-pen-cursor a,
@@ -7032,21 +7031,19 @@ li {
   }
 
 
-  /* -------------------------
-     鋼筆筆尖
-     ------------------------- */
+  /* =========================
+     鋼筆游標
+     ========================= */
 
   .angie-pen-nib {
     position: fixed;
-
     left: 0;
     top: 0;
 
-    width: 22px;
-    height: 22px;
+    width: 28px;
+    height: 28px;
 
     z-index: 9999999;
-
     pointer-events: none;
 
     opacity: 0;
@@ -7054,8 +7051,8 @@ li {
     transform: translate3d(-100px, -100px, 0);
 
     transition:
-      opacity 0.18s ease,
-      filter 0.18s ease;
+      opacity 0.16s ease,
+      filter 0.16s ease;
 
     will-change: transform;
   }
@@ -7063,95 +7060,96 @@ li {
 
   .angie-pen-nib svg {
     display: block;
-
     width: 100%;
     height: 100%;
-
     overflow: visible;
 
     filter:
       drop-shadow(
-        1px 2px 1.5px
-        rgba(145, 111, 96, 0.16)
+        1.5px 2.5px 1.8px
+        rgba(139, 111, 85, 0.18)
       );
   }
 
 
-  /* 滑過可點擊物件時，
-     只增加一點點光澤，不放大 */
   .angie-pen-nib.is-link {
     filter:
-      brightness(1.04)
-      saturate(1.05);
+      brightness(1.05)
+      saturate(1.04);
   }
 
 
-  /* -------------------------
-     小墨滴
-     ------------------------- */
+  /* =========================
+     墨滴
+     ========================= */
 
   .angie-ink-drop {
     position: fixed;
-
     left: 0;
     top: 0;
 
-    width: 3px;
-    height: 4px;
+    width: 4px;
+    height: 6px;
 
     z-index: 9999998;
 
     pointer-events: none;
 
     border-radius:
-      55% 55% 65% 65%;
+      50% 50% 62% 62%;
 
     background:
       linear-gradient(
         180deg,
-        #97907f 0%,
-        #a79f8b 100%
+        #928b78 0%,
+        #a79f8b 55%,
+        #b5a8a0 100%
       );
+
+    box-shadow:
+      0 1px 2px
+      rgba(139, 111, 85, 0.12);
 
     opacity: 0;
 
     transform-origin: center top;
 
     animation:
-      angieInkDrop 1.25s ease-in forwards;
+      angieInkDrop 1.45s ease-in forwards;
   }
 
 
-  /* 落地後非常小的暈墨 */
+  /* 落地後的淡墨暈 */
   .angie-ink-drop::after {
     content: "";
 
     position: absolute;
 
     left: 50%;
-    top: 20px;
+    top: 23px;
 
-    width: 8px;
-    height: 3px;
+    width: 13px;
+    height: 5px;
 
     transform:
       translateX(-50%)
-      scale(0.25);
+      scale(0.2);
 
     border-radius: 50%;
 
     background:
       radial-gradient(
         ellipse at center,
-        rgba(167, 159, 139, 0.52) 0%,
-        rgba(181, 168, 160, 0.30) 45%,
-        rgba(202, 198, 189, 0) 78%
+        rgba(146, 139, 120, 0.58) 0%,
+        rgba(181, 168, 160, 0.38) 42%,
+        rgba(202, 198, 189, 0.16) 66%,
+        rgba(202, 198, 189, 0) 82%
       );
 
     opacity: 0;
 
     animation:
-      angieInkMark 1.25s ease-out forwards;
+      angieInkMark 1.45s ease-out forwards;
   }
 
 
@@ -7165,31 +7163,31 @@ li {
     }
 
     10% {
-      opacity: 0.78;
+      opacity: 0.82;
       transform:
         translateY(1px)
-        scale(0.85);
+        scale(0.9);
     }
 
-    68% {
-      opacity: 0.72;
+    66% {
+      opacity: 0.76;
       transform:
-        translateY(17px)
-        scale(0.9);
+        translateY(19px)
+        scale(1);
     }
 
     76% {
       opacity: 0;
       transform:
-        translateY(20px)
-        scale(0.7);
+        translateY(23px)
+        scale(0.75);
     }
 
     100% {
       opacity: 0;
       transform:
-        translateY(20px)
-        scale(0.7);
+        translateY(23px)
+        scale(0.75);
     }
   }
 
@@ -7197,44 +7195,44 @@ li {
   @keyframes angieInkMark {
 
     0%,
-    68% {
+    66% {
       opacity: 0;
       transform:
         translateX(-50%)
-        scale(0.25);
+        scale(0.2);
     }
 
     76% {
-      opacity: 0.48;
+      opacity: 0.58;
       transform:
         translateX(-50%)
         scale(0.72);
     }
 
     88% {
-      opacity: 0.32;
+      opacity: 0.36;
       transform:
         translateX(-50%)
-        scale(0.92);
+        scale(0.96);
     }
 
     100% {
       opacity: 0;
       transform:
         translateX(-50%)
-        scale(1);
+        scale(1.08);
     }
   }
 
 }
 
 
-/* 使用者系統設定「減少動畫」時，
-   保留鋼筆游標，但取消滴墨 */
 @media (prefers-reduced-motion: reduce) {
 
   .angie-ink-drop {
     display: none !important;
-  }
+  
+
+}
 
 }
