@@ -13,6 +13,8 @@
    01. Color System
    ========================================================== */
 :root {
+
+  /* Paper / text */
   --angie-paper: #f2eee7;
   --angie-paper-deep: #e9e4dc;
   --angie-card: #f8f5ef;
@@ -20,6 +22,7 @@
   --angie-charcoal: #292b29;
   --angie-grey: #74736f;
 
+  /* New palette */
   --angie-line: #cac6bd;
 
   --angie-green: #979d6e;
@@ -33,7 +36,7 @@
   --angie-accent-pale: #e8dfda;
 
   --angie-muted: #b5a8a0;
-}
+
 
   /* Global Chinese typeface */
   --angie-font-zh:
@@ -43,6 +46,7 @@
     "Heiti TC",
     "Noto Sans TC",
     sans-serif;
+
 }
 
 /* ==========================================================
@@ -50,8 +54,10 @@
    ========================================================== */
 html,
 body,
-#main {
-  background: var(--angie-paper);
+#wrapper,
+#main,
+#main > .inner {
+  background-color: var(--angie-paper);
 }
 
 body {
