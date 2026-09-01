@@ -6917,3 +6917,99 @@ li {
 .contact-collaboration-item p {
 	font-family: var(--angie-font-zh) !important;
 }
+
+
+/* =========================================================
+   HOMEPAGE — THIN CRINKLED CHAMPAGNE GOLD FOIL BORDER
+   首頁互動式皺褶香檳金箔邊
+   ========================================================= */
+
+.practice-editorial-item,
+.explore-editorial-item {
+  position: relative;
+  isolation: isolate;
+}
+
+
+/* 金箔細邊 */
+.practice-editorial-item::after,
+.explore-editorial-item::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  z-index: 10;
+
+  /* 邊框厚度 */
+  padding: 1px;
+
+  pointer-events: none;
+  opacity: 0;
+
+  /* 模擬皺褶金箔：細碎明暗 + 香檳金底 */
+  background:
+    repeating-linear-gradient(
+      112deg,
+      rgba(255, 243, 179, 0.50) 0px,
+      rgba(255, 243, 179, 0.50) 1px,
+      rgba(207, 177, 79, 0.22) 2px,
+      rgba(238, 223, 154, 0.42) 3px,
+      rgba(210, 180, 94, 0.18) 5px,
+      rgba(255, 243, 179, 0.34) 7px
+    ),
+    linear-gradient(
+      128deg,
+      #cfb14f 0%,
+      #eedf9a 22%,
+      #fff3b3 39%,
+      #d2b45e 55%,
+      #eedf9a 72%,
+      #cfb14f 100%
+    );
+
+  background-size:
+    19px 19px,
+    220% 220%;
+
+  /* 中間挖空，只留下 1px 外框 */
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+
+  filter:
+    saturate(0.85)
+    brightness(1);
+
+  transition:
+    opacity 0.28s ease,
+    background-position 0.55s ease;
+}
+
+
+/* 滑鼠移入 */
+.practice-editorial-item:hover::after,
+.practice-editorial-item:focus-visible::after,
+.explore-editorial-item:hover::after,
+.explore-editorial-item:focus-visible::after {
+  opacity: 0.55;
+
+  background-position:
+    5px 3px,
+    100% 50%;
+}
+
+
+/* 點擊瞬間稍微亮一點 */
+.practice-editorial-item:active::after,
+.explore-editorial-item:active::after {
+  opacity: 0.78;
+
+  background-position:
+    9px 6px,
+    35% 65%;
+}
