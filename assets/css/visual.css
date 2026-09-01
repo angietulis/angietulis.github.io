@@ -7010,3 +7010,231 @@ li {
   opacity: 1;
 
 }
+
+
+/* =========================================================
+   ANGIE — FOUNTAIN PEN NIB CURSOR
+   簡約鋼筆筆尖游標
+   ========================================================= */
+
+@media (hover: hover) and (pointer: fine) {
+
+  /* 隱藏原本的系統鼠標 */
+  html.angie-pen-cursor,
+  html.angie-pen-cursor body,
+  html.angie-pen-cursor a,
+  html.angie-pen-cursor button,
+  html.angie-pen-cursor input,
+  html.angie-pen-cursor textarea,
+  html.angie-pen-cursor select,
+  html.angie-pen-cursor label {
+    cursor: none !important;
+  }
+
+
+  /* -------------------------
+     鋼筆筆尖
+     ------------------------- */
+
+  .angie-pen-nib {
+    position: fixed;
+
+    left: 0;
+    top: 0;
+
+    width: 22px;
+    height: 22px;
+
+    z-index: 9999999;
+
+    pointer-events: none;
+
+    opacity: 0;
+
+    transform: translate3d(-100px, -100px, 0);
+
+    transition:
+      opacity 0.18s ease,
+      filter 0.18s ease;
+
+    will-change: transform;
+  }
+
+
+  .angie-pen-nib svg {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: visible;
+
+    filter:
+      drop-shadow(
+        1px 2px 1.5px
+        rgba(145, 111, 96, 0.16)
+      );
+  }
+
+
+  /* 滑過可點擊物件時，
+     只增加一點點光澤，不放大 */
+  .angie-pen-nib.is-link {
+    filter:
+      brightness(1.04)
+      saturate(1.05);
+  }
+
+
+  /* -------------------------
+     小墨滴
+     ------------------------- */
+
+  .angie-ink-drop {
+    position: fixed;
+
+    left: 0;
+    top: 0;
+
+    width: 3px;
+    height: 4px;
+
+    z-index: 9999998;
+
+    pointer-events: none;
+
+    border-radius:
+      55% 55% 65% 65%;
+
+    background:
+      linear-gradient(
+        180deg,
+        #97907f 0%,
+        #a79f8b 100%
+      );
+
+    opacity: 0;
+
+    transform-origin: center top;
+
+    animation:
+      angieInkDrop 1.25s ease-in forwards;
+  }
+
+
+  /* 落地後非常小的暈墨 */
+  .angie-ink-drop::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    top: 20px;
+
+    width: 8px;
+    height: 3px;
+
+    transform:
+      translateX(-50%)
+      scale(0.25);
+
+    border-radius: 50%;
+
+    background:
+      radial-gradient(
+        ellipse at center,
+        rgba(167, 159, 139, 0.52) 0%,
+        rgba(181, 168, 160, 0.30) 45%,
+        rgba(202, 198, 189, 0) 78%
+      );
+
+    opacity: 0;
+
+    animation:
+      angieInkMark 1.25s ease-out forwards;
+  }
+
+
+  @keyframes angieInkDrop {
+
+    0% {
+      opacity: 0;
+      transform:
+        translateY(0)
+        scale(0.65);
+    }
+
+    10% {
+      opacity: 0.78;
+      transform:
+        translateY(1px)
+        scale(0.85);
+    }
+
+    68% {
+      opacity: 0.72;
+      transform:
+        translateY(17px)
+        scale(0.9);
+    }
+
+    76% {
+      opacity: 0;
+      transform:
+        translateY(20px)
+        scale(0.7);
+    }
+
+    100% {
+      opacity: 0;
+      transform:
+        translateY(20px)
+        scale(0.7);
+    }
+  }
+
+
+  @keyframes angieInkMark {
+
+    0%,
+    68% {
+      opacity: 0;
+      transform:
+        translateX(-50%)
+        scale(0.25);
+    }
+
+    76% {
+      opacity: 0.48;
+      transform:
+        translateX(-50%)
+        scale(0.72);
+    }
+
+    88% {
+      opacity: 0.32;
+      transform:
+        translateX(-50%)
+        scale(0.92);
+    }
+
+    100% {
+      opacity: 0;
+      transform:
+        translateX(-50%)
+        scale(1);
+    }
+  }
+
+}
+
+
+/* 使用者系統設定「減少動畫」時，
+   保留鋼筆游標，但取消滴墨 */
+@media (prefers-reduced-motion: reduce) {
+
+  .angie-ink-drop {
+    display: none !important;
+  }
+
+}
