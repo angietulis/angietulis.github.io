@@ -10,7 +10,7 @@
 
 
   /* ======================================================
-     建立鋼筆游標
+     建立鋼筆筆尖
      ====================================================== */
 
   const pen = document.createElement("div");
@@ -20,14 +20,13 @@
 
   pen.innerHTML = `
     <svg
-      viewBox="0 0 32 32"
+      viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
       aria-hidden="true"
     >
 
       <defs>
 
-        <!-- 筆尖的暖米金光影 -->
         <linearGradient
           id="angieNibFill"
           x1="0%"
@@ -35,14 +34,30 @@
           x2="100%"
           y2="100%"
         >
-          <stop offset="0%" stop-color="#f7f1e7"/>
-          <stop offset="42%" stop-color="#e8ddc6"/>
-          <stop offset="72%" stop-color="#d8c8ae"/>
-          <stop offset="100%" stop-color="#cac6bd"/>
+
+          <stop
+            offset="0%"
+            stop-color="#f7f1e7"
+          />
+
+          <stop
+            offset="48%"
+            stop-color="#e8ddc6"
+          />
+
+          <stop
+            offset="78%"
+            stop-color="#d8c8ae"
+          />
+
+          <stop
+            offset="100%"
+            stop-color="#cac6bd"
+          />
+
         </linearGradient>
 
 
-        <!-- 香檳金 -->
         <linearGradient
           id="angieNibGold"
           x1="0%"
@@ -50,49 +65,48 @@
           x2="100%"
           y2="100%"
         >
-          <stop offset="0%" stop-color="#fff3b3"/>
-          <stop offset="35%" stop-color="#eedf9a"/>
-          <stop offset="68%" stop-color="#d2b45e"/>
-          <stop offset="100%" stop-color="#bb9a88"/>
-        </linearGradient>
 
+          <stop
+            offset="0%"
+            stop-color="#fff3b3"
+          />
 
-        <!-- 筆桿 -->
-        <linearGradient
-          id="angiePenBarrel"
-          x1="0%"
-          y1="0%"
-          x2="100%"
-          y2="100%"
-        >
-          <stop offset="0%" stop-color="#c8ad9b"/>
-          <stop offset="42%" stop-color="#bb9a88"/>
-          <stop offset="72%" stop-color="#a98572"/>
-          <stop offset="100%" stop-color="#916f60"/>
+          <stop
+            offset="42%"
+            stop-color="#eedf9a"
+          />
+
+          <stop
+            offset="72%"
+            stop-color="#d2b45e"
+          />
+
+          <stop
+            offset="100%"
+            stop-color="#bb9a88"
+          />
+
         </linearGradient>
 
       </defs>
 
 
-      <!-- =========================
-           鋼筆筆尖
-           尖端朝左上
-           ========================= -->
+      <!-- 筆尖主體 -->
 
       <path
         d="
-          M 2.2 2.2
-          L 17.5 7.7
-          Q 14.5 11.0 13.9 14.8
-          Q 17.0 15.7 19.8 18.5
-          L 15.9 20.2
-          Q 12.7 17.0 9.0 16.3
-          Q 8.0 11.9 2.2 2.2
+          M 2.1 2.1
+          L 17.6 7.9
+          Q 14.4 11.1 13.8 15.1
+          Q 17.1 15.7 20.3 18.9
+          L 15.9 20.7
+          Q 12.6 17.2 8.8 16.6
+          Q 8.0 12.2 2.1 2.1
           Z
         "
         fill="url(#angieNibFill)"
         stroke="#8b6f55"
-        stroke-width="1.05"
+        stroke-width="1.15"
         stroke-linejoin="round"
       />
 
@@ -101,12 +115,12 @@
 
       <path
         d="
-          M 2.6 2.6
-          L 10.1 10.3
+          M 2.4 2.4
+          L 10.1 10.5
         "
         fill="none"
         stroke="#9a7b60"
-        stroke-width="0.75"
+        stroke-width="0.85"
         stroke-linecap="round"
       />
 
@@ -114,12 +128,12 @@
       <!-- 呼吸孔 -->
 
       <circle
-        cx="10.4"
-        cy="10.7"
-        r="1.15"
+        cx="10.35"
+        cy="10.8"
+        r="1.2"
         fill="#f2eee7"
         stroke="#8b6f55"
-        stroke-width="0.8"
+        stroke-width="0.85"
       />
 
 
@@ -127,81 +141,44 @@
 
       <path
         d="
-          M 11.1 11.6
-          L 15.1 16.5
+          M 11.15 11.7
+          L 15.4 16.8
         "
         fill="none"
         stroke="#9a7b60"
-        stroke-width="0.7"
+        stroke-width="0.72"
         stroke-linecap="round"
       />
 
 
-      <!-- 筆尖高光 -->
+      <!-- 淡高光 -->
 
       <path
         d="
-          M 4.1 3.4
-          L 14.9 8.1
+          M 4.0 3.4
+          L 15.0 8.2
         "
         fill="none"
-        stroke="rgba(255,255,255,0.78)"
+        stroke="rgba(255,255,255,0.72)"
         stroke-width="0.65"
         stroke-linecap="round"
       />
 
 
-      <!-- =========================
-           香檳金筆環
-           ========================= -->
+      <!-- 香檳金尾環 -->
 
       <path
         d="
-          M 15.0 17.6
-          L 18.3 16.2
-          L 21.1 19.0
-          L 17.0 20.9
+          M 14.8 17.9
+          L 18.4 16.4
+          L 20.5 18.8
+          L 16.1 20.7
           Z
         "
         fill="url(#angieNibGold)"
         stroke="#8b6f55"
-        stroke-width="0.8"
+        stroke-width="0.85"
         stroke-linejoin="round"
-      />
-
-
-      <!-- =========================
-           短筆桿
-           ========================= -->
-
-      <path
-        d="
-          M 17.0 20.9
-          L 21.1 19.0
-          L 29.2 26.0
-          Q 30.2 27.0 29.3 28.0
-          L 27.5 29.5
-          Q 26.6 30.3 25.6 29.4
-          Z
-        "
-        fill="url(#angiePenBarrel)"
-        stroke="#8b6f55"
-        stroke-width="0.9"
-        stroke-linejoin="round"
-      />
-
-
-      <!-- 筆桿高光 -->
-
-      <path
-        d="
-          M 20.3 21.0
-          L 27.4 27.1
-        "
-        fill="none"
-        stroke="rgba(255,255,255,0.40)"
-        stroke-width="0.7"
-        stroke-linecap="round"
       />
 
     </svg>
@@ -226,10 +203,6 @@
 
 
   function positionPen() {
-
-    /*
-      最左上筆尖就是真正點擊位置
-    */
 
     pen.style.transform =
       `translate3d(${mouseX - 2}px, ${mouseY - 2}px, 0)`;
@@ -308,12 +281,11 @@
     }
 
 
-    const reduceMotion =
+    if (
       window.matchMedia(
         "(prefers-reduced-motion: reduce)"
-      );
-
-    if (reduceMotion.matches) {
+      ).matches
+    ) {
       return;
     }
 
@@ -326,7 +298,7 @@
 
 
     /*
-      從鋼筆尖端滴落
+      從鼠標所在的筆尖位置滴下
     */
 
     drop.style.left =
@@ -345,15 +317,13 @@
         drop.remove();
 
       },
-      1550
+      1500
     );
 
   }
 
 
-  /* ======================================================
-     每 15 秒滴一次
-     ====================================================== */
+  /* 每 15 秒滴一次 */
 
   window.setInterval(
     createInkDrop,
