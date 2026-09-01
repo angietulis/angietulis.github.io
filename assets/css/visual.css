@@ -515,7 +515,11 @@ select:focus-visible {
 }
 
 .practice-soft {
-  background: rgba(202, 198, 189, 0.62);
+  background: rgba(202, 198, 189, 0.46);
+}
+
+.practice-warm {
+  background: rgba(187, 154, 136, 0.16);
 }
 
 .practice-illustration {
