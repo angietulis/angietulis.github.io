@@ -7013,8 +7013,8 @@ li {
 
 
 /* =========================================================
-   ANGIE — FOUNTAIN PEN CURSOR
-   鋼筆筆尖 + 短筆桿
+   ANGIE — FOUNTAIN PEN NIB CURSOR
+   簡約鋼筆筆尖 + 小型濺墨
    ========================================================= */
 
 @media (hover: hover) and (pointer: fine) {
@@ -7032,7 +7032,7 @@ li {
 
 
   /* =========================
-     鋼筆游標
+     鋼筆筆尖
      ========================= */
 
   .angie-pen-nib {
@@ -7040,8 +7040,8 @@ li {
     left: 0;
     top: 0;
 
-    width: 28px;
-    height: 28px;
+    width: 22px;
+    height: 22px;
 
     z-index: 9999999;
     pointer-events: none;
@@ -7057,7 +7057,6 @@ li {
     will-change: transform;
   }
 
-
   .angie-pen-nib svg {
     display: block;
     width: 100%;
@@ -7066,11 +7065,10 @@ li {
 
     filter:
       drop-shadow(
-        1.5px 2.5px 1.8px
-        rgba(139, 111, 85, 0.18)
+        1px 2px 1.5px
+        rgba(139, 111, 85, 0.16)
       );
   }
-
 
   .angie-pen-nib.is-link {
     filter:
@@ -7080,7 +7078,7 @@ li {
 
 
   /* =========================
-     墨滴
+     落下來的墨滴
      ========================= */
 
   .angie-ink-drop {
@@ -7092,34 +7090,68 @@ li {
     height: 6px;
 
     z-index: 9999998;
-
     pointer-events: none;
 
-    border-radius:
-      50% 50% 62% 62%;
+    border-radius: 50% 50% 60% 60%;
 
     background:
       linear-gradient(
         180deg,
-        #928b78 0%,
-        #a79f8b 55%,
+        #918a78 0%,
+        #a79f8b 58%,
         #b5a8a0 100%
       );
-
-    box-shadow:
-      0 1px 2px
-      rgba(139, 111, 85, 0.12);
 
     opacity: 0;
 
     transform-origin: center top;
 
     animation:
-      angieInkDrop 1.45s ease-in forwards;
+      angieInkFall 1.35s ease-in forwards;
   }
 
 
-  /* 落地後的淡墨暈 */
+  /* =========================
+     落地中央的小墨花
+     ========================= */
+
+  .angie-ink-drop::before {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    top: 23px;
+
+    width: 14px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background:
+      radial-gradient(
+        ellipse at center,
+        rgba(145, 138, 120, 0.60) 0%,
+        rgba(167, 159, 139, 0.42) 40%,
+        rgba(181, 168, 160, 0.18) 68%,
+        rgba(181, 168, 160, 0) 82%
+      );
+
+    opacity: 0;
+
+    transform:
+      translateX(-50%)
+      scale(0.15);
+
+    animation:
+      angieInkSplashBase 1.35s ease-out forwards;
+  }
+
+
+  /* =========================
+     四周濺起的小墨珠
+     ========================= */
+
   .angie-ink-drop::after {
     content: "";
 
@@ -7128,38 +7160,41 @@ li {
     left: 50%;
     top: 23px;
 
-    width: 13px;
-    height: 5px;
+    width: 2px;
+    height: 2px;
+
+    border-radius: 50%;
+
+    background: #a79f8b;
+
+    opacity: 0;
 
     transform:
       translateX(-50%)
       scale(0.2);
 
-    border-radius: 50%;
+    box-shadow:
+      -9px -3px 0 rgba(151, 144, 125, 0.65),
+      -6px -7px 0 rgba(167, 159, 139, 0.58),
+      -3px -5px 0 rgba(181, 168, 160, 0.62),
 
-    background:
-      radial-gradient(
-        ellipse at center,
-        rgba(146, 139, 120, 0.58) 0%,
-        rgba(181, 168, 160, 0.38) 42%,
-        rgba(202, 198, 189, 0.16) 66%,
-        rgba(202, 198, 189, 0) 82%
-      );
-
-    opacity: 0;
+       4px -6px 0 rgba(151, 144, 125, 0.58),
+       7px -8px 0 rgba(167, 159, 139, 0.52),
+      10px -3px 0 rgba(181, 168, 160, 0.58);
 
     animation:
-      angieInkMark 1.45s ease-out forwards;
+      angieInkSplashDrops 1.35s ease-out forwards;
   }
 
 
-  @keyframes angieInkDrop {
+  /* 墨滴落下 */
+  @keyframes angieInkFall {
 
     0% {
       opacity: 0;
       transform:
         translateY(0)
-        scale(0.65);
+        scale(0.7);
     }
 
     10% {
@@ -7169,14 +7204,14 @@ li {
         scale(0.9);
     }
 
-    66% {
-      opacity: 0.76;
+    68% {
+      opacity: 0.78;
       transform:
         translateY(19px)
         scale(1);
     }
 
-    76% {
+    75% {
       opacity: 0;
       transform:
         translateY(23px)
@@ -7192,35 +7227,89 @@ li {
   }
 
 
-  @keyframes angieInkMark {
+  /* 中央濺開 */
+  @keyframes angieInkSplashBase {
 
     0%,
-    66% {
+    68% {
       opacity: 0;
       transform:
         translateX(-50%)
-        scale(0.2);
+        scale(0.15);
     }
 
-    76% {
-      opacity: 0.58;
+    74% {
+      opacity: 0.64;
       transform:
         translateX(-50%)
-        scale(0.72);
+        scale(0.55);
     }
 
-    88% {
-      opacity: 0.36;
+    82% {
+      opacity: 0.54;
       transform:
         translateX(-50%)
-        scale(0.96);
+        scale(1);
+    }
+
+    92% {
+      opacity: 0.28;
+      transform:
+        translateX(-50%)
+        scale(1.12);
     }
 
     100% {
       opacity: 0;
       transform:
         translateX(-50%)
+        scale(1.18);
+    }
+  }
+
+
+  /* 小水花往外濺 */
+  @keyframes angieInkSplashDrops {
+
+    0%,
+    68% {
+      opacity: 0;
+      transform:
+        translateX(-50%)
+        translateY(0)
+        scale(0.15);
+    }
+
+    74% {
+      opacity: 0.75;
+      transform:
+        translateX(-50%)
+        translateY(-1px)
+        scale(0.6);
+    }
+
+    82% {
+      opacity: 0.62;
+      transform:
+        translateX(-50%)
+        translateY(-3px)
+        scale(1);
+    }
+
+    92% {
+      opacity: 0.25;
+      transform:
+        translateX(-50%)
+        translateY(-5px)
         scale(1.08);
+    }
+
+    100% {
+      opacity: 0;
+      transform:
+        translateX(-50%)
+        translateY(-6px)
+        scale(1.1);
     }
   }
 
@@ -7231,8 +7320,6 @@ li {
 
   .angie-ink-drop {
     display: none !important;
-  
-
-}
+  }
 
 }
