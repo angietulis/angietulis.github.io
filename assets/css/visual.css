@@ -6957,14 +6957,15 @@ li {
       rgba(255, 243, 179, 0.34) 7px
     ),
     linear-gradient(
-      128deg,
-      #cfb14f 0%,
-      #eedf9a 22%,
-      #fff3b3 39%,
-      #d2b45e 55%,
-      #eedf9a 72%,
-      #cfb14f 100%
-    );
+  128deg,
+  #B88A2E 0%,
+  #D6B65C 18%,
+  #F8E7A1 35%,
+  #FFF3C4 48%,
+  #D4AF37 62%,
+  #E8C96A 80%,
+  #B88A2E 100%
+);
 
   background-size:
     19px 19px,
@@ -6982,8 +6983,8 @@ li {
   mask-composite: exclude;
 
   filter:
-    saturate(0.85)
-    brightness(1);
+  saturate(1.15)
+  brightness(1.05);
 
   transition:
     opacity 0.28s ease,
