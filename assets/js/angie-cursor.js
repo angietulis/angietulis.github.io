@@ -246,7 +246,7 @@
 
   }
 
-  /* 每 15 秒滴一次 */
-  window.setInterval(createInkDrop, 15000);
+  /* 每 10 秒滴一次 */
+  window.setInterval(createInkDrop, 10000);
 
 })();
