@@ -8,15 +8,12 @@
     return;
   }
 
-
   /* ======================================================
      建立鋼筆筆尖
      ====================================================== */
 
   const pen = document.createElement("div");
-
   pen.className = "angie-pen-nib";
-
 
   pen.innerHTML = `
     <svg
@@ -34,29 +31,11 @@
           x2="100%"
           y2="100%"
         >
-
-          <stop
-            offset="0%"
-            stop-color="#f7f1e7"
-          />
-
-          <stop
-            offset="48%"
-            stop-color="#e8ddc6"
-          />
-
-          <stop
-            offset="78%"
-            stop-color="#d8c8ae"
-          />
-
-          <stop
-            offset="100%"
-            stop-color="#cac6bd"
-          />
-
+          <stop offset="0%" stop-color="#f7f1e7" />
+          <stop offset="48%" stop-color="#e8ddc6" />
+          <stop offset="78%" stop-color="#d8c8ae" />
+          <stop offset="100%" stop-color="#cac6bd" />
         </linearGradient>
-
 
         <linearGradient
           id="angieNibGold"
@@ -65,34 +44,15 @@
           x2="100%"
           y2="100%"
         >
-
-          <stop
-            offset="0%"
-            stop-color="#fff3b3"
-          />
-
-          <stop
-            offset="42%"
-            stop-color="#eedf9a"
-          />
-
-          <stop
-            offset="72%"
-            stop-color="#d2b45e"
-          />
-
-          <stop
-            offset="100%"
-            stop-color="#bb9a88"
-          />
-
+          <stop offset="0%" stop-color="#fff3b3" />
+          <stop offset="42%" stop-color="#eedf9a" />
+          <stop offset="72%" stop-color="#d2b45e" />
+          <stop offset="100%" stop-color="#bb9a88" />
         </linearGradient>
 
       </defs>
 
-
       <!-- 筆尖主體 -->
-
       <path
         d="
           M 2.1 2.1
@@ -110,9 +70,7 @@
         stroke-linejoin="round"
       />
 
-
       <!-- 中央導墨線 -->
-
       <path
         d="
           M 2.4 2.4
@@ -124,9 +82,7 @@
         stroke-linecap="round"
       />
 
-
       <!-- 呼吸孔 -->
-
       <circle
         cx="10.35"
         cy="10.8"
@@ -136,9 +92,7 @@
         stroke-width="0.85"
       />
 
-
       <!-- 下方導墨線 -->
-
       <path
         d="
           M 11.15 11.7
@@ -150,9 +104,7 @@
         stroke-linecap="round"
       />
 
-
       <!-- 淡高光 -->
-
       <path
         d="
           M 4.0 3.4
@@ -164,9 +116,7 @@
         stroke-linecap="round"
       />
 
-
       <!-- 香檳金尾環 -->
-
       <path
         d="
           M 14.8 17.9
@@ -184,13 +134,8 @@
     </svg>
   `;
 
-
   document.body.appendChild(pen);
-
-  document.documentElement.classList.add(
-    "angie-pen-cursor"
-  );
-
+  document.documentElement.classList.add("angie-pen-cursor");
 
   /* ======================================================
      滑鼠位置
@@ -198,77 +143,84 @@
 
   let mouseX = -100;
   let mouseY = -100;
-
   let pointerVisible = false;
 
-
   function positionPen() {
-
     pen.style.transform =
-      `translate3d(${mouseX - 2}px, ${mouseY - 2}px, 0)`;
-
+      `translate3d(${mouseX - 4}px, ${mouseY - 4}px, 0)`;
   }
 
+  document.addEventListener("mousemove", function (event) {
 
-  document.addEventListener(
-    "mousemove",
-    function (event) {
+    mouseX = event.clientX;
+    mouseY = event.clientY;
 
-      mouseX = event.clientX;
-      mouseY = event.clientY;
+    pointerVisible = true;
+    pen.style.opacity = "1";
 
+    positionPen();
+
+    const clickable = event.target.closest(
+      "a, button, input, textarea, select, label, [role='button']"
+    );
+
+    if (clickable) {
+      pen.classList.add("is-link");
+    } else {
+      pen.classList.remove("is-link");
+    }
+
+  });
+
+  document.addEventListener("mouseleave", function () {
+    pointerVisible = false;
+    pen.style.opacity = "0";
+  });
+
+  document.addEventListener("mouseenter", function () {
+    pointerVisible = true;
+  });
+
+  window.addEventListener("blur", function () {
+    pointerVisible = false;
+    pen.style.opacity = "0";
+  });
+
+  window.addEventListener("focus", function () {
+    if (mouseX > -100 && mouseY > -100) {
       pointerVisible = true;
-
       pen.style.opacity = "1";
-
       positionPen();
-
-
-      const clickable =
-        event.target.closest(
-          "a, button, input, textarea, select, label, [role='button']"
-        );
-
-
-      if (clickable) {
-
-        pen.classList.add("is-link");
-
-      } else {
-
-        pen.classList.remove("is-link");
-
-      }
-
     }
-  );
-
-
-  document.addEventListener(
-    "mouseleave",
-    function () {
-
-      pointerVisible = false;
-
-      pen.style.opacity = "0";
-
-    }
-  );
-
-
-  document.addEventListener(
-    "mouseenter",
-    function () {
-
-      pointerVisible = true;
-
-    }
-  );
-
+  });
 
   /* ======================================================
      滴墨
      ====================================================== */
+
+  function createSingleInkDrop(xOffset, yOffset, delay) {
+
+    window.setTimeout(function () {
+
+      if (!pointerVisible || document.hidden) {
+        return;
+      }
+
+      const drop = document.createElement("span");
+      drop.className = "angie-ink-drop";
+
+      drop.style.left = `${mouseX + xOffset}px`;
+      drop.style.top = `${mouseY + yOffset}px`;
+
+      document.body.appendChild(drop);
+
+      window.setTimeout(function () {
+        drop.remove();
+      }, 1900);
+
+    }, delay);
+
+  }
 
   function createInkDrop() {
 
@@ -280,7 +232,6 @@
       return;
     }
 
-
     if (
       window.matchMedia(
         "(prefers-reduced-motion: reduce)"
@@ -289,45 +240,13 @@
       return;
     }
 
-
-    const drop =
-      document.createElement("span");
-
-    drop.className =
-      "angie-ink-drop";
-
-
-    /*
-      從鼠標所在的筆尖位置滴下
-    */
-
-    drop.style.left =
-      `${mouseX - 2}px`;
-
-    drop.style.top =
-      `${mouseY + 3}px`;
-
-
-    document.body.appendChild(drop);
-
-
-    window.setTimeout(
-      function () {
-
-        drop.remove();
-
-      },
-      1500
-    );
+    /* 兩滴慢慢落下 */
+    createSingleInkDrop(-1, 4, 0);
+    createSingleInkDrop(2, 5, 280);
 
   }
 
-
   /* 每 15 秒滴一次 */
-
-  window.setInterval(
-    createInkDrop,
-    15000
-  );
+  window.setInterval(createInkDrop, 15000);
 
 })();
