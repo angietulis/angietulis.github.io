@@ -7040,8 +7040,8 @@ li {
     left: 0;
     top: 0;
 
-    width: 22px;
-    height: 22px;
+    width: 28px;
+    height: 28px;
 
     z-index: 9999999;
     pointer-events: none;
@@ -7092,13 +7092,13 @@ li {
     z-index: 9999998;
     pointer-events: none;
 
-    border-radius: 50% 50% 60% 60%;
+    border-radius: 50% 50% 62% 62%;
 
     background:
       linear-gradient(
         180deg,
         #918a78 0%,
-        #a79f8b 58%,
+        #a79f8b 52%,
         #b5a8a0 100%
       );
 
@@ -7107,7 +7107,7 @@ li {
     transform-origin: center top;
 
     animation:
-      angieInkFall 1.35s ease-in forwards;
+      angieInkFall 1.8s ease-in forwards;
   }
 
 
@@ -7121,21 +7121,21 @@ li {
     position: absolute;
 
     left: 50%;
-    top: 23px;
+    top: 29px;
 
-    width: 14px;
-    height: 5px;
+    width: 18px;
+    height: 7px;
 
     border-radius: 50%;
 
     background:
-      radial-gradient(
-        ellipse at center,
-        rgba(145, 138, 120, 0.60) 0%,
-        rgba(167, 159, 139, 0.42) 40%,
-        rgba(181, 168, 160, 0.18) 68%,
-        rgba(181, 168, 160, 0) 82%
-      );
+    radial-gradient(
+      ellipse at center,
+      rgba(151, 143, 125, 0.62) 0%,
+      rgba(167, 159, 139, 0.42) 42%,
+      rgba(184, 173, 165, 0.18) 70%,
+      rgba(184, 173, 165, 0) 84%
+    );
 
     opacity: 0;
 
@@ -7144,7 +7144,7 @@ li {
       scale(0.15);
 
     animation:
-      angieInkSplashBase 1.35s ease-out forwards;
+      angieInkSplashBase 1.8s ease-out forwards;
   }
 
 
@@ -7153,165 +7153,172 @@ li {
      ========================= */
 
   .angie-ink-drop::after {
-    content: "";
+  content: "";
 
-    position: absolute;
+  position: absolute;
 
-    left: 50%;
-    top: 23px;
+  left: 50%;
+  top: 29px;
 
-    width: 2px;
-    height: 2px;
+  width: 2.5px;
+  height: 2.5px;
 
-    border-radius: 50%;
+  border-radius: 50%;
 
-    background: #a79f8b;
+  background: #a79f8b;
 
-    opacity: 0;
+  opacity: 0;
 
-    transform:
-      translateX(-50%)
-      scale(0.2);
+  transform:
+    translateX(-50%)
+    scale(0.2);
 
-    box-shadow:
-      -9px -3px 0 rgba(151, 144, 125, 0.65),
-      -6px -7px 0 rgba(167, 159, 139, 0.58),
-      -3px -5px 0 rgba(181, 168, 160, 0.62),
+  box-shadow:
+    -11px -3px 0 rgba(151, 144, 125, 0.68),
+    -7px -8px 0 rgba(167, 159, 139, 0.58),
+    -3px -6px 0 rgba(184, 173, 165, 0.62),
 
-       4px -6px 0 rgba(151, 144, 125, 0.58),
-       7px -8px 0 rgba(167, 159, 139, 0.52),
-      10px -3px 0 rgba(181, 168, 160, 0.58);
+     4px -7px 0 rgba(151, 144, 125, 0.60),
+     8px -9px 0 rgba(167, 159, 139, 0.54),
+    12px -3px 0 rgba(184, 173, 165, 0.58);
 
-    animation:
-      angieInkSplashDrops 1.35s ease-out forwards;
-  }
+  animation:
+    angieInkSplashDrops 1.8s ease-out forwards;
+}
 
 
   /* 墨滴落下 */
   @keyframes angieInkFall {
 
-    0% {
-      opacity: 0;
-      transform:
-        translateY(0)
-        scale(0.7);
-    }
-
-    10% {
-      opacity: 0.82;
-      transform:
-        translateY(1px)
-        scale(0.9);
-    }
-
-    68% {
-      opacity: 0.78;
-      transform:
-        translateY(19px)
-        scale(1);
-    }
-
-    75% {
-      opacity: 0;
-      transform:
-        translateY(23px)
-        scale(0.75);
-    }
-
-    100% {
-      opacity: 0;
-      transform:
-        translateY(23px)
-        scale(0.75);
-    }
+  0% {
+    opacity: 0;
+    transform:
+      translateY(0)
+      scale(0.72);
   }
+
+  8% {
+    opacity: 0.82;
+    transform:
+      translateY(1px)
+      scale(0.9);
+  }
+
+  55% {
+    opacity: 0.8;
+    transform:
+      translateY(14px)
+      scale(1);
+  }
+
+  72% {
+    opacity: 0.78;
+    transform:
+      translateY(23px)
+      scale(1.02);
+  }
+
+  82% {
+    opacity: 0;
+    transform:
+      translateY(29px)
+      scale(0.82);
+  }
+
+  100% {
+    opacity: 0;
+    transform:
+      translateY(29px)
+      scale(0.82);
+  }
+}
 
 
   /* 中央濺開 */
   @keyframes angieInkSplashBase {
 
-    0%,
-    68% {
-      opacity: 0;
-      transform:
-        translateX(-50%)
-        scale(0.15);
-    }
-
-    74% {
-      opacity: 0.64;
-      transform:
-        translateX(-50%)
-        scale(0.55);
-    }
-
-    82% {
-      opacity: 0.54;
-      transform:
-        translateX(-50%)
-        scale(1);
-    }
-
-    92% {
-      opacity: 0.28;
-      transform:
-        translateX(-50%)
-        scale(1.12);
-    }
-
-    100% {
-      opacity: 0;
-      transform:
-        translateX(-50%)
-        scale(1.18);
-    }
+  0%,
+  70% {
+    opacity: 0;
+    transform:
+      translateX(-50%)
+      scale(0.15);
   }
+
+  78% {
+    opacity: 0.64;
+    transform:
+      translateX(-50%)
+      scale(0.58);
+  }
+
+  86% {
+    opacity: 0.54;
+    transform:
+      translateX(-50%)
+      scale(1);
+  }
+
+  94% {
+    opacity: 0.26;
+    transform:
+      translateX(-50%)
+      scale(1.12);
+  }
+
+  100% {
+    opacity: 0;
+    transform:
+      translateX(-50%)
+      scale(1.18);
+  }
+}
 
 
   /* 小水花往外濺 */
   @keyframes angieInkSplashDrops {
 
-    0%,
-    68% {
-      opacity: 0;
-      transform:
-        translateX(-50%)
-        translateY(0)
-        scale(0.15);
-    }
-
-    74% {
-      opacity: 0.75;
-      transform:
-        translateX(-50%)
-        translateY(-1px)
-        scale(0.6);
-    }
-
-    82% {
-      opacity: 0.62;
-      transform:
-        translateX(-50%)
-        translateY(-3px)
-        scale(1);
-    }
-
-    92% {
-      opacity: 0.25;
-      transform:
-        translateX(-50%)
-        translateY(-5px)
-        scale(1.08);
-    }
-
-    100% {
-      opacity: 0;
-      transform:
-        translateX(-50%)
-        translateY(-6px)
-        scale(1.1);
-    }
+  0%,
+  70% {
+    opacity: 0;
+    transform:
+      translateX(-50%)
+      translateY(0)
+      scale(0.15);
   }
+
+  78% {
+    opacity: 0.76;
+    transform:
+      translateX(-50%)
+      translateY(-1px)
+      scale(0.68);
+  }
+
+  86% {
+    opacity: 0.62;
+    transform:
+      translateX(-50%)
+      translateY(-4px)
+      scale(1);
+  }
+
+  94% {
+    opacity: 0.24;
+    transform:
+      translateX(-50%)
+      translateY(-6px)
+      scale(1.08);
+  }
+
+  100% {
+    opacity: 0;
+    transform:
+      translateX(-50%)
+      translateY(-7px)
+      scale(1.1);
+  }
+}
 
 }
 
